@@ -3,13 +3,13 @@ const SalesModule = ( function (){
     const salesArray = [
     {
         name: "Restaurant 1",
-        revenuePreviousYear: 400000,
-        revenueAccThisYear: 80000,
-        revenuePreviousMonth: 15000,
-        revenuePreviousWeek: 4500,
-        revenuePreviousDay: 1200,
-        grossRevenuePreviousYear: 60000,
-        grossRevenueAccThisYear: 8000,
+        revenuePreviousYear: 412345,
+        revenueAccThisYear: 80123,
+        revenuePreviousMonth: 15123,
+        revenuePreviousWeek: 4512,
+        revenuePreviousDay: 1212,
+        grossRevenuePreviousYear: 61234,
+        grossRevenueAccThisYear: 8345,
     },
     {
         name: "Restaurant 2",
@@ -19,7 +19,7 @@ const SalesModule = ( function (){
         revenuePreviousWeek: 7543,
         revenuePreviousDay: 1905,
         grossRevenuePreviousYear: 66400,
-        grossRevenueAccThisYear: 8000,
+        grossRevenueAccThisYear: 9954,
     },
     {
         name: "Restaurant 3",
@@ -45,7 +45,7 @@ const SalesModule = ( function (){
 
     const getAll = () => salesArray;
 
-    return {getall};
+    return {getAll};
 
 
 
