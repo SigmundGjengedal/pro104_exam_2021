@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-    
 }
 
 body {
@@ -10,74 +9,45 @@ body {
 }
 
 .split_screen{
-  width: 100%;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
   display: flex;
 }
 
 .left_half {
   flex-grow: 1;
-  flex-basis: 0;
   max-width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  height: 100%;
   background:#000;
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
+  position:relative;
+  height: 100vh;
 }
 
 .welcome_txt {
-  width: 650px;
   color: #FFF;
   position: absolute;
-  top: 176px;
-  left: 142px;
+  top: 40%;
+  left: 35%;
+  transform:translate(-50%, -50%);
   font-family: Futura;
   font-weight: Bold;
   font-size: 40px;
-  opacity: 1;
-  text-align: left;
 }
+
 .name_txt {
-  width: 554px;
   color: #000;
   position: absolute;
-  top: 289px;
-  left: 175px;
+  top: 60%;
+  left: 50%;
+  transform:translate(-50%, -50%);
   font-family: Futura;
   font-weight: Bold;
   font-size: 40px;
-  text-align: left; 
 }
 
 .right_half{
-  flex-grow: 1;
-  flex-basis: 0;
   max-width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  height: 100%;
   background:#FFF;
-  opacity: 1;
   position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-  justify-content: center;
+  height: 100vh;
 }
 
 .signin_txt {
@@ -89,23 +59,16 @@ body {
   font-family: Futura;
   font-weight: Bold;
   font-size: 30px;
-  opacity: 1;
-  text-align: left;
 }
 
 .signin_underline {
-  width: 121px;
+  width: 115px;
   height: 12px;
   background: #ECAF88;
-  opacity: 1;
   position: absolute;
   top: 130px;
   left: 50px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  overflow: hidden;
+  border-radius: 20px;
 }
 
 .create_txt {
@@ -117,8 +80,6 @@ body {
   font-family: Futura;
   font-weight: Bold;
   font-size: 30px;
-  opacity: 1;
-  text-align: left;
 }
 
 .login_input {
@@ -130,8 +91,6 @@ body {
   font-family: Futura-Bold;
   font-weight: Regular;
   font-size: 15px;
-  opacity: 1;
-  text-align: left;
   border: none;
   outline: none;
 }
@@ -171,8 +130,6 @@ body {
   font-family: Futura-Bold;
   font-weight: Regular;
   font-size: 15px;
-  opacity: 1;
-  text-align: left;
   border: none;
   outline: none;
 }
@@ -187,7 +144,6 @@ body {
   width: 364px;
   height: 6px;
   background: rgba(0,0,0,1);
-  opacity: 1;
   position: absolute;
   top: 430px;
   left: 200px;
@@ -198,7 +154,6 @@ body {
   width: 1px;
   height: 6px;
   background:#ECAF88;
-  opacity: 1;
   position: absolute;
   top: 430px;
   left: 200px;
@@ -208,10 +163,6 @@ body {
 .logout_checkbox {
   width: 24px;
   height: 22px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: absolute;
   top: 473px;
   left: 200px;
@@ -235,20 +186,11 @@ body {
 .login_btn {
   width: 300px;
   height: 64px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: absolute;
   background: rgba(236,175,136,0.25);
   top: 600px;
   left: 230px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  overflow: hidden;
-  
+  border-radius: 50px;
 }
 
 .login_btn_txt {
@@ -260,7 +202,6 @@ body {
   font-family: Futura-Bold;
   font-weight: Regular;
   font-size: 30px;
-  opacity: 20;
   text-align: left;
 }
 
@@ -274,6 +215,4 @@ body {
   font-family: Futura-Bold;
   font-weight: Regular;
   font-size: 15px;
-  opacity: 1;
-  text-align: left;
 }

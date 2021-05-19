@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link href="https://fonts.googleapis.com/css?family=Futura-Bold&display=swap" rel="stylesheet"/>
-		<link href="https://fonts.googleapis.com/css?family=Futura&display=swap" rel="stylesheet"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-		<link href="Scripts/css/index.css" rel="stylesheet"/>
-		<title>Document</title>
-	</head>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Futura-Bold&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Futura&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link href="Scripts/css/index.css" rel="stylesheet" />
+	<script defer type="module" src="index.js" charset="utf-8"></script>
+	<title>Document</title>
+</head>
 
 <body>
-  <div class="split_screen">
-    <div class="left_half">
-      <div class="left_section_1">
-     <span class="welcome_txt">WELCOME BACK</span>
-          </div>
-        
-        <div class="left_section_2">
-      <span class="name_txt">KARI NORDMANN</span>
-            </div>
-      </div>
-    
-      
-      <div class="right_half">
-      <div class="right_section_1">
-       <span class="signin_txt">SIGN IN</span>
-      <div class="signin_underline"></div>   
-      </div>
-          <div class="right_section_2">
-          <span class="create_txt">CREATE ACCOUNT</span>
-          </div>
-          <form action="/dashboard.html">
-          <div class="right_section_3">
-			<input type="text" class="login_input" placeholder="EMAIL, PHONE OR USERNAME" minlength="3" size="30" required>
-			<div class="login_input_underline_inactive"></div>
-			<div class="login_input_underline_active"></div>
-			
-			<input type="password" class="login_password" placeholder="PASSWORD" minlength="2" size="30" required>
-			<i class="fa fa-eye-slash" id="toggle_password_eye"></i>
-			<div class="login_password_underline_inactive"></div>
-			<div class="login_password_underline_active"></div>
-          </div>
-          
-          <div class="right_section_4">
-              <div class="logout_checkbox"></div>
-              <span class="logout_txt">LOG ME OUT AFTER</span>
-          </div>
-          
-          <div class="right_section_5">
-            <button type="submit" class="login_btn"><span class="login_btn_txt">LOG IN</span></button>
-              <!-- <span class="login_btn_txt">LOG IN</span> -->
-          </div>
-          </form>
-          <div class="right_section_6">
-           <span class="forgot_txt">FORGOT PASSWORD?</span>
-          </div>
-          
-      </div>
-  </div>
-    
-    
+
+
+	<div class="split_screen">
+		<div class="left_half">
+			<div class="left_section_1">
+				<span class="welcome_txt">WELCOME BACK</span>
+			</div>
+
+			<div class="left_section_2">
+				<span class="name_txt">KARI NORDMANN</span>
+			</div>
+		</div>
+
+
+		<div class="right_half">
+			<div class="right_section_1">
+				<span class="signin_txt">SIGN IN</span>
+				<div class="signin_underline"></div>
+			</div>
+			<div class="right_section_2">
+				<span class="create_txt">CREATE ACCOUNT</span>
+			</div>
+
+			<form action="/dashboard.html">
+				<div class="right_section_3">
+					<input type="text" class="login_input" placeholder="EMAIL, PHONE OR USERNAME" minlength="3" size="30" required>
+					<div class="login_input_underline_inactive"></div>
+					<div class="login_input_underline_active"></div>
+
+					<input type="password" class="login_password" placeholder="PASSWORD" minlength="2" size="30" required>
+					<i class="fa fa-eye-slash" id="toggle_password_eye"></i>
+					<div class="login_password_underline_inactive"></div>
+					<div class="login_password_underline_active"></div>
+				</div>
+
+				<div class="right_section_4">
+					<div class="logout_checkbox"></div>
+					<span class="logout_txt">LOG ME OUT AFTER</span>
+				</div>
+
+				<div class="right_section_5">
+					<button type="submit" class="login_btn"><span class="login_btn_txt">LOG IN</span></button>
+					<!-- <span class="login_btn_txt">LOG IN</span> -->
+				</div>
+			</form>
+			<div class="right_section_6">
+				<span class="forgot_txt">FORGOT PASSWORD?</span>
+			</div>
+
+		</div>
+	</div>
+
+
 </body>
+
 </html>
