@@ -83,14 +83,30 @@ body {
 .signin_txt {
   width: 200px;
   color: #000;
-  position: absolute;
-  top: 96px;
-  left: 50px;
+  position: relative;
+  /* top: 96px;
+  left: 50px; */
   font-family: Futura;
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
   text-align: left;
+}
+.signin_btn{
+  position: absolute;
+  top: 96px;
+  left: 42px;
+  background-color: white;
+  border: none;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  transition: 900ms;
+}
+
+.signin_btn:hover{
+  cursor: pointer;
+  transform: scale(1.05)
 }
 
 .signin_underline {
@@ -99,26 +115,51 @@ body {
   background: #ECAF88;
   opacity: 1;
   position: absolute;
-  top: 130px;
+  top: 135px;
   left: 50px;
-  border-top-left-radius: 20px;
+  border-radius: 20px;
+  /* border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 20px; */
   overflow: hidden;
+  transition: 300ms ease-out;
+  z-index: 2;
+}
+.signin_underline_create{
+  position: absolute;
+  width: 255px;
+  height: 12px;
+  top: 135px;
+  left: 435px;
+
 }
 
 .create_txt {
   width: 300px;
   color: #000;
-  position: absolute;
-  top: 96px;
-  left: 400px;
+  position: relative;
+  /* top: 96px;
+  left: 400px; */
   font-family: Futura;
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
   text-align: left;
+}
+.create_btn{
+  position: absolute;
+  top: 96px;
+  left: 412px;
+  background-color: white;
+  border: none;
+  border: none;
+  outline: none;
+  transition: 900ms;
+}
+.create_btn:hover{
+  cursor: pointer;
+  transform: scale(1.05)
 }
 
 .login_input {
@@ -219,6 +260,10 @@ body {
   overflow: hidden;
 }
 
+.logout_checkbox:checked{
+  color: white;
+}
+
 .logout_txt {
   width: 200px;
   color: rgba(0,0,0,1);
@@ -238,7 +283,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  opacity: 1;
+  opacity: 0.5;
   position: absolute;
   background: rgba(236,175,136,0.25);
   top: 600px;
@@ -248,7 +293,14 @@ body {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   overflow: hidden;
+  border: none;
   
+}
+.login_btn:enabled{
+  cursor: pointer;
+}
+.login_btn:enabled:hover{
+  transform: scale(1.03);
 }
 
 .login_btn_txt {
@@ -257,6 +309,7 @@ body {
   position: absolute;
   top: 15px;
   left: 90px;
+  opacity: 0.2;
   font-family: Futura-Bold;
   font-weight: Regular;
   font-size: 30px;
@@ -276,4 +329,8 @@ body {
   font-size: 15px;
   opacity: 1;
   text-align: left;
+}
+.forgot_txt:hover{
+  
+  cursor: pointer;
 }

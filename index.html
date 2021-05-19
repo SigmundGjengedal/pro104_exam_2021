@@ -23,41 +23,40 @@
       
       <div class="right_half">
       <div class="right_section_1">
-       <span class="signin_txt">SIGN IN</span>
+       <button class="signin_btn"><span class="signin_txt">SIGN IN</span></button>
       <div class="signin_underline"></div>   
       </div>
           <div class="right_section_2">
-          <span class="create_txt">CREATE ACCOUNT</span>
+          <button class="create_btn"><span class="create_txt">CREATE ACCOUNT</span></button>
           </div>
-          <form action="/dashboard.html">
+          <form action="/dashboard.html" id="form">
           <div class="right_section_3">
 			<input type="text" class="login_input" placeholder="EMAIL, PHONE OR USERNAME" minlength="3" size="30" required>
 			<div class="login_input_underline_inactive"></div>
 			<div class="login_input_underline_active"></div>
 			
 			<input type="password" class="login_password" placeholder="PASSWORD" minlength="2" size="30" required>
-			<i class="fa fa-eye-slash" id="toggle_password_eye"></i>
+			<i class="far fa-eye" id="toggle_password_eye"></i>
 			<div class="login_password_underline_inactive"></div>
 			<div class="login_password_underline_active"></div>
           </div>
           
           <div class="right_section_4">
-              <div class="logout_checkbox"></div>
+              <input type="checkbox" class="logout_checkbox">
               <span class="logout_txt">LOG ME OUT AFTER</span>
           </div>
           
           <div class="right_section_5">
-            <button type="submit" class="login_btn"><span class="login_btn_txt">LOG IN</span></button>
-              <!-- <span class="login_btn_txt">LOG IN</span> -->
+            <button type="submit" class="login_btn"><span class="login_btn_txt" >LOG IN</span></button>
           </div>
           </form>
           <div class="right_section_6">
-           <span class="forgot_txt">FORGOT PASSWORD?</span>
+           <a><span class="forgot_txt" onclick="alert('ditt passord er: *****')">FORGOT PASSWORD?</span></a>
           </div>
           
       </div>
   </div>
     
-    
+    <script src="Scripts/Modules/test.js"></script>
 </body>
 </html>
