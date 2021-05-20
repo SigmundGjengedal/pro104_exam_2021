@@ -89,7 +89,6 @@ body {
   background: #ECAF88;
   border-radius: 20px;
   transition: 300ms ease-out;
-
 }
 
 .create_underline {
@@ -119,6 +118,8 @@ body {
   font-weight: Bold;
   font-size: 2vw;
 }
+
+/* Logg inn delen med username, passord og checkbox */
 
 .right_section_3{
   position: absolute;
@@ -250,4 +251,83 @@ left:20%;
   font-size: 15px;
   text-decoration: none;
   color:#000;
+}
+
+@media screen and (max-width: 1024px) {
+  .left_half{
+    display: none;
+  }
+
+  .right_half{
+    position: absolute;
+    width: 100%;
+  }
+
+  .signin_underline {
+    width: 16vw;
+  }
+
+  .create_underline {
+    width: 40vw;
+  }
+
+  .login_input_underline_inactive {
+    width: 600px;
+  }
+
+  .login_password_underline_inactive{
+    width: 600px;
+  }
+
+  .login_password {
+    font-size: 35px;
+  }
+
+  .login_input {
+    font-size: 35px;
+  }
+
+
+  .logout_txt {
+    font-size: 20px;
+  }
+
+  .logout_checkbox {
+    width: 24px;
+    height: 22px;
+    border: 3px solid;
+    overflow: hidden;
+    display:inline-block;
+    vertical-align:bottom;
+  }
+
+
+
+  #toggle_password_eye {
+  position: relative;
+  left:80%;
+
+  }
+
+  .signin_txt {
+    font-size: 4vw;
+  }
+
+  .create_txt {
+    font-size: 4vw;
+  }
+
+
+
+  .login_btn {
+    width: 400px;
+    height: 80px;
+  }
+
+
+
+
+
+
+
 }
