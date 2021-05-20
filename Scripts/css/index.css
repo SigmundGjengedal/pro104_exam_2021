@@ -161,12 +161,26 @@ body {
   overflow: hidden;
 }
 
-.login_input_underline_active {
+.login_input_underline_active_from {
+  position: relative;
+  bottom: 6px;
   width: 0px;
   height: 6px;
   background: #ECAF88;
   opacity: 1;
   overflow: hidden;
+  transition-property: width;
+  transition-duration: 600ms;
+}
+
+.login_input_underline_active_to {
+  width: 364px;
+  height: 6px;
+  background: #ECAF88;
+  opacity: 1;
+  overflow: hidden;
+  transition-property: width;
+  transition-duration: 600ms;
 }
 
 ::placeholder{
@@ -193,11 +207,34 @@ body {
   overflow: hidden;
 }
 
-.login_password_underline_active {
+.login_password_underline_active_from {
+  position: relative;
+  bottom: 6px;
   width: 0px;
   height: 6px;
   background:#ECAF88;
   overflow: hidden;
+  transition-property: width;
+  transition-duration: 600ms;
+}
+
+.login_password_underline_active_to {
+  width: 364px;
+  height: 6px;
+  background: #ECAF88;
+  opacity: 1;
+  overflow: hidden;
+  transition-property: width;
+  transition-duration: 600ms;
+}
+
+.login_green {
+  width: 364px;
+  height: 6px;
+  background: #88eca9;
+  opacity: 1;
+  overflow: hidden;
+
 }
 
 #toggle_password_eye {
