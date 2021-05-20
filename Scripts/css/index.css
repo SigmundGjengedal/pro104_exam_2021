@@ -13,10 +13,11 @@ body {
 .split_screen{
   height: 100vh;
   display: flex;
+  width: 100%;
 }
 
+/* Venstre side*/
 .left_half {
-  flex-grow: 1;
   background:#000;
   position:relative;
   height: 100vh;
@@ -31,19 +32,21 @@ body {
   transform:translate(-50%, -50%);
   font-family: Futura;
   font-weight: Bold;
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 
 .name_txt {
+  color: #FFF;
   position: absolute;
   top: 60%;
   left: 50%;
   transform:translate(-50%, -50%);
   font-family: Futura;
   font-weight: Bold;
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 
+/* Høyre side*/
 .right_half{
   width: 50%;
   background:#FFF;
@@ -53,10 +56,10 @@ body {
 
 .right_section_1{
   position: absolute;
-  position: relative;
   top: 10%;
   left: 10%;
 }
+
 .right_section_2{
   position: absolute;
   top: 10%;
@@ -65,8 +68,6 @@ body {
 
 .signin_btn{
   background-color: white;
-  border: none;
-  margin-bottom: 10px;
   border: none;
   outline: none;
   transition: 900ms;
@@ -83,21 +84,20 @@ body {
   font-size: 2vw;
 }
 
-
 .signin_underline {
   width: 8vw;
   height: 12px;
   background: #ECAF88;
-  opacity: 1;
   border-radius: 20px;
   transition: 300ms ease-out;
-  z-index: 2;
+  margin-top: 5px;
 }
+
 .signin_underline_create{
   position: absolute;
   width: 30vh;
   height: 12px;
-  left:42%;
+  left:250%;
 }
 
 .create_btn{
