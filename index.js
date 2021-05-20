@@ -1,6 +1,7 @@
 
 const loginBtn = document.querySelector(".login_btn")
 const signinUnderline = document.querySelector(".signin_underline");
+const createUnderline = document.querySelector(".create_underline");
 const signInBtn = document.querySelector(".signin_btn");
 const createBtn = document.querySelector(".create_btn");
 
@@ -10,7 +11,11 @@ const usernameInput = document.querySelector(".login_input");
 const form = document.querySelector("#form")
 const nameTxt = document.querySelector(".name_txt");
 
+<<<<<<< HEAD
 
+=======
+// Test
+>>>>>>> loginVeljko
 const passwordEye = document.querySelector("#toggle_password_eye");
 
 
@@ -18,13 +23,16 @@ const passwordEye = document.querySelector("#toggle_password_eye");
 //funksjon for sign in / create underline
 //dette kan vel kombineres til kortere kode
 
-createBtn.addEventListener("click", function(){
-    signinUnderline.classList.toggle("signin_underline_create")
-})
 signInBtn.addEventListener("click", function(){
-    signinUnderline.classList.toggle("signin_underline_create")
+   signinUnderline.style.display="block";
+   createUnderline.style.display="none";
 })
 
+createBtn.addEventListener("click", function(){
+  signinUnderline.style.display="none";
+  createUnderline.style.display="block";
+
+})
 
 //Button starter som disabled, når minimum-length på passord
 //og brukernavn er tastet inn blir knappen aktivert.
@@ -55,11 +63,15 @@ passwordEye.addEventListener("click", function(e){
 usernameInput.addEventListener("focusout", () => {
     if (usernameInput.value.length > 4){
         nameTxt.style.color = "#FFF";
-        nameTxt.textContent = capitalizeFirstLetter(usernameInput.value);
+        nameTxt.textContent = usernameInput.value.toUpperCase();
     }
 }
+<<<<<<< HEAD
 );
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
+=======
+)
+>>>>>>> loginVeljko
