@@ -58,8 +58,8 @@ usernameInput.addEventListener("focusout", () => {
         nameTxt.textContent = capitalizeFirstLetter(usernameInput.value);
     }
 }
-)
+);
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
-}
+};
