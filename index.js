@@ -11,11 +11,7 @@ const usernameInput = document.querySelector(".login_input");
 const form = document.querySelector("#form")
 const nameTxt = document.querySelector(".name_txt");
 
-<<<<<<< HEAD
 
-=======
-// Test
->>>>>>> loginVeljko
 const passwordEye = document.querySelector("#toggle_password_eye");
 
 
@@ -66,12 +62,4 @@ usernameInput.addEventListener("focusout", () => {
         nameTxt.textContent = usernameInput.value.toUpperCase();
     }
 }
-<<<<<<< HEAD
-);
-
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-};
-=======
 )
->>>>>>> loginVeljko
