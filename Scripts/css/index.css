@@ -53,6 +53,7 @@ body {
 
 .right_section_1{
   position: absolute;
+  position: relative;
   top: 10%;
   left: 10%;
 }
@@ -62,18 +63,54 @@ body {
   right:10%;
 }
 
+.signin_btn{
+  background-color: white;
+  border: none;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  transition: 900ms;
+}
+
+.signin_btn:hover{
+  cursor: pointer;
+  transform: scale(1.05)
+}
+
 .signin_txt {
   font-family: Futura;
   font-weight: Bold;
   font-size: 2vw;
 }
 
+
 .signin_underline {
   width: 8vw;
   height: 12px;
   background: #ECAF88;
-  position: absolute;
+  opacity: 1;
   border-radius: 20px;
+  transition: 300ms ease-out;
+  z-index: 2;
+}
+.signin_underline_create{
+  position: absolute;
+  width: 30vh;
+  height: 12px;
+  left:42%;
+}
+
+.create_btn{
+  background-color: white;
+  border: none;
+  border: none;
+  outline: none;
+  transition: 900ms ease-out;
+}
+
+.create_btn:hover{
+  cursor: pointer;
+  transform: scale(1.05)
 }
 
 .create_txt {
@@ -115,7 +152,7 @@ body {
 }
 
 ::placeholder{
-  color: black;
+  color: #c4c4c4;
 }
 
 .password_div{
@@ -123,7 +160,6 @@ body {
 }
 
 .login_password {
-  /* width: 360px; */
   height: 30px;
   font-family: Futura-Bold;
   font-weight: Regular;
@@ -144,6 +180,9 @@ body {
   height: 6px;
   background:#ECAF88;
   overflow: hidden;
+}
+
+#toggle_password_eye {
 }
 
 .logout_checkbox {
@@ -168,6 +207,15 @@ body {
   height: 64px;
   background: rgba(236,175,136,0.25);
   border-radius: 50px;
+  opacity: 0.2;
+  border:none;
+}
+
+.login_btn:enabled{
+  cursor: pointer;
+}
+.login_btn:enabled:hover{
+  transform: scale(1.03);
 }
 
 .login_button{

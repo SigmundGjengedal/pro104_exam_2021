@@ -13,7 +13,6 @@
 
 <body>
 
-
 	<main class="split_screen">
 		<div class="left_half">
 			<div class="left_section_1">
@@ -29,16 +28,17 @@
 		<div class="right_half">
 
 			<div class="right_section_1">
-				<span class="signin_txt">SIGN IN</span>
+				<button class="signin_btn"><span class="signin_txt">SIGN IN</span></button>
 				<div class="signin_underline"></div>
 			</div>
 			<div class="right_section_2">
-				<span class="create_txt">CREATE ACCOUNT</span>
+				<button class="create_btn"><span class="create_txt">CREATE ACCOUNT</span></button>
 			</div>
 
-			<form action="/dashboard.html">
+			<form action="/dashboard.html" id="form">
 
 				<div class="right_section_3">
+
 
 					<section class="login_div">
 						<input type="text" class="login_input" placeholder="EMAIL, PHONE OR USERNAME" minlength="3" size="30" required>
@@ -48,13 +48,13 @@
 
 					<section class="password_div">
 					<input type="password" class="login_password" placeholder="PASSWORD" minlength="2" size="30" required>
-					<i class="fa fa-eye-slash"></i>
+					<i id="toggle_password_eye" class="far fa-eye"></i>
 					<div class="login_password_underline_inactive"></div>
 					<div class="login_password_underline_active"></div>
 					</section>
 
 					<section class="logout_div">
-						<div class="logout_checkbox"></div>
+						<input type="checkbox" class="logout_checkbox">
 						<span class="logout_txt">LOG ME OUT AFTER</span>
 					</section>
 
