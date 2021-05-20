@@ -234,7 +234,6 @@ body {
   background: #88eca9;
   opacity: 1;
   overflow: hidden;
-
 }
 
 #toggle_password_eye {
@@ -370,11 +369,23 @@ left:20%;
     font-size: 4vw;
   }
 
-
-
   .login_btn {
     width: 400px;
     height: 80px;
   }
+
+  .login_green {
+    width: 600px;
+  }
+
+  .login_password_underline_active_to {
+    width: 600px;
+  }
+
+  .login_input_underline_active_to {
+    width: 600px;
+  }
+
+
 
 }
