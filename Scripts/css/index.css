@@ -129,7 +129,6 @@ body {
 .signin_underline_create{
   position: absolute;
   width: 255px;
-  height: 12px;
   top: 135px;
   left: 435px;
 
@@ -199,7 +198,7 @@ body {
   overflow: hidden;
 }
 ::placeholder{
-  color: black;
+  color: #C4C4C4
 }
 
 .login_password {
@@ -219,8 +218,12 @@ body {
 }
 #toggle_password_eye {
   position: absolute;
-  left: 547px;
+  left: 647px;
   top: 405px;
+}
+.test{
+  background: yellow !important
+
 }
 
 
@@ -233,7 +236,10 @@ body {
   top: 430px;
   left: 200px;
   overflow: hidden;
+  transform: 2s;
+  transform-origin: left;
 }
+
 
 .login_password_underline_active {
   width: 1px;
@@ -283,7 +289,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.2;
   position: absolute;
   background: rgba(236,175,136,0.25);
   top: 600px;
@@ -309,7 +315,6 @@ body {
   position: absolute;
   top: 15px;
   left: 90px;
-  opacity: 0.2;
   font-family: Futura-Bold;
   font-weight: Regular;
   font-size: 30px;

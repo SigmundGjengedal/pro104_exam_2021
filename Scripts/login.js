@@ -21,28 +21,29 @@ signInBtn.addEventListener("click", function(){
 
 
 
+
+
 //Button starter som disabled, når minimum-length på passord
 //og brukernavn er tastet inn blir knappen aktivert.
 loginBtn.disabled = true;
-
 form.addEventListener("keyup", function(){
     let username = usernameInput.value;
     let password = passwordInput.value;
     if(username.length > 2 && password.length > 2){
         loginBtn.disabled = false;
         loginBtn.style.opacity = "1";
-        btnText.style.opacity = "1";
-
+    }else {
+        loginBtn.disabled = true;
+        loginBtn.style.opacity = "0.2";
     }
 })
 
 
-//Toggle vising av passord. classList togglen av ikonet funker ikke. 
+//Toggle vising av passord.
 passwordEye.addEventListener("click", function(e){
     const type = passwordInput.getAttribute("type") === 'password' ? "text" : "password";
     passwordInput.setAttribute("type", type);
-    passwordEye.classsList.toggle("fa-eye-slash");
-    passwordEye.classList.toggle("fa-eye-slash");
+    passwordEye.classList.toggle("fa-eye");
 })
 
 
