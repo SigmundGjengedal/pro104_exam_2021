@@ -34,6 +34,7 @@ createBtn.addEventListener("click", function(){
 
 //Button starter som disabled, når minimum-length på passord
 //og brukernavn er tastet inn blir knappen aktivert.
+//angir farger til linjer under passord og brukernavn
 loginBtn.disabled = true;
 form.addEventListener("keyup", function(){
     let username = usernameInput.value;
