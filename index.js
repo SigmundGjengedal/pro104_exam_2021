@@ -10,6 +10,7 @@ const usernameInput = document.querySelector(".login_input");
 const form = document.querySelector("#form")
 
 const passwordEye = document.querySelector("#toggle_password_eye");
+const nameTxt = document.querySelector(".name_txt");
 
 
 
@@ -47,3 +48,13 @@ passwordEye.addEventListener("click", function(e){
     passwordInput.setAttribute("type", type);
     passwordEye.classList.toggle("fa-eye-slash");
 })
+
+
+//funksjon for å vise "brukernavnet" på venstre side
+usernameInput.addEventListener("focusout", () => {
+    if (usernameInput.value.length > 4){
+        nameTxt.style.color = "#FFF";
+        nameTxt.textContent = usernameInput.value;
+    }
+}
+)
