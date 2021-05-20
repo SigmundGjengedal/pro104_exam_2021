@@ -62,4 +62,28 @@ usernameInput.addEventListener("focusout", () => {
         nameTxt.textContent = usernameInput.value.toUpperCase();
     }
 }
-)
+);
+
+//Flytte "placeholder text"
+usernameInput.addEventListener("focus", () =>{
+    document.querySelector(".login_username_label").style.visibility= "visible";
+    usernameInput.setAttribute('placeholder', '');
+
+} )
+usernameInput.addEventListener("focusout", () => {
+    document.querySelector(".login_username_label").style.visibility= "hidden";
+    usernameInput.setAttribute('placeholder', 'USERNAME');
+})
+
+passwordInput.addEventListener("focus", () =>{
+    document.querySelector(".login_password_label").style.visibility= "visible";
+    passwordInput.setAttribute('placeholder', '');
+
+} )
+passwordInput.addEventListener("focusout", () => {
+    document.querySelector(".login_password_label").style.visibility= "hidden";
+    passwordInput.setAttribute('placeholder', 'PASSWORD');
+})
+
+//Slutt på placeholder-moving.
+
