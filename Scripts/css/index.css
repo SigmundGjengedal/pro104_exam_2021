@@ -136,6 +136,22 @@ body {
   border: none;
   outline: none;
 }
+.login_username_label{
+  position: absolute;
+  visibility:hidden;
+  font-family: Futura;
+  font-weight: lighter;
+  font-size: 13px;
+  top: -15px;
+}
+.login_password_label{
+  position: absolute;
+  visibility: hidden;
+  font-family: Futura;
+  font-weight: Regular;
+  font-size: 13px;
+  bottom: 91px;
+}
 
 .login_input_underline_inactive {
   width: 364px;
