@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +7,7 @@ body {
   font-size: 14px;
   padding: 0;
   margin: 0;
+  color: #000;
 }
 
 .split_screen{
@@ -15,10 +17,10 @@ body {
 
 .left_half {
   flex-grow: 1;
-  max-width: 50%;
   background:#000;
   position:relative;
   height: 100vh;
+  width: 50%;
 }
 
 .welcome_txt {
@@ -29,68 +31,69 @@ body {
   transform:translate(-50%, -50%);
   font-family: Futura;
   font-weight: Bold;
-  font-size: 40px;
+  font-size: 3vw;
 }
 
 .name_txt {
-  color: #000;
   position: absolute;
   top: 60%;
   left: 50%;
   transform:translate(-50%, -50%);
   font-family: Futura;
   font-weight: Bold;
-  font-size: 40px;
+  font-size: 3vw;
 }
 
 .right_half{
-  max-width: 50%;
+  width: 50%;
   background:#FFF;
-  position: relative;
   height: 100vh;
+  position: relative;
+}
+
+.right_section_1{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.right_section_2{
+  position: absolute;
+  top: 10%;
+  right:10%;
 }
 
 .signin_txt {
-  width: 200px;
-  color: #000;
-  position: absolute;
-  top: 96px;
-  left: 50px;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 30px;
+  font-size: 2vw;
 }
 
 .signin_underline {
-  width: 115px;
+  width: 8vw;
   height: 12px;
   background: #ECAF88;
   position: absolute;
-  top: 130px;
-  left: 50px;
   border-radius: 20px;
 }
 
 .create_txt {
-  width: 300px;
-  color: #000;
-  position: absolute;
-  top: 96px;
-  left: 400px;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 30px;
+  font-size: 2vw;
+}
+
+.right_section_3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
 }
 
 .login_input {
-  /* width: 250px; */
-  color: #000;
-  position: absolute;
-  top: 310px;
-  left: 200px;
   font-family: Futura-Bold;
   font-weight: Regular;
   font-size: 15px;
+  height: 30px;
   border: none;
   outline: none;
 }
@@ -100,119 +103,100 @@ body {
   height: 6px;
   background: #000;
   opacity: 1;
-  position: absolute;
-  top: 340px;
-  left: 200px;
   overflow: hidden;
 }
 
 .login_input_underline_active {
-  width: 1px;
+  width: 0px;
   height: 6px;
   background: #ECAF88;
   opacity: 1;
-  position: absolute;
-  top: 340px;
-  left: 200px;
   overflow: hidden;
 }
+
 ::placeholder{
   color: black;
+}
+
+.password_div{
+  margin:10% 0 5%;
 }
 
 .login_password {
   /* width: 360px; */
   height: 30px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 400px;
-  left: 200px;
   font-family: Futura-Bold;
   font-weight: Regular;
   font-size: 15px;
   border: none;
   outline: none;
 }
-#toggle_password_eye {
-  position: absolute;
-  left: 547px;
-  top: 405px;
-}
-
 
 .login_password_underline_inactive{
   width: 364px;
   height: 6px;
-  background: rgba(0,0,0,1);
-  position: absolute;
-  top: 430px;
-  left: 200px;
+  background: #000;
   overflow: hidden;
 }
 
 .login_password_underline_active {
-  width: 1px;
+  width: 0px;
   height: 6px;
   background:#ECAF88;
-  position: absolute;
-  top: 430px;
-  left: 200px;
   overflow: hidden;
 }
 
 .logout_checkbox {
   width: 24px;
   height: 22px;
-  position: absolute;
-  top: 473px;
-  left: 200px;
-  border: 3px solid rgba(0,0,0,1);
+  border: 3px solid;
   overflow: hidden;
+  display:inline-block;
+  vertical-align:middle;
 }
 
 .logout_txt {
   width: 200px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 476px;
-  left: 230px;
   font-family: Futura-Bold;
   font-weight: Regular;
   font-size: 15px;
   opacity: 1;
-  text-align: left;
 }
 
 .login_btn {
   width: 300px;
   height: 64px;
-  position: absolute;
   background: rgba(236,175,136,0.25);
-  top: 600px;
-  left: 230px;
   border-radius: 50px;
+}
+
+.login_button{
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translate(-50%,-15%);
 }
 
 .login_btn_txt {
   width: 200px;
   color: rgba(0,0,0,0.6000000238418579);
-  position: absolute;
-  top: 15px;
-  left: 90px;
   font-family: Futura-Bold;
   font-weight: Regular;
   font-size: 30px;
   text-align: left;
 }
 
+.forgot_div{
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%,-10%);
+}
 
 .forgot_txt {
-  width: 200px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 750px;
-  left: 300px;
   font-family: Futura-Bold;
   font-weight: Regular;
   font-size: 15px;
+  text-decoration: none;
+  color:#000;
 }
