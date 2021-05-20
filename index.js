@@ -87,3 +87,5 @@ passwordInput.addEventListener("focusout", () => {
     passwordInput.setAttribute('placeholder', 'PASSWORD');
 })
 
+//Slutt på placeholder-moving.
+
