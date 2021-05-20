@@ -32,7 +32,7 @@ loginBtn.disabled = true;
 form.addEventListener("keyup", function(){
     let username = usernameInput.value;
     let password = passwordInput.value;
-    if(username.length > 2 && password.length > 2){
+    if(username.length > 5 && password.length > 5){
         loginBtn.disabled = false;
         loginBtn.style.opacity = "1";
     }else {
@@ -54,6 +54,8 @@ passwordEye.addEventListener("click", function(e){
 //Funksjon for å vise "brukernavnet" på venstre side
 usernameInput.addEventListener("focusout", () => {
     if (usernameInput.value.length > 4){
+
+
         nameTxt.style.color = "#FFF";
         nameTxt.textContent = capitalizeFirstLetter(usernameInput.value);
     }
@@ -63,3 +65,25 @@ usernameInput.addEventListener("focusout", () => {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
+
+//Flytte "placeholder text"
+usernameInput.addEventListener("focus", () =>{
+    document.querySelector(".login_username_label").style.visibility= "visible";
+    usernameInput.setAttribute('placeholder', '');
+
+} )
+usernameInput.addEventListener("focusout", () => {
+    document.querySelector(".login_username_label").style.visibility= "hidden";
+    usernameInput.setAttribute('placeholder', 'USERNAME');
+})
+
+passwordInput.addEventListener("focus", () =>{
+    document.querySelector(".login_password_label").style.visibility= "visible";
+    passwordInput.setAttribute('placeholder', '');
+
+} )
+passwordInput.addEventListener("focusout", () => {
+    document.querySelector(".login_password_label").style.visibility= "hidden";
+    passwordInput.setAttribute('placeholder', 'PASSWORD');
+})
+
