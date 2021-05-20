@@ -9,8 +9,8 @@ const passwordInput = document.querySelector(".login_password");
 const usernameInput = document.querySelector(".login_input");
 const form = document.querySelector("#form")
 
+
 const passwordEye = document.querySelector("#toggle_password_eye");
-const nameTxt = document.querySelector(".name_txt");
 
 
 
@@ -50,11 +50,15 @@ passwordEye.addEventListener("click", function(e){
 })
 
 
-//funksjon for å vise "brukernavnet" på venstre side
+//Funksjon for å vise "brukernavnet" på venstre side
 usernameInput.addEventListener("focusout", () => {
     if (usernameInput.value.length > 4){
         nameTxt.style.color = "#FFF";
-        nameTxt.textContent = usernameInput.value;
+        nameTxt.textContent = capitalizeFirstLetter(usernameInput.value);
     }
 }
 )
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
