@@ -13,6 +13,8 @@ const nameTxt = document.querySelector(".name_txt");
 
 
 const passwordEye = document.querySelector("#toggle_password_eye");
+const userNameUnderlineActive = document.querySelector(".login_input_underline_active_from");
+const passwordUnderlineActive = document.querySelector(".login_password_underline_active_from");
 
 
 
@@ -39,9 +41,13 @@ form.addEventListener("keyup", function(){
     if(username.length > 8 && password.length > 8){
         loginBtn.disabled = false;
         loginBtn.style.opacity = "1";
+        userNameUnderlineActive.classList.add('login_green');
+        passwordUnderlineActive.classList.add('login_green');
     }else {
         loginBtn.disabled = true;
         loginBtn.style.opacity = "0.2";
+        userNameUnderlineActive.classList.remove('login_green');
+        passwordUnderlineActive.classList.remove('login_green');
     }
 })
 
@@ -85,46 +91,21 @@ passwordInput.addEventListener("focusout", () => {
     passwordInput.setAttribute('placeholder', 'PASSWORD');
 })
 
-//Slutt på placeholder-moving.
-
-
 
 // farge transition for username linje
-const loginInput = document.querySelector('.login_input');
-const userNameUnderlineActive = document.querySelector(".login_input_underline_active_from");
-
-loginInput.addEventListener('focus', function (e) {
+usernameInput.addEventListener('focus', function (e) {
     userNameUnderlineActive.classList.add('login_input_underline_active_to');
   });
 
-loginInput.addEventListener('focusout', function (e) {
+usernameInput.addEventListener('focusout', function (e) {
     userNameUnderlineActive.classList.remove('login_input_underline_active_to');
-
   });
 
   // farge transition for passordlinje
-
-  const passwordLoginInput = document.querySelector(".login_password");
-  const passwordUnderlineActive = document.querySelector(".login_password_underline_active_from");
-
-  passwordLoginInput.addEventListener('focus', function (e) {
+  passwordInput.addEventListener('focus', function (e) {
       passwordUnderlineActive.classList.add('login_password_underline_active_to');
   } );
 
-  passwordLoginInput.addEventListener('focusout', function (e) {
+  passwordInput.addEventListener('focusout', function (e) {
     passwordUnderlineActive.classList.remove('login_password_underline_active_to');
 } );
-
-// for å gjøre grønn om både username og password er større en 8.
-  form.addEventListener("keyup", function (e) {
-    let username = loginInput.value;
-    let password = passwordLoginInput.value;
-    if(username.length > 8 && password.length > 8){
-      userNameUnderlineActive.classList.add('login_green');
-      passwordUnderlineActive.classList.add('login_green');
-    }
-    else{
-      userNameUnderlineActive.classList.remove('login_green');
-      passwordUnderlineActive.classList.remove('login_green');
-    }
-  })
