@@ -140,16 +140,16 @@ body {
   position: absolute;
   visibility:hidden;
   font-family: Futura;
-  font-weight: lighter;
-  font-size: 13px;
+  font-weight:normal;
+  font-size: 15px;
   top: -15px;
 }
 .login_password_label{
   position: absolute;
   visibility: hidden;
   font-family: Futura;
-  font-weight: Regular;
-  font-size: 13px;
+  font-weight: normal;
+  font-size: 15px;
   bottom: 91px;
 }
 
