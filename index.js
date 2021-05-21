@@ -56,6 +56,19 @@ form.addEventListener("keyup", function(){
 });
 
 
+<<<<<<< HEAD
+=======
+  console.log(username);
+  console.log(password);
+
+
+//   if(username > 3 && password > 3){
+//     window.location.href="html-dashboard.html";
+//   }else{
+//     alert("sender deg ikke");
+//   }
+});
+>>>>>>> 0e201525147f7281482bb170f1e7142ea34b4b2d
 
 
 

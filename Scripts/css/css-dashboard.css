@@ -510,7 +510,15 @@ body {
   /* Bilde skal komme her */
 }
 
-
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.8); /*dim the background*/
+}
 
 .private_messages_container {
   width: 100%;
@@ -529,14 +537,7 @@ body {
   transition: 1s ease-out;
   font-size: 16px;
 }
-.message_1_expanded{
-  top:1%;
-  left: -1000px;
-  height: 50vh;
-  width: 70vw;
-  font-size: 32px;
 
-}
 .message_1_background {
   width: 85%;
   height: 100%;
@@ -587,7 +588,10 @@ body {
   position: absolute;
   top: 47%;
   left: 23%;
+  transition: 1s ease-in-out;
+  font-size: 16px;
 }
+
 .message_2_background {
   width: 85%;
   height: 100%;
@@ -612,7 +616,7 @@ body {
   left: 23%;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 12px;
+  font-size: 0.7em;
 }
 .message_2_department {
   width: 40%;
@@ -621,7 +625,7 @@ body {
   left: 23.5%;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 9px;
+  font-size: 0.6em;
 }
 .message_2_txt {
   width: 80%;
@@ -630,7 +634,7 @@ body {
   left: 7%;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 9px;
+  font-size: 0.5em;
 }
 .message_3 {
   width: 90%;
@@ -638,6 +642,8 @@ body {
   position: absolute;
   top: 73%;
   left: 23%;
+  transition:1s ease-in-out;
+  font-size: 16px;
 }
 .message_3_background {
   width: 85%;
@@ -663,7 +669,7 @@ body {
   left: 23%;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 12px;
+  font-size: 0.7em;
 }
 .message_3_department {
   width: 40%;
@@ -672,7 +678,7 @@ body {
   left: 23.5%;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 9px;
+  font-size: 0.6em;
 }
 .message_3_txt {
   width: 80%;
@@ -681,7 +687,17 @@ body {
   left: 7%;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 9px;
+  font-size: 0.5em;
+}
+.expanded{
+  position: absolute;
+  top:1%;
+  left: -1000px;
+  height: 50vh;
+  width: 70vw;
+  font-size: 32px;
+  z-index: 2;
+
 }
 
 /* NAVBAR*/
