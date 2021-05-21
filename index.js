@@ -61,11 +61,11 @@ loginBtn.addEventListener("click", ()=>{
   console.log(password);
 
 
-  if(username > 3 && password > 3){
-    window.location.href="html-dashboard.html";
-  }else{
-    alert("sender deg ikke");
-  }
+//   if(username > 3 && password > 3){
+//     window.location.href="html-dashboard.html";
+//   }else{
+//     alert("sender deg ikke");
+//   }
 });
 
 
