@@ -895,41 +895,41 @@ body {
   font-size: 37px;
 }
 .home_line {
-  width: 0.7vw;
-  height: 9vh;
+  width: 0.4vw;
+  height: 13vh;
   background: #FFF;
   position: absolute;
-  top: 10%;
+  top: 6%;
   left: 60%;
 }
 
 .food_line {
-  width: 0.7vw;
-  height: 9vh;
+  width: 0.4vw;
+  height: 13vh;
   background: #FFF;
   position: absolute;
-  top: 30%;
+  top: 26%;
   left: 60%;
   display: none;
 }
 
 .employees_line {
-  width: 0.7vw;
-  height: 20vh;
+  width: 0.4vw;
+  height: 24vh;
   background: #FFF;
   position: absolute;
-  top: 51%;
+  top: 47%;
   left: 60%;
   display: none;
 
 }
 
 .sales_line{
-  width: 0.7vw;
-  height: 9vh;
+  width: 0.4vw;
+  height: 13vh;
   background: #FFF;
   position: absolute;
-  top:83%;
+  top:80%;
   left:60%;
   display: none;
 
