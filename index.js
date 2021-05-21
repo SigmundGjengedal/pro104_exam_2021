@@ -38,7 +38,7 @@ loginBtn.disabled = true;
 form.addEventListener("keyup", function(){
     let username = usernameInput.value;
     let password = passwordInput.value;
-    if(username.length > 8 && password.length > 8){
+    if(username.length > 3 && password.length > 3){
         loginBtn.disabled = false;
         loginBtn.style.opacity = "1";
         userNameUnderlineActive.classList.add('login_green');
@@ -63,7 +63,7 @@ passwordEye.addEventListener("click", function(e){
 
 //Funksjon for å vise "brukernavnet" på venstre side
 usernameInput.addEventListener("focusout", () => {
-    if (usernameInput.value.length > 4){
+    if (usernameInput.value.length > 3){
         nameTxt.style.color = "#FFF";
         nameTxt.textContent = usernameInput.value.toUpperCase();
     }
