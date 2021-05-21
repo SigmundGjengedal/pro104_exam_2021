@@ -30,7 +30,9 @@ createBtn.addEventListener("click", function(){
   signinUnderline.style.display="none";
   createUnderline.style.display="block";
 
-})
+});
+
+
 
 //Button starter som disabled, når minimum-length på passord
 //og brukernavn er tastet inn blir knappen aktivert.
@@ -53,20 +55,7 @@ form.addEventListener("keyup", function(){
 
 });
 
-loginBtn.addEventListener("click", ()=>{
-  let username = usernameInput.value;
-  let password = passwordInput.value;
 
-  console.log(username);
-  console.log(password);
-
-
-  if(username > 3 && password > 3){
-    window.location.href="html-dashboard.html";
-  }else{
-    alert("sender deg ikke");
-  }
-});
 
 
 
