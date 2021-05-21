@@ -364,7 +364,7 @@ body {
   position: absolute;
   top: 35%;
   left: 30%;
-  
+
 }
 .accomplished_number {
   color: #000;
@@ -676,24 +676,14 @@ body {
 
 /* NAVBAR*/
 .navbar_container {
-<<<<<<< HEAD
-  width: 110px;
-  height: 100%;
-=======
   width: 10%;
   height: 100vh;
->>>>>>> loginVeljko
   position: absolute;
   top: 0;
   left: 0;
 }
 .navbar_background {
-<<<<<<< HEAD
-  width: 110px;
-  height: 100%;
-=======
   height: 100vh;
->>>>>>> loginVeljko
   background: #FC7B61;
   border-top-right-radius: 90px;
   border-bottom-right-radius: 90px;
@@ -726,9 +716,9 @@ body {
 }
 
 .navbar_sales:hover{
-  cursor: pointer; 
+  cursor: pointer;
   font-size:37px;
-  
+
 }
 
 .navbar_employees_container {
@@ -752,7 +742,7 @@ body {
 }
 
 .navbar_employees:hover{
-  cursor: pointer; 
+  cursor: pointer;
   font-size:37px;
 }
 .navbar_food_container {
@@ -845,8 +835,3 @@ body {
   display: none;
 
 }
-
-
-
-
-
