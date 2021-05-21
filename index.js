@@ -50,7 +50,24 @@ form.addEventListener("keyup", function(){
         userNameUnderlineActive.classList.remove('login_green');
         passwordUnderlineActive.classList.remove('login_green');
     }
-})
+
+});
+
+loginBtn.addEventListener("click", ()=>{
+  let username = usernameInput.value;
+  let password = passwordInput.value;
+
+  if(username > 3 && password > 3){
+    window.location.href = "../html-dashboard.html";
+    alert("sender deg")
+  }else{
+    alert("sender deg ikke")
+  }
+});
+
+
+
+
 
 
 //Toggle vising av passord.
