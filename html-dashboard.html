@@ -5,6 +5,7 @@
   <link href="https://fonts.googleapis.com/css?family=Futura&display=swap" rel="stylesheet" />
   <link href="Scripts/css/css-dashboard.css" rel="stylesheet" />
   <script type="module" src="Scripts/counter.js"></script>
+  <script defer type="module" src="navbar.js" charset="utf-8"></script>
   <title>Document</title>
 </head>
 
@@ -79,7 +80,6 @@
         <span class="sales_0">0</span>
       </div>
     </div>
-  </div>
   </div>
 
   <div class="horizontal_line_container">
@@ -173,25 +173,31 @@
     </div>
   </div>
 
+  <!--navbar-->
   <div class="navbar_container">
     <div class="navbar_background">
+
       <div class="navbar_sales_container">
-        <span class="navbar_sales">SALES</span>
+        <a href="#"><span class="navbar_sales">SALES</span></a>
       </div>
 
       <div class="navbar_employees_container">
-        <span class="navbar_employees">EMPLOYEES</span>
+        <a href="#"><span class="navbar_employees">EMPLOYEES</span></a>
       </div>
 
       <div class="navbar_food_container">
-        <span class="navbar_food">FOOD</span>
+        <a href="#"><span class="navbar_food">FOOD</span></a> 
       </div>
 
       <div class="navbar_home_container">
-        <span class="navbar_home">HOME</span>
+        <a href="#"><span class="navbar_home">HOME</span></a> 
       </div>
 
-      <div class="navbar_line"></div>
+      <div class="home_line"></div>
+      <div class="food_line"></div>
+      <div class="employees_line"></div>
+      <div class="sales_line"></div>
+    
     </div>
   </div>
   </div>
