@@ -271,12 +271,11 @@ body {
   font-size: 15px;
 }
 .horizontal_line_container {
-  width: 80%;
+  width: 70%;
   height: 5%;
   position: absolute;
   top: 58%;
   left: 23%;
-  display:none;
 }
 .horizontal_line {
   width: 60%;
@@ -368,7 +367,6 @@ body {
 }
 .percent_accomplished {
   width: 50%;
-  height: 50%;
   position: absolute;
   top: 90%;
   left: 30%;
@@ -383,7 +381,7 @@ body {
 }
 .profit_container {
   width: 50%;
-  height: 50%;
+  height: 30%;
   position: absolute;
   top: 63%;
   left: 49%;
@@ -426,55 +424,13 @@ body {
   left: 20%;
 }
 .inbox_container {
-  width: 23.5%;
-  height: 100%;
-  position: absolute;
-  left: 76.5%;
-  display: none;
-}
-.inbox_background_container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 17%;
-}
-.inbox_background {
-  width: 100%;
-  height: 100%;
+  width: 20%;
+  height: 100vh;
+  position: relative;
+  left:80%;
   background: #ECAF88;
-  position: relative;
-  right: 5%;
 }
-.inbox_header_container {
-  width: 30%;
-  height: 30%;
-  position: absolute;
-  top: 20%;
-}
-.inbox_header_txt {
-  width: 50%;
-  color: #000;
-  position: absolute;
-  top: 25%;
-  right: 30%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 30px;
-}
-.profile_container {
-  width: 50%;
-  height: 20%;
-  position: absolute;
-  left: 48%;
-}
-.profile_picture {
-  background: blue;
-  width: 45%;
-  height: 45%;
-  position: relative;
-  top: 15%;
-  border-radius: 50%;
-}
+
 .standard_message_container {
   width: 33%;
   height: 10%;
@@ -486,7 +442,7 @@ body {
   width: 50%;
   color: #000;
   position: absolute;
-  left: 23%;
+  left: 50%
   font-family: Futura;
   font-weight: Bold;
   font-size: 12px;
@@ -496,37 +452,43 @@ body {
   color: #000;
   position: absolute;
   top: 30%;
-  right: 13%;
+  right:50%;
   font-family: Futura;
   font-weight: Bold;
   font-size: 12px;
   text-align: center;
 }
-.logout_container {
-  width: 20%;
-  height: 20%;
-  position: absolute;
-  top: 90%;
-  right: 27%;
-}
-.logout_background {
-  width: 65%;
-  height: 28%;
-  background: #FFF;
-  position: absolute;
-  border-radius: 10px;
-}
-.logout_icon {
-  background: url("images/logout.png");
+
+.inbox_header_txt {
   width: 50%;
-  height: 20%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  color: #000;
   position: absolute;
-  top: 5%;
-  left: 10%;
+  top: 25%;
+  right: 30%;
+  font-family: Futura;
+  font-weight: Bold;
+  font-size: 30px;
 }
+
+/* Må jobbe mere med, button er display none */
+
+.logout_container {
+
+  position: absolute;
+  bottom: 40px;
+}
+
+.logout_icon {
+/* Log ut knappen kommer her */
+}
+
+
+.profile_picture {
+  /* Bilde skal komme her */
+}
+
+
+
 .private_messages_container {
   width: 100%;
   height: 70%;
