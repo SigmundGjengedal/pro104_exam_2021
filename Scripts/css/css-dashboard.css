@@ -2,14 +2,12 @@
   box-sizing: border-box;
 }
 body {
-  max-width: 100%;
-  max-height: 100%;
   margin: 0;
   padding: 0;
 }
 .home_page_container {
-  width: 100%; /* BREDDEN PÅ SIDEN ER FOR STOR */
-  height: 1024px; /* FÅR IKKE ENDRET TIL PROSENT, SIDEN ER FOR HØY */
+  width: 100%;
+  height: 100vh;
   background: #FFF;
   position: absolute;
 }
@@ -21,7 +19,6 @@ body {
   left: 13%;
 }
 .top_page_title {
-  width: 50%;
   color: #000;
   font-family: Futura;
   font-weight: Bold;
@@ -38,110 +35,69 @@ body {
   width: 50%;
   color: #000;
   position: relative;
-  top: 5%;
-  left: 10%;
+  top: 12%;
+  left:15%;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 30px;
+  font-size: 25px;
 }
+
+
+/* Uke dagene under søyle diagramen */
 .week_container {
-  width: 100%;
+  width: 90%;
   height: 250px; /* FÅR IKKE ENDRET TIL PROSENT */
   position: absolute;
   top: 30%;
   left: 27.5%;
+
+
 }
 .week {
   width: 100%;
-  height: 50%;
   position: absolute;
   top: 75%;
-}
-.week_monday {
-  width: 10%;
   color: #A9A9A9;
-  position: absolute;
   font-family: Futura;
   font-weight: Bold;
   font-size: 16px;
+
 }
+
 .week_tuesday {
-  width: 10%;
-  color: #A9A9A9;
   position: absolute;
-  left: 8%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 16px;
+  left: 8.2%;
 }
+
 .week_wednesday {
-  width: 10%;
-  color: #A9A9A9;
   position: absolute;
-  left: 16.4%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 16px;
+  left: 18%;
 }
 .week_thursday {
-  width: 10%;
-  color: #A9A9A9;
   position: absolute;
-  left: 24.3%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 16px;
+  left: 26.5%;
 }
 .week_friday {
-  width: 10%;
-  color: #A9A9A9;
   position: absolute;
-  left: 32.6%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 16px;
+  left: 35.6%;
 }
 .week_saturday {
-  width: 10%;
-  color: #A9A9A9;
   position: absolute;
-  left: 40.2%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 16px;
+  left: 44.3%;
 }
 .week_sunday {
-  width: 10%;
-  color: #A9A9A9;
   position: absolute;
-  left: 48.5%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 16px;
+  left: 53.5%;
 }
-.last_week_container {
-  width: 70%;
-  height: 10%;
-  position: absolute;
-  top: 25%;
-  left: 80%;
-}
-.last_week {
-  width: 50%;
-  color: #A9A9A9;
-  position: relative;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 15px;
-  letter-spacing: 1px;
-}
+
+/* Søyle diagram */
 .diagrams_container {
   width: 53%;
   height: 150%;
   position: absolute;
   top: 30%;
   left: 25%;
-  
+
 }
 .diagram_1 {
   width: 50%;
@@ -153,28 +109,25 @@ body {
   width: 12.3%;
   height: 29%;
   background: #DEDEDE;
-  position: relative;
-  left: 0;
 }
 .diagram_1_filled {
   width: 12.3%;
   height: 28%;
   background: #FC7B61;
-  position: absolute;
-  top: 29%;
 }
 .diagram_2 {
   width: 50%;
   height: 50%;
   position: absolute;
   top: 1px;
-  left: 17%;
+  left: 14%;
 }
 .diagram_2_not_filled {
   width: 12.3%;
   height: 10%;
+
   background: #DEDEDE;
-  position: relative;
+
 }
 .diagram_2_filled {
   width: 12.3%;
@@ -193,15 +146,11 @@ body {
   width: 12.2%;
   height: 45%;
   background: #DEDEDE;
-  position: relative;
-  left: 0.2%;
 }
 .diagram_3_filled {
   width: 12.3%;
-  height: 12.5%;
+  height: 12%;
   background: #FC7B61;
-  position: absolute;
-  top: 44%;
 }
 .diagram_4 {
   width: 50%;
@@ -213,15 +162,11 @@ body {
   width: 12.3%;
   height: 20%;
   background: #DEDEDE;
-  position: relative;
-  left: 0;
 }
 .diagram_4_filled {
   width: 12.3%;
-  height: 38%;
+  height: 37%;
   background: #FC7B61;
-  position: absolute;
-  top: 18.5%;
 }
 .diagram_5 {
   width: 50%;
@@ -231,22 +176,18 @@ body {
 }
 .diagram_5_not_filled {
   width: 12.3%;
-  height: 0;
   background: #DEDEDE;
-  position: relative;
 }
 .diagram_5_filled {
   width: 12.3%;
   height: 56.5%;
   background: #FC7B61;
-  position: absolute;
 }
 .diagram_6 {
   width: 50%;
   height: 50%;
   position: absolute;
   left: 78%;
-  overflow: hidden;
 }
 .diagram_6_not_filled {
   width: 12.3%;
@@ -271,7 +212,6 @@ body {
   width: 12.3%;
   height: 10%;
   background: #DEDEDE;
-  position: relative;
 }
 .diagram_7_filled {
   width: 12.3%;
@@ -281,7 +221,6 @@ body {
   top: 10%;
 }
 .sales_numbers_container {
-  width: 30%;
   height: 48%;
   position: absolute;
   top: 27%;
@@ -332,7 +271,7 @@ body {
   font-size: 15px;
 }
 .horizontal_line_container {
-  width: 80%;
+  width: 70%;
   height: 5%;
   position: absolute;
   top: 58%;
@@ -347,7 +286,7 @@ body {
 }
 .vertical_line_container {
   width: 20%;
-  height: 50%;
+  height: 10%;
   position: absolute;
   top: 80%;
   left: 36%;
@@ -425,7 +364,7 @@ body {
   position: absolute;
   top: 35%;
   left: 30%;
-  
+
 }
 .accomplished_number {
   color: #000;
@@ -451,7 +390,6 @@ body {
 }
 .percent_accomplished {
   width: 50%;
-  height: 50%;
   position: absolute;
   top: 90%;
   left: 30%;
@@ -466,7 +404,7 @@ body {
 }
 .profit_container {
   width: 50%;
-  height: 50%;
+  height: 30%;
   position: absolute;
   top: 63%;
   left: 49%;
@@ -509,54 +447,13 @@ body {
   left: 20%;
 }
 .inbox_container {
-  width: 23.5%;
-  height: 100%;
-  position: absolute;
-  left: 76.5%;
-}
-.inbox_background_container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 17%;
-}
-.inbox_background {
-  width: 100%;
-  height: 100%;
+  width: 20%;
+  height: 100vh;
+  position: relative;
+  left:80%;
   background: #ECAF88;
-  position: relative;
-  right: 5%;
 }
-.inbox_header_container {
-  width: 30%;
-  height: 30%;
-  position: absolute;
-  top: 20%;
-}
-.inbox_header_txt {
-  width: 50%;
-  color: #000;
-  position: absolute;
-  top: 25%;
-  right: 30%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 30px;
-}
-.profile_container {
-  width: 50%;
-  height: 20%;
-  position: absolute;
-  left: 48%;
-}
-.profile_picture {
-  background: blue;
-  width: 45%;
-  height: 45%;
-  position: relative;
-  top: 15%;
-  border-radius: 50%;
-}
+
 .standard_message_container {
   width: 33%;
   height: 10%;
@@ -568,7 +465,7 @@ body {
   width: 50%;
   color: #000;
   position: absolute;
-  left: 23%;
+  left: 50%
   font-family: Futura;
   font-weight: Bold;
   font-size: 12px;
@@ -578,37 +475,43 @@ body {
   color: #000;
   position: absolute;
   top: 30%;
-  right: 13%;
+  right:50%;
   font-family: Futura;
   font-weight: Bold;
   font-size: 12px;
   text-align: center;
 }
-.logout_container {
-  width: 20%;
-  height: 20%;
-  position: absolute;
-  top: 90%;
-  right: 27%;
-}
-.logout_background {
-  width: 65%;
-  height: 28%;
-  background: #FFF;
-  position: absolute;
-  border-radius: 10px;
-}
-.logout_icon {
-  background: url("images/logout.png");
+
+.inbox_header_txt {
   width: 50%;
-  height: 20%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  color: #000;
   position: absolute;
-  top: 5%;
-  left: 10%;
+  top: 25%;
+  right: 30%;
+  font-family: Futura;
+  font-weight: Bold;
+  font-size: 30px;
 }
+
+/* Må jobbe mere med, button er display none */
+
+.logout_container {
+
+  position: absolute;
+  bottom: 40px;
+}
+
+.logout_icon {
+/* Log ut knappen kommer her */
+}
+
+
+.profile_picture {
+  /* Bilde skal komme her */
+}
+
+
+
 .private_messages_container {
   width: 100%;
   height: 70%;
@@ -773,17 +676,15 @@ body {
 
 /* NAVBAR*/
 .navbar_container {
-  width: 110px;
-  height: 100%;
+  width: 10%;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
 }
 .navbar_background {
-  width: 110px;
-  height: 100%;
+  height: 100vh;
   background: #FC7B61;
-  position: relative;
   border-top-right-radius: 90px;
   border-bottom-right-radius: 90px;
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
@@ -815,9 +716,9 @@ body {
 }
 
 .navbar_sales:hover{
-  cursor: pointer; 
+  cursor: pointer;
   font-size:37px;
-  
+
 }
 
 .navbar_employees_container {
@@ -841,7 +742,7 @@ body {
 }
 
 .navbar_employees:hover{
-  cursor: pointer; 
+  cursor: pointer;
   font-size:37px;
 }
 .navbar_food_container {
@@ -934,8 +835,3 @@ body {
   display: none;
 
 }
-
-
-
-
-
