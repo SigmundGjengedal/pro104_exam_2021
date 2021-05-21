@@ -623,6 +623,16 @@ body {
   position: absolute;
   top: 22%;
   left: 23%;
+  transition: 1s ease-out;
+  font-size: 16px;
+}
+.message_1_expanded{
+  top:1%;
+  left: -1000px;
+  height: 50vh;
+  width: 70vw;
+  font-size: 32px;
+
 }
 .message_1_background {
   width: 85%;
@@ -648,7 +658,7 @@ body {
   left: 23%;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 12px;
+  font-size: 0.7em;
 }
 .message_1_department {
   width: 20%;
@@ -657,7 +667,7 @@ body {
   left: 23.5%;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 9px;
+  font-size: 0.6em;
 }
 .message_1_txt {
   width: 80%;
@@ -666,7 +676,7 @@ body {
   left: 7%;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 9px;
+  font-size: 0.5em;
 }
 .message_2 {
   width: 90%;
