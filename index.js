@@ -57,11 +57,14 @@ loginBtn.addEventListener("click", ()=>{
   let username = usernameInput.value;
   let password = passwordInput.value;
 
+  console.log(username);
+  console.log(password);
+
+
   if(username > 3 && password > 3){
-    window.location.href = "../html-dashboard.html";
-    alert("sender deg")
+    window.location.href="html-dashboard.html";
   }else{
-    alert("sender deg ikke")
+    alert("sender deg ikke");
   }
 });
 
