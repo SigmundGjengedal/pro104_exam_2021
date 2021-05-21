@@ -676,7 +676,7 @@ body {
 
 /* NAVBAR*/
 .navbar_container {
-  width: 10%;
+  width: 7%;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -800,16 +800,16 @@ body {
   height: 13vh;
   background: #FFF;
   position: absolute;
-  top: 7%;
+  top: 6.3%;
   left: 60%;
 }
 
 .food_line {
   width: 0.4vw;
-  height: 13vh;
+  height: 12vh;
   background: #FFF;
   position: absolute;
-  top: 27%;
+  top: 26.6%;
   left: 60%;
   display: none;
 }
@@ -819,7 +819,7 @@ body {
   height: 24vh;
   background: #FFF;
   position: absolute;
-  top: 48%;
+  top: 47.3%;
   left: 60%;
   display: none;
 
@@ -827,10 +827,10 @@ body {
 
 .sales_line{
   width: 0.4vw;
-  height: 13vh;
+  height: 12vh;
   background: #FFF;
   position: absolute;
-  top:80%;
+  top:80.3%;
   left:60%;
   display: none;
 
