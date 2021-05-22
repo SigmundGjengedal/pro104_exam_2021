@@ -270,6 +270,8 @@ body {
   font-weight: Bold;
   font-size: 15px;
 }
+
+/* Linjer som deler skjermen */
 .horizontal_line_container {
   width: 70%;
   height: 5%;
@@ -299,6 +301,7 @@ body {
   border-radius: 20px;
   transform: rotate(-90deg);
 }
+/* Sirkel delen - Budget  */
 .budget_page_container {
   width: 30%;
   height: 30%;
@@ -357,7 +360,6 @@ body {
   left: 60%; FÅR IKKE ENDRET PLASSERING */
 
 }
-
 .accomplished {
   width: 50%;
   height: 30%;
@@ -402,6 +404,7 @@ body {
   font-weight: Bold;
   font-size: 25px;
 }
+/* Profit delen */
 .profit_container {
   width: 50%;
   height: 30%;
@@ -446,6 +449,8 @@ body {
   top: 40%;
   left: 20%;
 }
+
+/* Inbox Conteiner */
 .inbox_container {
   width: 20%;
   height: 100vh;
@@ -453,7 +458,6 @@ body {
   left:80%;
   background: #ECAF88;
 }
-
 .standard_message_container {
   width: 33%;
   height: 10%;
@@ -493,32 +497,14 @@ body {
   font-size: 30px;
 }
 
-/* Må jobbe mere med, button er display none */
 
-.logout_container {
-
-  position: absolute;
-  bottom: 40px;
-}
-
-.logout_icon {
-/* Log ut knappen kommer her */
-}
 
 
 .profile_picture {
   /* Bilde skal komme her */
 }
 
-.overlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: rgba(0,0,0,0.8); /*dim the background*/
-}
+
 
 .private_messages_container {
   width: 100%;
@@ -536,15 +522,9 @@ body {
   left: 12%;
   transition:0.6s ease-in-out;
   font-size: 16px;
-}
-
-.message_1_background {
-  width: 85%;
-  height: 100%;
-  background: #FFF;
-  position: relative;
   border-radius: 20px;
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
+  background: #FFF;
 }
 .message_1_profile_picture {
   background: blue;
@@ -590,16 +570,11 @@ body {
   left: 12%;
   transition:0.6s ease-in-out;
   font-size: 16px;
-}
-
-.message_2_background {
-  width: 85%;
-  height: 100%;
-  background: #FFF;
-  position: relative;
   border-radius: 20px;
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
+  background: #FFF;
 }
+
 .message_2_profile_picture {
   background: blue;
   width: 12%;
@@ -644,15 +619,11 @@ body {
   left: 12%;
   transition:0.6s ease-in-out;
   font-size: 16px;
-}
-.message_3_background {
-  width: 90%;
-  height: 100%;
-  background: #FFF;
-  position: relative;
   border-radius: 20px;
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
+  background: #FFF;
 }
+
 .message_3_profile_picture {
   background: blue;
   width: 12%;
@@ -689,6 +660,29 @@ body {
   font-weight: Bold;
   font-size: 0.5em;
 }
+
+/* Må jobbe mere med, button er display none */
+
+.logout_container {
+
+  position: absolute;
+  bottom: 40px;
+}
+
+.logout_icon {
+/* Log ut knappen kommer her */
+}
+
+/* Overlay forandrer bakgrunnen når message er ekspandert og expanded toggles gjennom JS for å eksapandere meldinger */
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.8); /*dim the background*/
+}
 .expanded{
   position: absolute;
   top:1%;
@@ -700,7 +694,7 @@ body {
 }
 
 
-/* NAVBAR*/
+/* Navbar*/
 .navbar_container {
   width: 7%;
   height: 100vh;
@@ -715,8 +709,6 @@ body {
   border-bottom-right-radius: 90px;
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
 }
-
-/*SALES*/
 .navbar_sales_container {
   width: 30%;
   height: 30%;
