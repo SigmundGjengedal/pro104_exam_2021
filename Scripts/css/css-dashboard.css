@@ -460,50 +460,53 @@ body {
   position: relative;
   left:80%;
   background: #ECAF88;
-  text-align:center;
+  text-align: center;
 }
 
 .profile_picture {
-  margin-top: 10%;
+  margin-top: 20%;
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 .welcome_message {
-  font-family: Futura;
-  font-weight: Bold;
   font-size: 12px;
   text-align: center;
   line-height: 0.3;
 }
 
 .inbox_name{
+<<<<<<< HEAD
   font-size:
 }
 
 .inbox_header_txt {
   font-size: 30px;
+=======
+  font-size: 20px;
+>>>>>>> old-state
 }
 
 .private_messages_container {
-  width: 100%;
-  height: 70%;
-  position: absolute;
-  top: 17%;
-  right: 4.5%;
-  color: #000;
+  width: 90%;
+  height: 60%;
+  margin: 100px auto;
+}
+
+.inbox_header_txt {
+  font-size: 15px;
 }
 .message_1 {
-  width: 90%;
+  width: 100%;
   height: 20%;
-  position: absolute;
-  top: 22%;
-  left: 12%;
+  position: relative;
+
   transition:0.6s ease-in-out;
   font-size: 16px;
   border-radius: 20px;
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
   background: #FFF;
+  margin-top:5%;
 }
 .message_1_profile_picture {
   background: blue;
@@ -541,17 +544,17 @@ body {
   font-weight: Bold;
   font-size: 0.5em;
 }
+
 .message_2 {
-  width: 90%;
+  width: 100%;
   height: 20%;
-  position: absolute;
-  top: 47%;
-  left: 12%;
+  position: relative;
   transition:0.6s ease-in-out;
   font-size: 16px;
   border-radius: 20px;
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
   background: #FFF;
+  margin: 5% 0;
 }
 
 .message_2_profile_picture {
@@ -590,12 +593,11 @@ body {
   font-weight: Bold;
   font-size: 0.5em;
 }
+
 .message_3 {
-  width: 90%;
+  width: 100%;
   height: 20%;
-  position: absolute;
-  top: 73%;
-  left: 12%;
+  position: relative;
   transition:0.6s ease-in-out;
   font-size: 16px;
   border-radius: 20px;
@@ -643,7 +645,6 @@ body {
 /* Må jobbe mere med, button er display none */
 
 .logout_container {
-
   position: absolute;
   bottom: 40px;
 }
