@@ -685,7 +685,12 @@ body {
   z-index: 2;
 }
 
+<<<<<<< HEAD
 /* Navbar*/
+=======
+
+/* NAVBAR*/
+>>>>>>> old-state
 .navbar_container {
   width: 7%;
   height: 100vh;
