@@ -460,7 +460,7 @@ body {
   position: relative;
   left:80%;
   background: #ECAF88;
-  text-align: center;
+
 }
 
 .profile_picture {
@@ -471,7 +471,7 @@ body {
 }
 .welcome_message {
   font-size: 12px;
-  line-height: 0.3;
+  text-align: center;
 }
 
 .inbox_name{
@@ -481,7 +481,7 @@ body {
 .private_messages_container {
   width: 100%;
   height: 60%;
-  margin: 50px 0;
+  margin-bottom: 10%;
 }
 
 .inbox_header_txt {
@@ -500,43 +500,38 @@ body {
   border-radius: 20px;
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
   background: #FFF;
+  text-align: center;
   }
-.message_1_profile_picture {
-  background: blue;
-  width: 12%;
-  height: 30%;
-  position: absolute;
-  top: 13%;
-  left: 7%;
-  border-radius: 50%;
-}
-.message_1_name {
-  width: 40%;
-  position: absolute;
-  top: 15%;
-  left: 23%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.7em;
-}
-.message_1_department {
-  width: 20%;
-  position: absolute;
-  top: 30%;
-  left: 23.5%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.6em;
-}
-.message_1_txt {
+
+  .message_info_div{
   width: 80%;
-  position: absolute;
-  top: 55%;
-  left: 7%;
+  margin:10px auto 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-family: Futura;
+  font-weight: Bold;
+  font-size: 0.8em;
+}
+
+
+.message_1_profile_picture {
+  width: 3em;
+  height: 3em;
+  float:left;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.message_1_div {
+  padding-top: 20px;
   font-family: Futura;
   font-weight: Bold;
   font-size: 0.5em;
+  text-align: z
 }
+
+
 .message_2 {
   width: 90%;
   height: 16%;
@@ -661,15 +656,8 @@ body {
   font-size: 0.5em;
 }
 
-/* Må jobbe mere med, button er display none */
-
 .logout_container {
-  position: absolute;
-  bottom: 40px;
-}
-
-.logout_icon {
-/* Log ut knappen kommer her */
+  text-align: center;
 }
 
 /* Overlay forandrer bakgrunnen når message er ekspandert og expanded toggles gjennom JS for å eksapandere meldinger */
@@ -684,7 +672,7 @@ body {
 }
 .expanded{
   position: absolute;
-  left: -100vh;
+  left: -95vh;
   top:50%;
   transform: translateY(-50%);
   height: 50vh;
