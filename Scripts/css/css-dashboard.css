@@ -4,6 +4,9 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Futura;
+  font-weight: Bold;
+  color: #000;
 }
 .home_page_container {
   width: 100%;
@@ -457,54 +460,27 @@ body {
   position: relative;
   left:80%;
   background: #ECAF88;
+  text-align:center;
 }
-.standard_message_container {
-  width: 33%;
-  height: 10%;
-  position: absolute;
-  top: 13%;
-  right: 25%;
+
+.profile_picture {
+  margin-top: 10%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 .welcome_message {
-  width: 50%;
-  color: #000;
-  position: absolute;
-  left: 50%
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 12px;
-}
-.name_message {
-  width: 70%;
-  color: #000;
-  position: absolute;
-  top: 30%;
-  right:50%;
   font-family: Futura;
   font-weight: Bold;
   font-size: 12px;
   text-align: center;
+  line-height: 0.3;
 }
+
 
 .inbox_header_txt {
-  width: 50%;
-  color: #000;
-  position: absolute;
-  top: 25%;
-  right: 30%;
-  font-family: Futura;
-  font-weight: Bold;
   font-size: 30px;
 }
-
-
-
-
-.profile_picture {
-  /* Bilde skal komme her */
-}
-
-
 
 .private_messages_container {
   width: 100%;

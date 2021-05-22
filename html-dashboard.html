@@ -4,7 +4,8 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Futura&display=swap" rel="stylesheet" />
   <link href="Scripts/css/css-dashboard.css" rel="stylesheet" />
-  <script type="module" src="Scripts/counter.js"></script>
+  <script defer type="module" src="Scripts/counter.js"></script>
+  <script defer type="module" src="Scripts/dashboard.js"></script>
   <script defer type="module" src="navbar.js" charset="utf-8"></script>
   <title>Document</title>
 </head>
@@ -132,9 +133,11 @@
   <div class="inbox_container">
 
     <div class="standard_message_container">
-      <img src="profile_picture" alt="">
-      <span class="welcome_message">WELCOME</span>
-      <span class="name_message">KARI NORDMANN</span>
+      <img class="profile_picture" src="userImageInbox.png" alt="">
+      <div class="welcome_message">
+        <h3>WELCOME</h3>
+        <h3 class="inbox_name">KARI NORDMANN</h3>
+      </div>
     </div>
 
 
@@ -200,6 +203,7 @@
   </div>
 
   <script src="Scripts/messages.js"></script>
+
 </body>
 
 </html>
