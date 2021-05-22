@@ -471,7 +471,6 @@ body {
 }
 .welcome_message {
   font-size: 12px;
-  text-align: center;
   line-height: 0.3;
 }
 
@@ -480,9 +479,9 @@ body {
 }
 
 .private_messages_container {
-  width: 90%;
+  width: 100%;
   height: 60%;
-  margin: 80px auto;
+  margin: 50px 0;
 }
 
 .inbox_header_txt {
@@ -490,16 +489,18 @@ body {
 }
 /* Meldinger i inboxen */
 .message_1 {
-  width: 100%;
-  height: 20%;
-  position: relative;
+  width: 90%;
+  height: 16%;
+  position: absolute;
+  top:35%;
+  left:50%;
+  transform: translateX(-50%);
   transition:0.6s ease-in-out;
   font-size: 16px;
   border-radius: 20px;
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
   background: #FFF;
-  margin-top:5%;
-}
+  }
 .message_1_profile_picture {
   background: blue;
   width: 12%;
@@ -537,15 +538,18 @@ body {
   font-size: 0.5em;
 }
 .message_2 {
-  width: 100%;
-  height: 20%;
-  position: relative;
+  width: 90%;
+  height: 16%;
+  position: absolute;
+  top:52%;
+  left:50%;
+  transform: translateX(-50%);
   transition:0.6s ease-in-out;
   font-size: 16px;
   border-radius: 20px;
   box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
   background: #FFF;
-  margin: 5% 0;
+
 }
 .message_2_profile_picture {
   background: blue;
@@ -584,9 +588,12 @@ body {
   font-size: 0.5em;
 }
 .message_3 {
-  width: 100%;
-  height: 20%;
-  position: relative;
+  width: 90%;
+  height: 16%;
+  position: absolute;
+  top:69%;
+  left:50%;
+  transform: translateX(-50%);
   transition:0.6s ease-in-out;
   font-size: 16px;
   border-radius: 20px;
@@ -654,8 +661,10 @@ body {
 .expanded{
   position: absolute;
   left: -100vh;
+  top:50%;
+  transform: translateY(-50%);
   height: 50vh;
-  width: 200%;
+  width: 250%;
   font-size: 32px;
   z-index: 2;
 }
