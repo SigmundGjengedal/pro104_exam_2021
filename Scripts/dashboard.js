@@ -2,8 +2,7 @@ import SalesModule from './Modules/SalesModule.js';
 
 const positiveProfit = document.querySelector(".positive_profit");
 const totalProfitNumber = document.querySelector(".total_profit_number");
-
-
+const inboxName = document.querySelector(".inbox_name");
 
 
 function totalNumber(){
@@ -35,3 +34,7 @@ function loopNumber(){
     }
 }
 loopNumber();
+
+
+// Koden som henter username fra localStorage og printer det ut i inbox delen
+window.onload = inboxName.innerHTML = localStorage.getItem("username");

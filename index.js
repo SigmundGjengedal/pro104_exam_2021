@@ -30,7 +30,9 @@ createBtn.addEventListener("click", function(){
   signinUnderline.style.display="none";
   createUnderline.style.display="block";
 
-})
+});
+
+
 
 //Button starter som disabled, når minimum-length på passord
 //og brukernavn er tastet inn blir knappen aktivert.
@@ -44,6 +46,7 @@ form.addEventListener("keyup", function(){
         loginBtn.style.opacity = "1";
         userNameUnderlineActive.classList.add('login_green');
         passwordUnderlineActive.classList.add('login_green');
+        saveUsername(username);
     }else {
         loginBtn.disabled = true;
         loginBtn.style.opacity = "0.2";
@@ -53,21 +56,11 @@ form.addEventListener("keyup", function(){
 
 });
 
-loginBtn.addEventListener("click", ()=>{
-  let username = usernameInput.value;
-  let password = passwordInput.value;
 
-  if(username > 3 && password > 3){
-    window.location.href = "../html-dashboard.html";
-    alert("sender deg")
-  }else{
-    alert("sender deg ikke")
-  }
-});
-
-
-
-
+// Funksjon som lagrer username i localeStorage og kalles på når brukeren har tastet inn username og password
+function saveUsername(username){
+  localStorage.setItem("username",username);
+};
 
 
 //Toggle vising av passord.
@@ -79,7 +72,7 @@ passwordEye.addEventListener("click", function(e){
 })
 
 
-//Funksjon for å vise "brukernavnet" på venstre side
+//Funksjon for å vise "brukernavnet" på venstre side av skjermen
 usernameInput.addEventListener("focusout", () => {
     if (usernameInput.value.length > 3){
         nameTxt.style.color = "#FFF";
@@ -87,6 +80,12 @@ usernameInput.addEventListener("focusout", () => {
     }
 }
 );
+
+// Funksjonen som sender brukernavnet til dashbordet og viser den i inboksen
+
+
+
+
 
 //Flytte "placeholder text"
 usernameInput.addEventListener("focus", () =>{

@@ -20,7 +20,7 @@ function makeNumbers(){
 function loopNumber(){
     var counter = 0;
     var numbers = makeNumbers();
-    var loopnumber = setInterval( changeNumbers, 80);
+    var loopnumber = setInterval( changeNumbers, 50);
     function changeNumbers() {
         counter++;
         if(counter === 30){
