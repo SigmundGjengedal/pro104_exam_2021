@@ -701,15 +701,12 @@ body {
   font-size: 4vh;
   transform: rotate(-90deg);
   transition: 200ms;
-  border: none;
-  border: none;
-  outline: none;
   background-color: #FC7B61;
 }
 
 .navbar_sales:hover{
   cursor: pointer;
-  font-size:37px;
+  font-size:4.2vh;
 
 }
 
@@ -735,7 +732,7 @@ body {
 
 .navbar_employees:hover{
   cursor: pointer;
-  font-size:37px;
+  font-size:4.2vh;
 }
 .navbar_food_container {
   width: 30%;
@@ -760,7 +757,7 @@ body {
 
 .navbar_food:hover{
   cursor: pointer;
-  font-size: 37px;
+  font-size:4.2vh;
 }
 .navbar_home_container {
   width: 30%;
@@ -785,7 +782,7 @@ body {
 
 .navbar_home:hover{
   cursor: pointer;
-  font-size: 37px;
+  font-size:4.2vh;
 }
 .home_line {
   width: 0.4vw;
