@@ -477,6 +477,9 @@ body {
   line-height: 0.3;
 }
 
+.inbox_name{
+  font-size:
+}
 
 .inbox_header_txt {
   font-size: 30px;
@@ -826,4 +829,5 @@ body {
   top:80.3%;
   left:60%;
   display: none;
+
 }
