@@ -52,7 +52,7 @@ body {
   height: 250px; /* FÅR IKKE ENDRET TIL PROSENT */
   position: absolute;
   top: 30%;
-  left: 27.5%;
+  left: 25.5%;
 
 
 }
@@ -67,161 +67,156 @@ body {
 
 }
 
+.week_monday {
+  position: absolute;
+  left: 0%;
+}
+
 .week_tuesday {
   position: absolute;
-  left: 8.2%;
+  left: 12%;
 }
 
 .week_wednesday {
   position: absolute;
-  left: 18%;
+  left: 21%;
 }
 .week_thursday {
   position: absolute;
-  left: 26.5%;
+  left: 29%;
 }
 .week_friday {
   position: absolute;
-  left: 35.6%;
+  left: 39%;
 }
 .week_saturday {
   position: absolute;
-  left: 44.3%;
+  left: 47%;
 }
 .week_sunday {
   position: absolute;
-  left: 53.5%;
+  left: 56%;
 }
 
 /* Søyle diagram */
 .diagrams_container {
   width: 53%;
-  height: 150%;
+  height: 200px;
   position: absolute;
   top: 30%;
   left: 25%;
 
 }
-.diagram_1 {
-  width: 50%;
-  height: 50%;
+/* tester med egen css og egen html*/
+.diagram_1{
+  width: 50px;
+  height: 170px;
   position: absolute;
-  left: 3%;
-}
-.diagram_1_not_filled {
-  width: 12.3%;
-  height: 29%;
   background: #DEDEDE;
+}		
+.diagram_1_filled{
+  height: 80%;
+  width: 100%;
+  background-color: #FC7B61;
+  position: absolute;
+  bottom: 0;
+  transition: height 2s;
 }
-.diagram_1_filled {
-  width: 12.3%;
-  height: 28%;
-  background: #FC7B61;
-}
+
 .diagram_2 {
-  width: 50%;
-  height: 50%;
+  width: 50px;
+  height: 170px;
   position: absolute;
-  top: 1px;
-  left: 14%;
-}
-.diagram_2_not_filled {
-  width: 12.3%;
-  height: 10%;
-
   background: #DEDEDE;
-
+  left: 18%;
 }
+
 .diagram_2_filled {
-  width: 12.3%;
-  height: 53%;
-  background: #FC7B61;
+  height: 80%;
+  width: 100%;
+  background-color: #FC7B61;
   position: absolute;
-  top: 3.5%;
+  bottom: 0;
+  transition: height 2s;
 }
 .diagram_3 {
-  width: 50%;
-  height: 50%;
+  width: 50px;
+  height: 170px;
   position: absolute;
+  background: #DEDEDE;
   left: 34%;
 }
-.diagram_3_not_filled {
-  width: 12.2%;
-  height: 45%;
-  background: #DEDEDE;
-}
 .diagram_3_filled {
-  width: 12.3%;
-  height: 12%;
-  background: #FC7B61;
+  height: 80%;
+  width: 100%;
+  background-color: #FC7B61;
+  position: absolute;
+  bottom: 0;
+  transition: height 2s;
 }
 .diagram_4 {
-  width: 50%;
-  height: 50%;
+  width: 50px;
+  height: 170px;
   position: absolute;
+  background: #DEDEDE;
   left: 48%;
 }
-.diagram_4_not_filled {
-  width: 12.3%;
-  height: 20%;
-  background: #DEDEDE;
-}
+
 .diagram_4_filled {
-  width: 12.3%;
-  height: 37%;
-  background: #FC7B61;
+  height: 50%;
+  width: 100%;
+  background-color: #FC7B61;
+  position: absolute;
+  bottom: 0;
+  transition: height 2s;
 }
 .diagram_5 {
-  width: 50%;
-  height: 50%;
+  width: 50px;
+  height: 170px;
   position: absolute;
+  background: #DEDEDE;
   left: 63.5%;
 }
-.diagram_5_not_filled {
-  width: 12.3%;
-  background: #DEDEDE;
-}
+
 .diagram_5_filled {
-  width: 12.3%;
-  height: 56.5%;
-  background: #FC7B61;
+  height: 10%;
+  width: 100%;
+  background-color: #FC7B61;
+  position: absolute;
+  bottom: 0;
+  transition: height 2s;
 }
 .diagram_6 {
-  width: 50%;
-  height: 50%;
+  width: 50px;
+  height: 170px;
   position: absolute;
+  background: #DEDEDE;
   left: 78%;
 }
-.diagram_6_not_filled {
-  width: 12.3%;
-  height: 30%;
-  background: #DEDEDE;
-  position: relative;
-}
+
 .diagram_6_filled {
-  width: 12.3%;
-  height: 30%;
-  background: #FC7B61;
+  height: 10%;
+  width: 100%;
+  background-color: #FC7B61;
   position: absolute;
-  top: 26.5%;
+  bottom: 0;
+  transition: height 2s;
 }
 .diagram_7 {
-  width: 50%;
-  height: 50%;
+  width: 50px;
+  height: 170px;
   position: absolute;
+  background: #DEDEDE;
   left: 93.5%;
 }
-.diagram_7_not_filled {
-  width: 12.3%;
-  height: 10%;
-  background: #DEDEDE;
-}
+
 .diagram_7_filled {
-  width: 12.3%;
-  height: 46.5%;
-  background: #FC7B61;
+  height: 10%;
+  width: 100%;
+  background-color: #FC7B61;
   position: absolute;
-  top: 10%;
+  bottom: 0;
+  transition: height 2s;
 }
 .sales_numbers_container {
   height: 48%;
