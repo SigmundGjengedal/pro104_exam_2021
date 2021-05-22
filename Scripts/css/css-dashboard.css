@@ -475,19 +475,11 @@ body {
 }
 
 .inbox_name{
-<<<<<<< HEAD
-<<<<<<< HEAD
-  font-size:
+  font-size:30px;
 }
 
 .inbox_header_txt {
   font-size: 30px;
-=======
-  font-size: 20px;
->>>>>>> old-state
-=======
-  font-size: 25px;
->>>>>>> old-state
 }
 
 .private_messages_container {
