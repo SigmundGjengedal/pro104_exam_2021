@@ -46,6 +46,7 @@ form.addEventListener("keyup", function(){
         loginBtn.style.opacity = "1";
         userNameUnderlineActive.classList.add('login_green');
         passwordUnderlineActive.classList.add('login_green');
+        saveUsername(username);
     }else {
         loginBtn.disabled = true;
         loginBtn.style.opacity = "0.2";
@@ -54,6 +55,13 @@ form.addEventListener("keyup", function(){
     }
 
 });
+
+
+// Funksjon som lagrer username i localeStorage og kalles på når brukeren har tastet inn username og password
+function saveUsername(username){
+  localStorage.setItem("username",username);
+};
+
 
 //Toggle vising av passord.
 passwordEye.addEventListener("click", function(e){
@@ -64,7 +72,7 @@ passwordEye.addEventListener("click", function(e){
 })
 
 
-//Funksjon for å vise "brukernavnet" på venstre side
+//Funksjon for å vise "brukernavnet" på venstre side av skjermen
 usernameInput.addEventListener("focusout", () => {
     if (usernameInput.value.length > 3){
         nameTxt.style.color = "#FFF";
@@ -72,6 +80,12 @@ usernameInput.addEventListener("focusout", () => {
     }
 }
 );
+
+// Funksjonen som sender brukernavnet til dashbordet og viser den i inboksen
+
+
+
+
 
 //Flytte "placeholder text"
 usernameInput.addEventListener("focus", () =>{
