@@ -10,6 +10,7 @@ const SalesModule = ( function (){
         revenuePreviousDay: 1212,
         grossRevenuePreviousYear: 61234,
         grossRevenueAccThisYear: 8345,
+        revenueDaysLastweek : [ 3000, 3500,4000,4500,5000,5500,6000]
     },
     {
         name: "Restaurant 2",
@@ -20,6 +21,7 @@ const SalesModule = ( function (){
         revenuePreviousDay: 1905,
         grossRevenuePreviousYear: 66400,
         grossRevenueAccThisYear: 9954,
+        revenueDaysLastweek : [ 3000, 3500,4000,4500,5000,5500,6000]
     },
     {
         name: "Restaurant 3",
@@ -30,6 +32,7 @@ const SalesModule = ( function (){
         revenuePreviousDay: 1590,
         grossRevenuePreviousYear: 72450,
         grossRevenueAccThisYear: 8874,
+        revenueDaysLastweek : [ 3000, 3500,4000,4500,5000,5500,6000]
     },
     {
         name: "Restaurant 4",
@@ -40,10 +43,13 @@ const SalesModule = ( function (){
         revenuePreviousDay: 890,
         grossRevenuePreviousYear: 39567,
         grossRevenueAccThisYear: 5298,
+        revenueDaysLastweek : [ 3000, 3500,4000,4500,5000,5500,6000]
     }
     ]
 
     const getAll = () => salesArray;
+        
+    /* må lage funksjon for å hente ut totale-salg per dag for restaurantene */
 
     return {getAll};
 
