@@ -595,7 +595,7 @@ body {
   visibility: hidden;
   animation-name: pop-up;
   animation-duration: 1s;
-  animation-delay: 4s;
+  animation-delay: 6s;
   transition: 0.6s ease-in-out;
 }
 
