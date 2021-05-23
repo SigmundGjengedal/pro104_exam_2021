@@ -1,5 +1,5 @@
 
-// Må flyttes i egen fil og deles opp
+// test - Må lage navbar og inbox HTML i egen fil og fordeles videre
 
 const test = document.querySelector(".test");
 
@@ -231,7 +231,6 @@ var tekst = `
 `
 
 test.innerHTML = tekst;
-
 
 
 
