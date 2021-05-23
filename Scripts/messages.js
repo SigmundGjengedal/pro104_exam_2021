@@ -1,7 +1,7 @@
 // const message1 = document.querySelector(".message_1");
 // const message2 = document.querySelector(".message_2");
 const overlay = document.querySelector("#overlay");
-const message3 = document.querySelector(".message_3");
+const message3 = document.querySelector(".msg3_time");
 const inboxName = document.querySelector(".inbox_name");
 const messageTxt = document.querySelectorAll(".message_txt");
 const expandable = document.querySelectorAll(".expandable");
@@ -108,4 +108,4 @@ window.onload = inboxName.innerHTML = localStorage.getItem("username");
 function printMessage(){
 message3.style.visibility="visible";
 };
-window.setTimeout(printMessage, 3000);
+window.setTimeout(printMessage, 500);
