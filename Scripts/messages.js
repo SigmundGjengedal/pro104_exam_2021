@@ -2,6 +2,7 @@
 // const message2 = document.querySelector(".message_2");
 const overlay = document.querySelector("#overlay");
 const message3 = document.querySelector(".msg3_time");
+const msg3 = document.querySelector(".msg3");
 const inboxName = document.querySelector(".inbox_name");
 const messageTxt = document.querySelectorAll(".message_txt");
 const expandable = document.querySelectorAll(".expandable");
@@ -72,10 +73,17 @@ element.addEventListener("click", function(e){
     this.classList.toggle("expanded");
     overlay.classList.toggle("overlay");
     time.forEach(time =>{
-      time.classList.toggle("hidden");
-    });
+    time.classList.toggle("hidden");
+
+  });
+  // Sjekker om brukeren har klikket på nyeste meldingen for å fjerne grønn border
+  if(e.currentTarget.classList.contains("msg3_time")){
+    msg3.style.border="none";
+  };
 });
 });
+
+
 
 overlay.addEventListener("click", () =>{
     time.forEach(time => time.classList.toggle("hidden"));
@@ -90,5 +98,7 @@ window.onload = inboxName.innerHTML = localStorage.getItem("username");
 // Time function som printer ut melding etter vis antal sekunder
 function printMessage(){
 message3.style.visibility="visible";
+var audio = new Audio("mail-notification.mp3");
+audio.play();
 };
 window.setTimeout(printMessage, 4000);
