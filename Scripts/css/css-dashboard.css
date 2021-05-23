@@ -615,31 +615,23 @@ body {
   }
 }
 
-
 .logout_container{
   position: absolute;
   bottom: 2%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 80%;
 }
 
 
-.message_3_txt {
-  width: 80%;
-  position: absolute;
-  top: 55%;
-  left: 7%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.5em;
+.logout_icone{
+  color:black;
 }
 
-.logout_container {
-  text-align: center;
+.logout_icone:hover{
+  color:#FFF;
+  transition: 0.3s;
 }
 
 /* Overlay forandrer bakgrunnen når message er ekspandert og expanded toggles gjennom JS for å eksapandere meldinger */
-
 .expanded {
   position: absolute;
   left: -95vh;
@@ -659,7 +651,7 @@ body {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.8);
 }
-
+/* Klassen angis til time-diven gjennom JS */
 .hidden{
   visibility: hidden;
 }
