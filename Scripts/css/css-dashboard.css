@@ -526,6 +526,11 @@ body {
   overflow: hidden;
 }
 
+.msg:hover{
+  filter: brightness(80%);
+  transition: 0.3s;
+}
+
 .time{
   width: 85%;
   margin: auto;
