@@ -522,7 +522,6 @@ body {
 
 .msg {
   background: #FFF;
-  font-size: 16px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -534,6 +533,8 @@ body {
   justify-content:space-between;
   margin-bottom: -3%;
   font-size: 12px;
+  color:black;
+  font-style: italic;
 }
 
 .message_info_div {
@@ -594,7 +595,8 @@ body {
   visibility: hidden;
   animation-name: pop-up;
   animation-duration: 1s;
-  animation-delay: 0.5s;
+  animation-delay: 4s;
+  transition: 0.6s ease-in-out;
 }
 
 @keyframes pop-up {
@@ -602,7 +604,7 @@ body {
     opacity: 0;
     width: 50%;
     height: 5%;
-    top: 85%;
+    top: 75%;
   }
 
   100% {
@@ -637,16 +639,6 @@ body {
 }
 
 /* Overlay forandrer bakgrunnen når message er ekspandert og expanded toggles gjennom JS for å eksapandere meldinger */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.8);
-  /*dim the background*/
-}
 
 .expanded {
   position: absolute;
@@ -657,6 +649,19 @@ body {
   width: 250%;
   font-size: 32px;
   z-index: 2;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hidden{
+  visibility: hidden;
 }
 
 /* Navbar*/

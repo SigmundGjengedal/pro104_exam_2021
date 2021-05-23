@@ -5,6 +5,11 @@ const message3 = document.querySelector(".msg3_time");
 const inboxName = document.querySelector(".inbox_name");
 const messageTxt = document.querySelectorAll(".message_txt");
 const expandable = document.querySelectorAll(".expandable");
+const yesterdayTxt = document.querySelectorAll(".yesterday");
+const todayTimeTxt = document.querySelector(".timeToday");
+const todayDateTxt = document.querySelector(".dateToday");
+const time = document.querySelectorAll(".time");
+
 
 
 
@@ -22,7 +27,7 @@ function slicingMsgTxt(){
 };
 window.onload = slicingMsgTxt();
 
-// Angir dato for meldinger i inboksen
+// Lager og formaterer date objekt for meldinger i inboksen
 const months = [
   'Jan',
   'Feb',
@@ -42,60 +47,38 @@ let today = new Date();
 const dd = String(today.getDate()).padStart(2, '0');
 const mIndex = today.getMonth();
 const mm = months[mIndex];
-
 const hours = String(today.getHours());
-const minutes = String(today.getMinutes());
-
+const minutes = String(today.getMinutes()).padStart(2, '0');
 today = dd + " " + mm;
 const timeToday = hours + ":" + minutes;
+todayTimeTxt.innerHTML = timeToday;
+todayDateTxt.innerHTML = today;
 
-console.log(today);
-console.log(timeToday);
 
-// simulerer gårsdagens dato som brukes på 2 av meldingene
+// Simulerer gårsdagens dato som brukes på 2 av meldingene, og printer ut
 let yesterday = new Date();
 yesterday.setDate(yesterday.getDate() - 1);
-
 const ddYesterday = String(yesterday.getDate()).padStart(2, '0');
 const mmIndexYesterday = yesterday.getMonth();
 const mmYesterday = months[mmIndexYesterday];
-
 yesterday = ddYesterday + " " + mmYesterday;
-console.log(yesterday);
+yesterdayTxt.forEach(day =>{
+  day.innerHTML = yesterday;
+});
 
-
-
-
-
-
-
-
-
-// Toggler expanded class som åpner og stenger inbox meldinger
+// Toggler expanded class som åpner og stenger inbox meldinger, og toggler hidden class som gjemmer og viser tiden for meldingene
 expandable.forEach(element => {
 element.addEventListener("click", function(e){
-    console.log(e.currentTarget);
     this.classList.toggle("expanded");
     overlay.classList.toggle("overlay");
-
-})
-})
-
-// message1.addEventListener("click", () =>{
-//     message1.classList.toggle("message_1_expanded")
-//     document.querySelector("#overlay").classList.toggle("overlay");
-
-// })
-
-// message2.addEventListener("click", () =>{
-//     message2.classList.toggle("message_2_expanded")
-//     document.querySelector("#overlay").classList.toggle("overlay");
-
-// })
+    time.forEach(time =>{
+      time.classList.toggle("hidden");
+    });
+});
+});
 
 overlay.addEventListener("click", () =>{
-    // message1.classList.toggle("message_1_expanded");
-    // message2.classList.toggle("message_1_expanded");
+    time.forEach(time => time.classList.toggle("hidden"));
     expandable.forEach(element => element.classList.remove("expanded"));
     overlay.classList.toggle("overlay");
     slicingMsgTxt();
@@ -108,4 +91,4 @@ window.onload = inboxName.innerHTML = localStorage.getItem("username");
 function printMessage(){
 message3.style.visibility="visible";
 };
-window.setTimeout(printMessage, 500);
+window.setTimeout(printMessage, 4000);
