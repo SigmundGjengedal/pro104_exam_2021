@@ -62,6 +62,7 @@ const SalesModule = ( function (){
         return total;
     }
 
+    // kaller funksjonen med de ulike dagene.
     const getTotalMonday = getTotalperDay(0);
     const getTotalTuesday = getTotalperDay(1);
     const getTotalWednesday = getTotalperDay(2);
