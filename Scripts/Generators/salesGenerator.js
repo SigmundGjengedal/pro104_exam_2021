@@ -1,7 +1,7 @@
 import SalesModule from "../Modules/SalesModule.js";
 
 
-// generer tall for søylediagram på home siden.
+// henter tall for dager forrige uke, og setter de til height i søylediagram på home siden.
 
 document.querySelector(".diagram_1_filled").style.height = SalesModule.getTotalMonday;
 document.querySelector(".diagram_2_filled").style.height = SalesModule.getTotalTuesday;
