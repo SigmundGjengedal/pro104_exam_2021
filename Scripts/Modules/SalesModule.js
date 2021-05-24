@@ -32,7 +32,7 @@ const SalesModule = ( function (){
         revenuePreviousDay: 1590,
         grossRevenuePreviousYear: 72450,
         grossRevenueAccThisYear: 8874,
-        revenueDaysLastweek : [ 10000, 13500,15000,24500,16000,25500,16000]
+        revenueDaysLastweek : [ 10000, 13500,15000,14500,16000,25500,16000]
     },
     {
         name: "Restaurant 4",
@@ -43,7 +43,7 @@ const SalesModule = ( function (){
         revenuePreviousDay: 890,
         grossRevenuePreviousYear: 39567,
         grossRevenueAccThisYear: 5298,
-        revenueDaysLastweek : [ 20000, 23500,30000,14500,15000,35500,15000]
+        revenueDaysLastweek : [ 20000, 23500,30000,4500,15000,35500,15000]
     }
     ]
 
