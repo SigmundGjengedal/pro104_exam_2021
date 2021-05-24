@@ -1,4 +1,5 @@
 // Printer ut home content
+
 const mainContentHome = document.querySelector(".main_content");
 const navbarHome = document.querySelector(".navbar_home");
 let mainTextHome = `
@@ -120,6 +121,7 @@ window.onload = mainContentHome.innerHTML = mainTextHome;
 navbarHome.addEventListener("click", ()=>{
   mainContentHome.innerHTML = mainTextHome;
   loopNumber();
+  HomePageDiagramsModule.generateDiagramNumbers();
 });
 
 // Importerer Salesmodule for å bruke data inn i funksjonen
@@ -154,3 +156,6 @@ function loopNumber(){
     }
 }
 loopNumber();
+
+import HomePageDiagramsModule from './Generators/salesGenerator.js';
+window.onload = HomePageDiagramsModule.generateDiagramNumbers();
