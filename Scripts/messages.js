@@ -8,7 +8,7 @@ const yesterdayTxt = document.querySelectorAll(".yesterday");
 const todayTimeTxt = document.querySelector(".timeToday");
 const todayDateTxt = document.querySelector(".dateToday");
 const time = document.querySelectorAll(".time");
-const close = document.querySelectorAll(".close");
+
 
 
 // Lager og formaterer date objekt for meldinger i inboksen
@@ -71,36 +71,26 @@ window.onload = slicingMsgTxt();
  // Toggler hidden class som gjemmer og viser tiden for meldingene
  // Printer ut hele meldingen og slicer den når meldingen ikke er ekspandert
 expandable.forEach(element => {
-element.addEventListener("click", ekspandMessage)
+element.addEventListener("click", (e)=>{
+    e.currentTarget.children[0].classList.toggle("hidden");
+    e.currentTarget.classList.toggle("expanded");
+    e.currentTarget.children[1].children[0].classList.toggle("visible");
+    // console.log(e.currentTarget.dateset.msgTxt;
+    overlay.classList.toggle("overlay_active");
+  // Sjekker om brukeren har klikket på nyeste meldingen for å fjerne grønn border
+  if (e.currentTarget.children[1].children[2].children[0].innerHTML.length >54) {
+    slicingMsgTxt()
+  }else if(e.currentTarget.classList.contains("msg3_time")){
+    msg3.style.border="none";
+    e.currentTarget.children[1].children[2].children[0].innerHTML = msgArray[2]
+  }else if (e.currentTarget.classList.contains("msg2_time")) {
+    e.currentTarget.children[1].children[2].children[0].innerHTML = msgArray[1];
+  }else if (e.currentTarget.classList.contains("msg1_time")) {
+    e.currentTarget.children[1].children[2].children[0].innerHTML = msgArray[0];
+  }
+
 });
-
-
-
-function ekspandMessage(){
-  this.classList.toggle("expanded");
-  overlay.classList.toggle("overlay_active");
-  time.forEach(time => time.classList.toggle("hidden"));
-// Sjekker om brukeren har klikket på nyeste meldingen for å fjerne grønn border
-if(this.classList.contains("msg3_time")){
-  msg3.style.border="none";
-};
-};
-
-
-// close.forEach(close => {
-//   close.addEventListener("click", closeMessage);
-//   });
-//
-// function closeMessage(){
-//   time.forEach(time => time.classList.remove("hidden"));
-//   expandable.forEach(element => element.classList.remove("expanded"));
-//   overlay.classList.remove("overlay_active");
-//   slicingMsgTxt();
-//
-// }
-
-
-
+});
 
 
 

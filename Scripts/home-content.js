@@ -2,6 +2,7 @@
 const mainContentHome = document.querySelector(".main_content");
 const navbarHome = document.querySelector(".navbar_home");
 let mainTextHome = `
+
 <div class="home_page_container">
   <div class="top_page_title_container">
     <span class="top_page_title">HOME</span>

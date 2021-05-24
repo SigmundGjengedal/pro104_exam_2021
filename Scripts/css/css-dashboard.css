@@ -501,6 +501,7 @@ body {
   position: absolute;
   top:5%;
   right: 5%;
+  visibility: hidden;
 }
 
 /* Meldinger i inboxen */
@@ -647,6 +648,10 @@ body {
 /* Klassen angis til time-diven gjennom JS */
 .hidden{
   visibility: hidden;
+}
+
+.visible{
+  visibility: visible;
 }
 
 /* Navbar*/
