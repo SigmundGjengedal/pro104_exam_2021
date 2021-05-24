@@ -167,7 +167,11 @@ const MenuModule = ( function (){
 
     const getAll = () => menuArray;
 
-    return {getAll}
+    const getPizza =() => menuArray.filter(e => e.itemType === "Pizza");
+    const getDrinks =() => menuArray.filter(e => e.itemType === "Beverage");
+    
+
+    return {getAll, getPizza, getDrinks}
 
 }())
 

@@ -26,25 +26,11 @@ mainContent.innerHTML = `
                 <div class="diagram_icon"></div>
             </div>
 
-            <div class="pizza_container"> 
-                <div class="pizza_type_1"><img src="../../Images/Menu/Food_and_drink/${food[0].image}"></div>
-                <div class="pizza_type_2"></div>
-                <div class="pizza_type_3"></div>
-                <div class="pizza_type_4"></div>
-                <div class="pizza_type_5">
-                    <div class="pizza_plus_icon"></div>
-                </div>            
+            <div class="pizza_container">           
             </div>
 
             <span class="drinks_title">DRINKS</span>
             <div class="drinks_container">
-                <div class="drink_type_1"></div>
-                <div class="drink_type_2"></div>
-                <div class="drink_type_3"></div>
-                <div class="drink_type_4"></div>
-                <div class="drink_type_5">
-                    <div class="drinks_plus_icon"></div>
-                </div>
             </div>
 
             <div class="splitscreen_line_container">
@@ -66,3 +52,33 @@ mainContent.innerHTML = `
 }
 
 generateFood();
+
+function addPizza(){
+    const pizza = MenuModule.getPizza();
+    for(var i = 0; i<5;i++)
+    if(i>0){
+    document.querySelector(".pizza_container").innerHTML +=
+    `
+    <div class="pizza_type_1"><img src="../../Images/Menu/Food_and_drink/${pizza[i].image}"></div>
+    `
+}
+    document.querySelector(".pizza_container").innerHTML += `<div class="pizza_type_5"></div>`;
+}
+
+
+function addDrinks(){
+    const drinks = MenuModule.getDrinks();
+    for(var i = 0; i<5;i++)
+    if(i>0){
+    document.querySelector(".drinks_container").innerHTML +=
+    `
+    <div class="drink_type_1"><img src="../../Images/Menu/Food_and_drink/${drinks[i].image}"></div>
+    `
+}
+    document.querySelector(".drinks_container").innerHTML += `<div class="drink_type_5"></div>`;
+}
+
+
+
+addPizza();
+addDrinks();
