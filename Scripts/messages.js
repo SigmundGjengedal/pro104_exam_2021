@@ -66,7 +66,9 @@ function slicingMsgTxt(){
 };
 window.onload = slicingMsgTxt();
 
-// Toggler expanded class som åpner og stenger inbox meldinger, og toggler hidden class som gjemmer og viser tiden for meldingene
+// Toggler expanded class som åpner og stenger inbox meldinger
+ // Toggler hidden class som gjemmer og viser tiden for meldingene
+ // Printer ut hele meldingen og slicer den når meldingen ikke er ekspandert
 expandable.forEach(element => {
 element.addEventListener("click", function(e){
     this.classList.toggle("expanded");
@@ -78,6 +80,12 @@ element.addEventListener("click", function(e){
   if(e.currentTarget.classList.contains("msg3_time")){
     msg3.style.border="none";
   };
+  // Fjerner sliced text og printer den ut på nytt
+  messageTxt.forEach(msg =>{
+    msgArray.forEach(msgArray => {
+      msg.innerHTML = msgArray;
+    });
+  })
 
 });
 });
