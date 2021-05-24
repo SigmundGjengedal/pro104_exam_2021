@@ -118,10 +118,12 @@ let mainTextHome = `
 `
 // Loader opp homecontent når siden lastes opp og printer ut home content når brukeren klikker på Home
 window.onload = mainContentHome.innerHTML = mainTextHome;
+
 navbarHome.addEventListener("click", ()=>{
   mainContentHome.innerHTML = mainTextHome;
   loopNumber();
-  HomePageDiagramsModule.generateDiagramNumbers();
+  setTimeout(HomePageDiagramsModule.generateDiagramNumbers, 100);
+  
 });
 
 // Importerer Salesmodule for å bruke data inn i funksjonen
@@ -158,4 +160,6 @@ function loopNumber(){
 loopNumber();
 
 import HomePageDiagramsModule from './Generators/salesGenerator.js';
-window.onload = HomePageDiagramsModule.generateDiagramNumbers();
+
+// setter timeout slik at transition funker på søylene fungerer.
+window.onload =  setTimeout(HomePageDiagramsModule.generateDiagramNumbers, 100);
