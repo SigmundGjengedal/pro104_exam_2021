@@ -110,7 +110,6 @@ let mainTextHome = `
     </div>
 
     <div class="profit_type">
-      <span class="positive_profit">+</span>
       <span class="total_profit_number">$</span>
     </div>
   </div>
