@@ -1,9 +1,3 @@
-
-
-
-
-
-
 const overlay = document.querySelector("#overlay");
 const message3 = document.querySelector(".msg3_time");
 const msg3 = document.querySelector(".msg3");
