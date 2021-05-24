@@ -10,22 +10,6 @@ const todayDateTxt = document.querySelector(".dateToday");
 const time = document.querySelectorAll(".time");
 
 
-
-
-// Function som slicer og printer message text til x antall bokstaver - Må jobbes mere med
-const msgArray = [
-   "Kenneth er syk idag. Kunne du sett om vi har noen som kan erstate kveldsvakta hans?",
-   "Kunne vi flyttet neste onsdags møte til torsdag? Jeg må være på restorangen fram til kl.12, men etter det er jeg ledig når som helst.",
-   "Hei. Prøvde å ringe. Kan du ringe meg så fort du ser dette?Takk"
-];
-function slicingMsgTxt(){
-  for (var i = 0; i < messageTxt.length; i++) {
-    let slicedTxt = msgArray[i].slice(0,50);
-    messageTxt[i].innerHTML = slicedTxt + "...";
-  }
-};
-window.onload = slicingMsgTxt();
-
 // Lager og formaterer date objekt for meldinger i inboksen
 const months = [
   'Jan',
@@ -65,6 +49,23 @@ yesterdayTxt.forEach(day =>{
   day.innerHTML = yesterday;
 });
 
+
+
+
+// Function som slicer og printer message text til x antall bokstaver - Må jobbes mere med
+const msgArray = [
+   "Kenneth er syk idag. Kunne du sett om vi har noen som kan erstate kveldsvakta hans?",
+   "Kunne vi flyttet neste onsdags møte til torsdag? Jeg må være på restorangen fram til kl.12, men etter det er jeg ledig når som helst.",
+   "Hei. Prøvde å ringe. Kan du ringe meg så fort du ser dette?Takk"
+];
+function slicingMsgTxt(){
+  for (var i = 0; i < messageTxt.length; i++) {
+    let slicedTxt = msgArray[i].slice(0,50);
+    messageTxt[i].innerHTML = slicedTxt + "...";
+  }
+};
+window.onload = slicingMsgTxt();
+
 // Toggler expanded class som åpner og stenger inbox meldinger, og toggler hidden class som gjemmer og viser tiden for meldingene
 expandable.forEach(element => {
 element.addEventListener("click", function(e){
@@ -72,15 +73,14 @@ element.addEventListener("click", function(e){
     overlay.classList.toggle("overlay");
     time.forEach(time =>{
     time.classList.toggle("hidden");
-
   });
   // Sjekker om brukeren har klikket på nyeste meldingen for å fjerne grønn border
   if(e.currentTarget.classList.contains("msg3_time")){
     msg3.style.border="none";
   };
-});
-});
 
+});
+});
 
 
 overlay.addEventListener("click", () =>{
@@ -94,9 +94,9 @@ overlay.addEventListener("click", () =>{
 window.onload = inboxName.innerHTML = localStorage.getItem("username");
 
 // Time function som printer ut melding etter vis antal sekunder
-function printMessage(){
+function printMessage3(){
 message3.style.visibility="visible";
 var audio = new Audio("../Images/mail-notification.mp3");
 audio.play();
 };
-window.setTimeout(printMessage, 6000);
+window.onload = setTimeout(printMessage3, 6000);
