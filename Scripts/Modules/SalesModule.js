@@ -10,7 +10,7 @@ const SalesModule = ( function (){
         revenuePreviousDay: 1212,
         grossRevenuePreviousYear: 61234,
         grossRevenueAccThisYear: 8345,
-        revenueDaysLastweek : [ 3000, 3500,4000,4500,5000,5500,6000]
+        revenueDaysLastweek : [ 7000, 8500,9000,23500,11000,15500,26000]
     },
     {
         name: "Restaurant 2",
@@ -21,7 +21,7 @@ const SalesModule = ( function (){
         revenuePreviousDay: 1905,
         grossRevenuePreviousYear: 66400,
         grossRevenueAccThisYear: 9954,
-        revenueDaysLastweek : [ 3000, 3500,4000,4500,5000,5500,6000]
+        revenueDaysLastweek : [ 5000, 9500,16000,10500,25000,15500,12000]
     },
     {
         name: "Restaurant 3",
@@ -32,7 +32,7 @@ const SalesModule = ( function (){
         revenuePreviousDay: 1590,
         grossRevenuePreviousYear: 72450,
         grossRevenueAccThisYear: 8874,
-        revenueDaysLastweek : [ 3000, 3500,4000,4500,5000,5500,6000]
+        revenueDaysLastweek : [ 10000, 13500,15000,24500,16000,25500,16000]
     },
     {
         name: "Restaurant 4",
@@ -43,16 +43,36 @@ const SalesModule = ( function (){
         revenuePreviousDay: 890,
         grossRevenuePreviousYear: 39567,
         grossRevenueAccThisYear: 5298,
-        revenueDaysLastweek : [ 3000, 3500,4000,4500,5000,5500,6000]
+        revenueDaysLastweek : [ 20000, 23500,30000,14500,15000,35500,15000]
     }
     ]
 
     const getAll = () => salesArray;
         
-    /* må lage funksjon for å hente ut totale-salg per dag for restaurantene */
+    /*funksjon for å hente ut totale-salg per dag for restaurantene */
+    const getTotalperDay = function (day){
+        let total = 0;
+        total += salesArray[0].revenueDaysLastweek[day];
+        total += salesArray[1].revenueDaysLastweek[day];
+        total += salesArray[2].revenueDaysLastweek[day];
+        total += salesArray[3].revenueDaysLastweek[day];
+      
+        total = (total/100000) * 100;
+        total = total +"%"
+        return total;
+    }
 
-    return {getAll};
+    const getTotalMonday = getTotalperDay(0);
+    const getTotalTuesday = getTotalperDay(1);
+    const getTotalWednesday = getTotalperDay(2);
+    const getTotalThursday = getTotalperDay(3);
+    const getTotalFriday = getTotalperDay(4);
+    const getTotalSaturday = getTotalperDay(5);
+    const getTotalSunday = getTotalperDay(6);
 
+
+    
+    return {getAll, getTotalMonday,getTotalTuesday, getTotalWednesday,getTotalThursday,getTotalFriday,getTotalSaturday,getTotalSunday};
 
 
 }())
