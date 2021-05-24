@@ -457,6 +457,12 @@ body {
   top: 40%;
   left: 10%;
 }
+.main_content{
+  position: absolute;
+  left: 7%;
+  width: 73%;
+  height: 100vh;
+}
 
 /* Inbox Conteiner */
 .inbox_container {
