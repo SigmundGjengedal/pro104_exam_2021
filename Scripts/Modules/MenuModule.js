@@ -11,6 +11,7 @@ const MenuModule = ( function (){
             allergies: "Wheat, soy, milk",
             amountSoldThisYear: 65,
             grossPrItem: 30,
+            image: "pizza.jpg"
 
         },
         {
@@ -22,6 +23,7 @@ const MenuModule = ( function (){
             allergies: "Wheat, soy, milk",
             amountSoldThisYear: 56,
             grossPrItem: 28,
+            image: "pizza2.jpg"
         },
         {
             menuNr: 3,
@@ -32,6 +34,7 @@ const MenuModule = ( function (){
             allergies: "Wheat, soy, milk",
             amountSoldThisYear: 80,
             grossPrItem: 40,
+            image: "pizza3.jpg"
 
         },
         {
@@ -43,6 +46,7 @@ const MenuModule = ( function (){
             allergies: "Wheat, soy, milk",
             amountSoldThisYear: 68,
             grossPrItem: 21,
+            image: "pizza4.jpg"
 
         },
         {
@@ -54,6 +58,7 @@ const MenuModule = ( function (){
             allergies: "Whete, soy, milk, selleri, mustard",
             amountSoldThisYear: 70,
             grossPrItem: 28,
+            image: "pizza5.jpg"
 
         },
         //5 Beverages
@@ -65,6 +70,7 @@ const MenuModule = ( function (){
             mediumPrice: 39,
             amountSoldThisYear: 60,
             grossPrItem: 25,
+            image: "drink1.jpg"
         },
         {
             menuNr: 7,
@@ -74,6 +80,7 @@ const MenuModule = ( function (){
             mediumPrice: 39,
             amountSoldThisYear: 82,
             grossPrItem: 25,
+            image: "drink2.jpg"
         },
         {
             menuNr: 8,
@@ -83,6 +90,7 @@ const MenuModule = ( function (){
             mediumPrice: 29,
             amountSoldThisYear: 62,
             grossPrItem: 25,
+            image: "drink3.jpg"
         },
         {
             menuNr: 9,
@@ -92,6 +100,7 @@ const MenuModule = ( function (){
             mediumPrice: 89,
             amountSoldThisYear: 45,
             grossPrItem: 34,
+            image: "drink4.jpg"
         },
         {
             menuNr: 10,
@@ -101,6 +110,7 @@ const MenuModule = ( function (){
             mediumPrice: 89,
             amountSoldThisYear: 39,
             grossPrItem: 39,
+            image: "drink5.jpg"
         },
         //5 Desserts
         {
@@ -110,7 +120,7 @@ const MenuModule = ( function (){
             price: 79,
             allergies: "Milk",
             amountSoldThisYear: 15,
-            grossPrItem: 14,
+            grossPrItem: 14
         },
         {
             menuNr: 12,
@@ -120,6 +130,7 @@ const MenuModule = ( function (){
             allergies: "Wheat, milk, egg, soy, almond",
             amountSoldThisYear: 24,
             grossPrItem: 17,
+            image: ""
         },
         {
             menuNr: 13,
@@ -129,6 +140,7 @@ const MenuModule = ( function (){
             allergies: "Cashew",
             amountSoldThisYear: 34,
             grossPrItem: 19,
+            image: ""
         },
         {
             menuNr: 14,
@@ -138,6 +150,7 @@ const MenuModule = ( function (){
             allergies: "",
             amountSoldThisYear: 47,
             grossPrItem: 12,
+            image: ""
         },
         {
             menuNr: 15,
@@ -147,6 +160,7 @@ const MenuModule = ( function (){
             allergies: "Milk",
             amountSoldThisYear: 112,
             grossPrItem: 40,
+            image: ""
         }
         
     ]
