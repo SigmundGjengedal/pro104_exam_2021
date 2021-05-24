@@ -1,5 +1,4 @@
 // Printer ut home content
-
 const mainContentHome = document.querySelector(".main_content");
 const navbarHome = document.querySelector(".navbar_home");
 let mainTextHome = `
@@ -122,7 +121,7 @@ navbarHome.addEventListener("click", ()=>{
   mainContentHome.innerHTML = mainTextHome;
   loopNumber();
   setTimeout(HomePageDiagramsModule.generateDiagramNumbers, 100);
-  
+
 });
 
 // Importerer Salesmodule for å bruke data inn i funksjonen
@@ -158,7 +157,8 @@ function loopNumber(){
 }
 loopNumber();
 
+// Importerer HomePageDiagramsModule for å bruke funksjonen som henter data som fyller ut diagramen på home siden
 import HomePageDiagramsModule from './Generators/salesGenerator.js';
 
-// setter timeout slik at transition funker på søylene fungerer.
+// setter timeout slik at transition funkerer på søylene
 window.onload =  setTimeout(HomePageDiagramsModule.generateDiagramNumbers, 100);
