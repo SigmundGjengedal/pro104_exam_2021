@@ -444,45 +444,18 @@ body {
 }
 
 .profit_title_container {
-  width: 50%;
-  height: 50%;
-  position: absolute;
-}
-
-.profit_title {
-  color: #000;
-  position: absolute;
-  font-family: Futura;
-  font-weight: Bold;
   font-size: 30px;
 }
 
-.profit_type {
-  width: 50%;
-  height: 50%;
-  position: absolute;
-}
-
-.positive_profit {
-  width: 84px;
-  color: #448662;
-  position: absolute;
-  top: 41%;
-  left: 3%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 5rem;
-}
 
 .total_profit_number {
-  width: 125px;
   color: #448662;
   position: absolute;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 5rem;
+  font-size: 4rem;
   top: 40%;
-  left: 20%;
+  left: 10%;
 }
 
 /* Inbox Conteiner */
