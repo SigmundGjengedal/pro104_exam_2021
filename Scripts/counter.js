@@ -11,7 +11,7 @@ return totalProfit;
 
 function makeNumbers(){
     let numbers = [];
-    for(let i=31;i>0;i--){
+    for(let i=25;i>0;i--){
         numbers.push(totalNumber() / i)
     }
     return numbers;
@@ -23,7 +23,7 @@ function loopNumber(){
     var loopnumber = setInterval( changeNumbers, 50);
     function changeNumbers() {
         counter++;
-        if(counter === 30){
+        if(counter === 24){
             clearInterval(loopnumber)
         }
         totalProfitNumber.innerHTML = Math.floor(numbers[counter]) + ",-";
