@@ -10,6 +10,13 @@ body {
   color: #000;
 }
 
+.main_content{
+  position: absolute;
+  left: 7%;
+  width: 73%;
+  height: 100vh;
+}
+
 .home_page_container {
   background: #FFF;
 }
@@ -457,12 +464,7 @@ body {
   top: 40%;
   left: 10%;
 }
-.main_content{
-  position: absolute;
-  left: 7%;
-  width: 73%;
-  height: 100vh;
-}
+
 
 /* Inbox Conteiner */
 .inbox_container {
@@ -495,12 +497,19 @@ body {
   font-size: 15px;
 }
 
+.close{
+  position: absolute;
+  top:5%;
+  right: 5%;
+}
+
 /* Meldinger i inboxen */
 
 .msg {
   background: #FFF;
   border-radius: 20px;
   overflow: hidden;
+  position: relative;
 }
 
 .msg:hover{
@@ -553,7 +562,7 @@ body {
   top: 32%;
   left: 50%;
   transform: translateX(-50%);
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease;
 }
 
 .msg2_time {
@@ -563,7 +572,7 @@ body {
   top:50%;
   left: 50%;
   transform: translateX(-50%);
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease;
 }
 
 .msg3_time{
@@ -577,7 +586,7 @@ body {
   animation-name: pop-up;
   animation-duration: 1s;
   animation-delay: 6s;
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease;
 }
 
 .msg3{
@@ -620,14 +629,13 @@ body {
 .expanded {
   position: absolute;
   left: -95vh;
-  top: 50%;
+  top:40%;
   transform: translateY(-50%);
-  height: 50vh;
   width: 250%;
   font-size: 32px;
   z-index: 2;
 }
-.overlay {
+.overlay_active {
   position: absolute;
   top: 0;
   left: 0;

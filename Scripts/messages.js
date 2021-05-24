@@ -1,4 +1,4 @@
-const overlay = document.querySelector("#overlay");
+const overlay = document.querySelector(".overlay");
 const message3 = document.querySelector(".msg3_time");
 const msg3 = document.querySelector(".msg3");
 const inboxName = document.querySelector(".inbox_name");
@@ -8,6 +8,7 @@ const yesterdayTxt = document.querySelectorAll(".yesterday");
 const todayTimeTxt = document.querySelector(".timeToday");
 const todayDateTxt = document.querySelector(".dateToday");
 const time = document.querySelectorAll(".time");
+const close = document.querySelectorAll(".close");
 
 
 // Lager og formaterer date objekt for meldinger i inboksen
@@ -70,33 +71,39 @@ window.onload = slicingMsgTxt();
  // Toggler hidden class som gjemmer og viser tiden for meldingene
  // Printer ut hele meldingen og slicer den når meldingen ikke er ekspandert
 expandable.forEach(element => {
-element.addEventListener("click", function(e){
-    this.classList.toggle("expanded");
-    overlay.classList.toggle("overlay");
-    time.forEach(time =>{
-    time.classList.toggle("hidden");
-  });
-  // Sjekker om brukeren har klikket på nyeste meldingen for å fjerne grønn border
-  if(e.currentTarget.classList.contains("msg3_time")){
-    msg3.style.border="none";
-  };
-  // Fjerner sliced text og printer den ut på nytt
-  messageTxt.forEach(msg =>{
-    msgArray.forEach(msgArray => {
-      msg.innerHTML = msgArray;
-    });
-  })
-
-});
+element.addEventListener("click", ekspandMessage)
 });
 
 
-overlay.addEventListener("click", () =>{
-    time.forEach(time => time.classList.toggle("hidden"));
-    expandable.forEach(element => element.classList.remove("expanded"));
-    overlay.classList.toggle("overlay");
-    slicingMsgTxt();
-});
+
+function ekspandMessage(){
+  this.classList.toggle("expanded");
+  overlay.classList.toggle("overlay_active");
+  time.forEach(time => time.classList.toggle("hidden"));
+// Sjekker om brukeren har klikket på nyeste meldingen for å fjerne grønn border
+if(this.classList.contains("msg3_time")){
+  msg3.style.border="none";
+};
+};
+
+
+// close.forEach(close => {
+//   close.addEventListener("click", closeMessage);
+//   });
+//
+// function closeMessage(){
+//   time.forEach(time => time.classList.remove("hidden"));
+//   expandable.forEach(element => element.classList.remove("expanded"));
+//   overlay.classList.remove("overlay_active");
+//   slicingMsgTxt();
+//
+// }
+
+
+
+
+
+
 
 // Koden som henter username fra localStorage og printer det ut i inbox delen
 window.onload = inboxName.innerHTML = localStorage.getItem("username");

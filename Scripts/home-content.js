@@ -124,7 +124,7 @@ navbarHome.addEventListener("click", ()=>{
 
 });
 
-// Importerer Salesmodule for å bruke data inn i funksjonen
+// Importerer Salesmodule for å bruke data inn i funksjonen under
 import SalesModule from './Modules/SalesModule.js';
 const positiveProfit = document.querySelector(".positive_profit");
 
