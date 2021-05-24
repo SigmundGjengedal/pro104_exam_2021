@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -8,12 +9,14 @@ body {
   font-weight: Bold;
   color: #000;
 }
+
 .home_page_container {
   width: 100%;
   height: 100vh;
   background: #FFF;
   position: absolute;
 }
+
 .top_page_title_container {
   width: 20%;
   height: 20%;
@@ -21,12 +24,14 @@ body {
   top: 5%;
   left: 13%;
 }
+
 .top_page_title {
   color: #000;
   font-family: Futura;
   font-weight: Bold;
   font-size: 50px;
 }
+
 .total_sales_container {
   width: 80%;
   height: 40%;
@@ -34,28 +39,28 @@ body {
   top: 10%;
   left: 5%;
 }
+
 .total_sales_title {
   width: 50%;
   color: #000;
   position: relative;
   top: 12%;
-  left:15%;
+  left: 15%;
   font-family: Futura;
   font-weight: Bold;
   font-size: 25px;
 }
 
-
 /* Uke dagene under søyle diagramen */
 .week_container {
   width: 90%;
-  height: 250px; /* FÅR IKKE ENDRET TIL PROSENT */
+  height: 250px;
+  /* FÅR IKKE ENDRET TIL PROSENT */
   position: absolute;
   top: 30%;
   left: 25.5%;
-
-
 }
+
 .week {
   width: 53%;
   position: absolute;
@@ -64,7 +69,6 @@ body {
   font-family: Futura;
   font-weight: Bold;
   font-size: 16px;
-
 }
 
 .week_monday {
@@ -81,18 +85,22 @@ body {
   position: absolute;
   left: 37%;
 }
+
 .week_thursday {
   position: absolute;
   left: 55%;
 }
+
 .week_friday {
   position: absolute;
   left: 73%;
 }
+
 .week_saturday {
   position: absolute;
   left: 91%;
 }
+
 .week_sunday {
   position: absolute;
   left: 109%;
@@ -105,18 +113,19 @@ body {
   position: absolute;
   top: 30%;
   left: 25%;
-
 }
+
 /* Søylene : Laget med egen css og egen html*/
-.diagram_1{
+.diagram_1 {
   width: 50px;
   height: 170px;
   position: absolute;
   background: #DEDEDE;
   margin-right: 10px;
   border: #FC7B61;
-}		
-.diagram_1_filled{
+}
+
+.diagram_1_filled {
   height: 80%;
   width: 100%;
   background-color: #FC7B61;
@@ -142,6 +151,7 @@ body {
   bottom: 0;
   transition: height 2s;
 }
+
 .diagram_3 {
   width: 50px;
   height: 170px;
@@ -149,6 +159,7 @@ body {
   background: #DEDEDE;
   left: 32%;
 }
+
 .diagram_3_filled {
   height: 80%;
   width: 100%;
@@ -157,6 +168,7 @@ body {
   bottom: 0;
   transition: height 2s;
 }
+
 .diagram_4 {
   width: 50px;
   height: 170px;
@@ -173,6 +185,7 @@ body {
   bottom: 0;
   transition: height 2s;
 }
+
 .diagram_5 {
   width: 50px;
   height: 170px;
@@ -189,6 +202,7 @@ body {
   bottom: 0;
   transition: height 2s;
 }
+
 .diagram_6 {
   width: 50px;
   height: 170px;
@@ -205,6 +219,7 @@ body {
   bottom: 0;
   transition: height 2s;
 }
+
 .diagram_7 {
   width: 50px;
   height: 170px;
@@ -221,6 +236,7 @@ body {
   bottom: 0;
   transition: height 2s;
 }
+
 .sales_numbers_container {
   height: 48%;
   position: absolute;
@@ -228,6 +244,7 @@ body {
   left: 15%;
   letter-spacing: 1px;
 }
+
 .sales_100 {
   color: #949494;
   position: relative;
@@ -235,6 +252,7 @@ body {
   font-weight: Bold;
   font-size: 15px;
 }
+
 .sales_75 {
   color: #949494;
   position: absolute;
@@ -244,6 +262,7 @@ body {
   font-weight: Bold;
   font-size: 15px;
 }
+
 .sales_50 {
   color: #949494;
   position: absolute;
@@ -253,6 +272,7 @@ body {
   font-weight: Bold;
   font-size: 15px;
 }
+
 .sales_25 {
   color: #949494;
   position: absolute;
@@ -262,6 +282,7 @@ body {
   font-weight: Bold;
   font-size: 15px;
 }
+
 .sales_0 {
   color: #949494;
   position: absolute;
@@ -280,6 +301,7 @@ body {
   top: 58%;
   left: 23%;
 }
+
 .horizontal_line {
   width: 68%;
   height: 15%;
@@ -287,6 +309,7 @@ body {
   position: absolute;
   border-radius: 20px;
 }
+
 .vertical_line_container {
   width: 20%;
   height: 10%;
@@ -294,6 +317,7 @@ body {
   top: 80%;
   left: 36%;
 }
+
 .vertical_line {
   width: 100%;
   height: 2%;
@@ -302,6 +326,7 @@ body {
   border-radius: 20px;
   transform: rotate(-90deg);
 }
+
 /* Sirkel delen - Budget  */
 .budget_page_container {
   width: 30%;
@@ -310,14 +335,14 @@ body {
   top: 63%;
   left: 13%;
   letter-spacing: 1px;
-
 }
+
 .budget_title_container {
   width: 30%;
   height: 30%;
   position: absolute;
-
 }
+
 .budget_title {
   color: #000;
   position: absolute;
@@ -326,6 +351,7 @@ body {
   font-size: 30px;
   letter-spacing: 0;
 }
+
 .goal_circle {
   position: absolute;
   top: 11%;
@@ -336,11 +362,11 @@ body {
   /* top: 70%; FÅR IKKE ENDRET PLASSERING
   left: 80%; FÅR IKKE ENDRET PLASSERING */
   border-radius: 50%;
-
 }
+
 .goal_circle_inside {
   position: relative;
-  left:5%;
+  left: 5%;
   top: 5%;
   width: 90%;
   height: 90%;
@@ -348,9 +374,9 @@ body {
   /* top: 40%; FÅR IKKE ENDRET PLASSERING
   left: 60%; FÅR IKKE ENDRET PLASSERING */
   border-radius: 50%;
-
 }
-.goal_circle_inside2{
+
+.goal_circle_inside2 {
   position: relative;
   top: -10%;
   left: 48%;
@@ -359,16 +385,16 @@ body {
   background: #FFF;
   /* top: 40%; FÅR IKKE ENDRET PLASSERING
   left: 60%; FÅR IKKE ENDRET PLASSERING */
-
 }
+
 .accomplished {
   width: 50%;
   height: 30%;
   position: absolute;
   top: 35%;
   left: 30%;
-
 }
+
 .accomplished_number {
   color: #000;
   position: absolute;
@@ -376,6 +402,7 @@ body {
   font-weight: Bold;
   font-size: 40px;
 }
+
 .total_goal {
   width: 50%;
   height: 30%;
@@ -383,6 +410,7 @@ body {
   top: 57%;
   left: 37%;
 }
+
 .total_goal_number {
   width: 60%;
   color: #000;
@@ -391,12 +419,14 @@ body {
   font-weight: Light Condensed;
   font-size: 30px;
 }
+
 .percent_accomplished {
   width: 50%;
   position: absolute;
   top: 90%;
   left: 30%;
 }
+
 .percent_accomplished_txt {
   width: 100%;
   color: #A9A9A9;
@@ -405,6 +435,7 @@ body {
   font-weight: Bold;
   font-size: 25px;
 }
+
 /* Profit delen */
 .profit_container {
   width: 50%;
@@ -413,11 +444,13 @@ body {
   top: 63%;
   left: 49%;
 }
+
 .profit_title_container {
   width: 50%;
   height: 50%;
   position: absolute;
 }
+
 .profit_title {
   color: #000;
   position: absolute;
@@ -425,11 +458,13 @@ body {
   font-weight: Bold;
   font-size: 30px;
 }
+
 .profit_type {
   width: 50%;
   height: 50%;
   position: absolute;
 }
+
 .positive_profit {
   width: 84px;
   color: #448662;
@@ -440,6 +475,7 @@ body {
   font-weight: Bold;
   font-size: 80px;
 }
+
 .total_profit_number {
   width: 125px;
   color: #448662;
@@ -456,220 +492,178 @@ body {
   width: 20%;
   height: 100vh;
   position: relative;
-  left:80%;
+  left: 80%;
   background: #ECAF88;
-  text-align:center;
 }
 
 .profile_picture {
-  margin-top: 10%;
+  margin-top: 20%;
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
+
 .welcome_message {
-  font-family: Futura;
-  font-weight: Bold;
   font-size: 12px;
   text-align: center;
-  line-height: 0.3;
+  line-height: 0;
 }
 
-.inbox_name{
-  font-size:
-}
-
-.inbox_header_txt {
+.inbox_name {
   font-size: 30px;
 }
 
-.private_messages_container {
-  width: 100%;
-  height: 70%;
-  position: absolute;
-  top: 17%;
-  right: 4.5%;
-  color: #000;
+
+.inbox_header_txt {
+  font-size: 15px;
 }
-.message_1 {
+
+/* Meldinger i inboxen */
+
+.msg {
+  background: #FFF;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.msg:hover{
+  filter: brightness(80%);
+  transition: 0.3s;
+}
+
+.time{
+  width: 85%;
+  margin: auto;
+  display:flex;
+  justify-content:space-between;
+  margin-bottom: -3%;
+  font-size: 12px;
+  color:black;
+  font-style: italic;
+}
+
+.message_info_div {
+  width: 80%;
+  margin:  5px auto 0;
+  display: flex;
+  align-items: center;
+  font-family: Futura;
+  font-weight: Bold;
+  font-size: 0.8em;
+  line-height: 0.2;
+}
+
+.message_profile_picture {
+  width: 3em;
+  height: 3em;
+  float: left;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.message_txt_div {
+  font-family: Futura;
+  font-size: 0.8em;
+  text-align: left;
+  width: 80%;
+  margin:auto;
+  padding-bottom: 5px;
+}
+
+.msg1_time{
   width: 90%;
   height: 20%;
   position: absolute;
-  top: 22%;
-  left: 12%;
-  transition:0.6s ease-in-out;
-  font-size: 16px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
-  background: #FFF;
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.6s ease-in-out;
 }
-.message_1_profile_picture {
-  background: blue;
-  width: 12%;
-  height: 30%;
-  position: absolute;
-  top: 13%;
-  left: 7%;
-  border-radius: 50%;
-}
-.message_1_name {
-  width: 40%;
-  position: absolute;
-  top: 15%;
-  left: 23%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.7em;
-}
-.message_1_department {
-  width: 20%;
-  position: absolute;
-  top: 30%;
-  left: 23.5%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.6em;
-}
-.message_1_txt {
-  width: 80%;
-  position: absolute;
-  top: 55%;
-  left: 7%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.5em;
-}
-.message_2 {
+
+.msg2_time {
   width: 90%;
   height: 20%;
   position: absolute;
-  top: 47%;
-  left: 12%;
-  transition:0.6s ease-in-out;
-  font-size: 16px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
-  background: #FFF;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.6s ease-in-out;
 }
 
-.message_2_profile_picture {
-  background: blue;
-  width: 12%;
-  height: 30%;
-  position: absolute;
-  top: 13%;
-  left: 7%;
-  border-radius: 50%;
-}
-.message_2_name {
-  width: 30%;
-  position: absolute;
-  top: 15%;
-  left: 23%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.7em;
-}
-.message_2_department {
-  width: 40%;
-  position: absolute;
-  top: 30%;
-  left: 23.5%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.6em;
-}
-.message_2_txt {
-  width: 80%;
-  position: absolute;
-  top: 55%;
-  left: 7%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.5em;
-}
-.message_3 {
+.msg3_time{
   width: 90%;
   height: 20%;
   position: absolute;
-  top: 73%;
-  left: 12%;
-  transition:0.6s ease-in-out;
-  font-size: 16px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
-  background: #FFF;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  animation-name: pop-up;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  transition: 0.6s ease-in-out;
 }
 
-.message_3_profile_picture {
-  background: blue;
-  width: 12%;
-  height: 30%;
-  position: absolute;
-  top: 13%;
-  left: 7%;
-  border-radius: 50%;
-}
-.message_3_name {
-  width: 30%;
-  position: absolute;
-  top: 15%;
-  left: 23%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.7em;
-}
-.message_3_department {
-  width: 40%;
-  position: absolute;
-  top: 30%;
-  left: 23.5%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.6em;
-}
-.message_3_txt {
-  width: 80%;
-  position: absolute;
-  top: 55%;
-  left: 7%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 0.5em;
+.msg3{
+  border:solid 4px green;
 }
 
-/* Må jobbe mere med, button er display none */
+@keyframes pop-up {
+  0% {
+    opacity: 0;
+    width: 50%;
+    height: 5%;
+    top: 75%;
+  }
 
-.logout_container {
-
-  position: absolute;
-  bottom: 40px;
+  100% {
+    opacity: 1;
+    width: 90%;
+    height: 20%;
+    top: 68%;
+  }
 }
 
-.logout_icon {
-/* Log ut knappen kommer her */
+.logout_container{
+  position: absolute;
+  bottom: 2%;
+  left: 80%;
+}
+
+
+.logout_icone{
+  color:black;
+}
+
+.logout_icone:hover{
+  color:#d3d3d3;
+  transition: 0.3s;
 }
 
 /* Overlay forandrer bakgrunnen når message er ekspandert og expanded toggles gjennom JS for å eksapandere meldinger */
-.overlay{
+.expanded {
+  position: absolute;
+  left: -95vh;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50vh;
+  width: 250%;
+  font-size: 32px;
+  z-index: 2;
+}
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1;
-  background-color: rgba(0,0,0,0.8); /*dim the background*/
+  background-color: rgba(0, 0, 0, 0.8);
 }
-.expanded{
-  position: absolute;
-  top:1%;
-  left: -100vh;
-  height: 50vh;
-  width: 70vw;
-  font-size: 32px;
-  z-index: 2;
+/* Klassen angis til time-diven gjennom JS */
+.hidden{
+  visibility: hidden;
 }
-
 
 /* Navbar*/
 .navbar_container {
@@ -691,6 +685,7 @@ body {
   top: 60%;
   left: 0;
 }
+
 .navbar_sales {
   width: 70%;
   color: #FFF;
@@ -705,10 +700,9 @@ body {
   background-color: #FC7B61;
 }
 
-.navbar_sales:hover{
+.navbar_sales:hover {
   cursor: pointer;
-  font-size:4.2vh;
-
+  font-size: 4.2vh;
 }
 
 .navbar_employees_container {
@@ -718,6 +712,7 @@ body {
   top: 43%;
   left: 0;
 }
+
 .navbar_employees {
   width: 70%;
   color: #FFF;
@@ -731,10 +726,11 @@ body {
   transition: 200ms;
 }
 
-.navbar_employees:hover{
+.navbar_employees:hover {
   cursor: pointer;
-  font-size:4.2vh;
+  font-size: 4.2vh;
 }
+
 .navbar_food_container {
   width: 30%;
   height: 30%;
@@ -742,6 +738,7 @@ body {
   top: 17%;
   left: 0;
 }
+
 .navbar_food {
   width: 70%;
   color: #FFF;
@@ -753,13 +750,13 @@ body {
   font-size: 4vh;
   transform: rotate(-90deg);
   transition: 200ms;
-
 }
 
-.navbar_food:hover{
+.navbar_food:hover {
   cursor: pointer;
-  font-size:4.2vh;
+  font-size: 4.2vh;
 }
+
 .navbar_home_container {
   width: 30%;
   height: 30%;
@@ -767,6 +764,7 @@ body {
   top: 5%;
   left: 0;
 }
+
 .navbar_home {
   width: 70%;
   color: #FFF;
@@ -778,13 +776,13 @@ body {
   font-size: 4vh;
   transform: rotate(-90deg);
   transition: 200ms;
-
 }
 
-.navbar_home:hover{
+.navbar_home:hover {
   cursor: pointer;
-  font-size:4.2vh;
+  font-size: 4.2vh;
 }
+
 .home_line {
   width: 0.4vw;
   height: 13vh;
@@ -814,13 +812,12 @@ body {
   display: none;
 }
 
-.sales_line{
+.sales_line {
   width: 0.4vw;
   height: 12vh;
   background: #FFF;
   position: absolute;
-  top:80.3%;
+  top: 80.3%;
   left: 60%;
   display: none;
-
 }
