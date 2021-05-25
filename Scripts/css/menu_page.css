@@ -16,6 +16,7 @@ body {
   position: relative;
 }
  .menu_page_container img{
+  will-change: transform;
   border-radius: 12%;
   position: relative;
   height: 100%;
