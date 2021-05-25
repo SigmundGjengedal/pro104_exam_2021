@@ -1,4 +1,7 @@
 // Printer ut home content
+
+
+
 const mainContentHome = document.querySelector(".main_content");
 const navbarHome = document.querySelector(".navbar_home");
 let mainTextHome = `
@@ -126,7 +129,6 @@ navbarHome.addEventListener("click", ()=>{
 
 // Importerer Salesmodule for å bruke data inn i funksjonen under
 import SalesModule from './Modules/SalesModule.js';
-const positiveProfit = document.querySelector(".positive_profit");
 
 // Henter data fra SalesModule
 function totalNumber(){
@@ -155,10 +157,11 @@ function loopNumber(){
         document.querySelector(".total_profit_number").innerHTML= Math.floor(numbers[counter]) + ",-";
     }
 }
-loopNumber();
+// loopNumber();
 
 // Importerer HomePageDiagramsModule for å bruke funksjonen som henter data som fyller ut diagramen på home siden
 import HomePageDiagramsModule from './Generators/salesGenerator.js';
 
 // setter timeout slik at transition funkerer på søylene
 window.onload =  setTimeout(HomePageDiagramsModule.generateDiagramNumbers, 100);
+
