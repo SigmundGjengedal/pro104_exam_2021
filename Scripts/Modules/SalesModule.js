@@ -2,47 +2,55 @@ const SalesModule = ( function (){
 
     const salesArray = [
     {
-        name: "Restaurant 1",
-        revenuePreviousYear: 412345,
-        revenueAccThisYear: 80123,
-        revenuePreviousMonth: 15123,
-        revenuePreviousWeek: 4512,
-        revenuePreviousDay: 1212,
-        grossRevenuePreviousYear: 61234,
-        grossRevenueAccThisYear: 8345,
+        name: "Bjørvika",
+        revenueAccThisYear: 600000,
+        grossRevenueAccThisYear: 500000,
+        grossRevenuePreviousYear: 700000,
+
+        revenuePreviousYear: 1100000,
+        revenuePreviousMonth: 110000,
+        revenuePreviousWeek: 35000,
+        revenuePreviousDay: 12000,
+        
         revenueDaysLastweek : [ 7000, 8500,9000,23500,11000,15500,26000]
     },
     {
-        name: "Restaurant 2",
-        revenuePreviousYear: 605042,
-        revenueAccThisYear: 96234,
-        revenuePreviousMonth: 18300,
-        revenuePreviousWeek: 7543,
-        revenuePreviousDay: 1905,
-        grossRevenuePreviousYear: 66400,
-        grossRevenueAccThisYear: 9954,
+        name: "Karl Johan",
+        revenueAccThisYear: 500000,
+        grossRevenueAccThisYear: 300000,
+        grossRevenuePreviousYear: 600000,
+
+        revenuePreviousYear: 900000,
+        revenuePreviousMonth: 88300,
+        revenuePreviousWeek: 25000,
+        revenuePreviousDay: 8000,
+        
         revenueDaysLastweek : [ 5000, 9500,16000,10500,25000,15500,12000]
     },
     {
-        name: "Restaurant 3",
-        revenuePreviousYear: 450643,
-        revenueAccThisYear: 86321,
-        revenuePreviousMonth: 16924,
-        revenuePreviousWeek: 4989,
-        revenuePreviousDay: 1590,
-        grossRevenuePreviousYear: 72450,
-        grossRevenueAccThisYear: 8874,
+        name: "Nydalen",
+        revenueAccThisYear: 700000,
+        grossRevenueAccThisYear: 500000,
+        grossRevenuePreviousYear: 900000,
+
+        revenuePreviousYear: 1100000,
+        revenuePreviousMonth: 90000,
+        revenuePreviousWeek: 25000,
+        revenuePreviousDay: 14000,
+        
         revenueDaysLastweek : [ 10000, 13500,15000,14500,16000,25500,16000]
     },
     {
-        name: "Restaurant 4",
-        revenuePreviousYear: 290543,
-        revenueAccThisYear: 60455,
-        revenuePreviousMonth: 11981,
-        revenuePreviousWeek: 3799,
-        revenuePreviousDay: 890,
-        grossRevenuePreviousYear: 39567,
-        grossRevenueAccThisYear: 5298,
+        name: "Grunerløkka",
+        revenueAccThisYear: 400000,
+        grossRevenueAccThisYear: 300000,
+        grossRevenuePreviousYear: 500000,
+
+        revenuePreviousYear: 700000,
+        revenuePreviousMonth: 88000,
+        revenuePreviousWeek: 80000,
+        revenuePreviousDay: 11000,
+        
         revenueDaysLastweek : [ 20000, 23500,30000,4500,15000,35500,15000]
     }
     ]
@@ -72,10 +80,33 @@ const SalesModule = ( function (){
     const getTotalSunday = getTotalperDay(6);
 
 
+    // funksjoner for å  hente ut totaltsalg (en value) for en og en avdeling, etter navn.
+
+    const test2 = salesArray[1].revenueAccThisYear;
+
+    const getAccRevenueThisYearByRestaurant = (name)  => {        
+       let result = salesArray.filter( object => object.name.toLowerCase === name.toLowerCase);
+       let resultFormatted = result[0].revenueAccThisYear; // filter laget ett array, så må hente ut denne verdien.
+       return resultFormatted;
     
-    return {getAll, getTotalMonday,getTotalTuesday, getTotalWednesday,getTotalThursday,getTotalFriday,getTotalSaturday,getTotalSunday};
+    };
+
+    const getGrossRevenueThisYearByRestaurant = (name) =>{
+        let result = salesArray.filter( object => object.name.toLowerCase === name.toLowerCase);
+        let resultFormatted = result[0].grossRevenueAccThisYear; // filter laget ett array, så må hente ut denne verdien.
+        return resultFormatted;
+    }
+
+    const getGrossRevenueLastYearByRestaurant = (name) => {
+        let result = salesArray.filter( object => object.name.toLowerCase === name.toLowerCase);
+        let resultFormatted = result[0].grossRevenuePreviousYear;
+        return resultFormatted;
+    }
+    
+    return {getAll, getTotalMonday,getTotalTuesday, getTotalWednesday,getTotalThursday,getTotalFriday,getTotalSaturday,getTotalSunday,getAccRevenueThisYearByRestaurant,getGrossRevenueThisYearByRestaurant, getGrossRevenueLastYearByRestaurant};
 
 
 }())
 
 export default SalesModule
+
