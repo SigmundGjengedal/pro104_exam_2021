@@ -170,10 +170,10 @@ import foodGenerator from './Generators/foodGenerator.js'
 
 const navbarFood = document.querySelector(".navbar_food");
 navbarFood.addEventListener("click", function (){
-    foodGenerator.addListeners();
-    foodGenerator.generateLayout();
-    foodGenerator.addPizza();
-    foodGenerator.addDrinks();
-    foodGenerator.addReserve();
+  foodGenerator.generateLayout();
+  foodGenerator.addPizza();
+  foodGenerator.addDrinks();
+  foodGenerator.addReserve();
+  foodGenerator.addListeners();
 }
 )
