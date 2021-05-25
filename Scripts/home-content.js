@@ -157,7 +157,7 @@ function loopNumber(){
         document.querySelector(".total_profit_number").innerHTML= Math.floor(numbers[counter]) + ",-";
     }
 }
-// loopNumber();
+loopNumber();
 
 // Importerer HomePageDiagramsModule for å bruke funksjonen som henter data som fyller ut diagramen på home siden
 import HomePageDiagramsModule from './Generators/salesGenerator.js';
