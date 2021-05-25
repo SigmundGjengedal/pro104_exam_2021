@@ -122,7 +122,6 @@ navbarHome.addEventListener("click", ()=>{
   mainContentHome.innerHTML = mainTextHome;
   loopNumber();
   setTimeout(HomePageDiagramsModule.generateDiagramNumbers, 100);
-
 });
 
 // Importerer Salesmodule for å bruke data inn i funksjonen under
