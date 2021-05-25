@@ -116,51 +116,52 @@ const MenuModule = ( function (){
         {
             menuNr: 11,
             itemName: "Chocolate Milkshake",
-            itemType: "Dessert",
+            itemType: "Pizza",
             price: 79,
             allergies: "Milk",
             amountSoldThisYear: 15,
-            grossPrItem: 14
+            grossPrItem: 14,
+            image: "pizza6.jpg"
         },
         {
             menuNr: 12,
             itemName: "Apple Cake",
-            itemType: "Dessert",
+            itemType: "Pizza",
             price: 95,
             allergies: "Wheat, milk, egg, soy, almond",
             amountSoldThisYear: 24,
             grossPrItem: 17,
-            image: ""
+            image: "pizza7.jpg"
         },
         {
             menuNr: 13,
             itemName: "Brownie",
-            itemType: "Dessert",
+            itemType: "Beverage",
             price: 49,
             allergies: "Cashew",
             amountSoldThisYear: 34,
             grossPrItem: 19,
-            image: ""
+            image: "drink8.jpg"
         },
         {
             menuNr: 14,
             itemName: "Espresso",
-            itemType: "Dessert",
+            itemType: "Beverage",
             price: 39,
             allergies: "",
             amountSoldThisYear: 47,
             grossPrItem: 12,
-            image: ""
+            image: "drink6.jpg"
         },
         {
             menuNr: 15,
             itemName: "Bananasplit",
-            itemType: "Dessert",
+            itemType: "Beverage",
             price: 89,
             allergies: "Milk",
             amountSoldThisYear: 112,
             grossPrItem: 40,
-            image: ""
+            image: "drink7.jpg"
         }
         
     ]
