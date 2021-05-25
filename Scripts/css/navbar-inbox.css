@@ -1,0 +1,344 @@
+/* Inbox Conteiner */
+.inbox_container {
+  width: 20%;
+  height: 100vh;
+  position: relative;
+  left: 80%;
+  background: #ECAF88;
+}
+
+.profile_picture {
+  margin-top: 20%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.welcome_message {
+  font-size: 12px;
+  text-align: center;
+  line-height: 0;
+}
+
+.inbox_name {
+  font-size: 30px;
+}
+
+
+.inbox_header_txt {
+  font-size: 15px;
+}
+
+.close{
+  position: absolute;
+  top:5%;
+  right: 5%;
+  visibility: hidden;
+}
+
+/* Meldinger i inboxen */
+
+.msg {
+  background: #FFF;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.msg:hover{
+  cursor: pointer;
+}
+
+.time{
+  width: 85%;
+  margin: auto;
+  display:flex;
+  justify-content:space-between;
+  margin-bottom: -3%;
+  font-size: 12px;
+  color:black;
+  font-style: italic;
+}
+
+.message_info_div {
+  width: 80%;
+  margin:  5px auto 0;
+  display: flex;
+  align-items: center;
+  font-family: Futura;
+  font-weight: Bold;
+  font-size: 0.8em;
+  line-height: 0.2;
+}
+
+.message_profile_picture {
+  width: 3em;
+  height: 3em;
+  float: left;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.message_txt_div {
+  font-family: Futura;
+  font-size: 0.8em;
+  text-align: left;
+  width: 80%;
+  margin:auto;
+  padding-bottom: 5px;
+}
+
+.msg1_time{
+  width: 90%;
+  height: 20%;
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.6s ease;
+}
+
+.msg2_time {
+  width: 90%;
+  height: 20%;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.6s ease;
+}
+
+.msg3_time{
+  width: 90%;
+  height: 20%;
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  animation-name: pop-up;
+  animation-duration: 1s;
+  animation-delay: 6s;
+  transition: 0.6s ease;
+}
+
+.msg3{
+  border:solid 4px green;
+}
+
+@keyframes pop-up {
+  0% {
+    opacity: 0;
+    width: 50%;
+    height: 5%;
+    top: 75%;
+  }
+
+  100% {
+    opacity: 1;
+    width: 90%;
+    height: 20%;
+    top: 68%;
+  }
+}
+
+.logout_container{
+  position: absolute;
+  bottom: 2%;
+  left: 80%;
+}
+
+
+.logout_icone{
+  color:black;
+}
+
+.logout_icone:hover{
+  color:#d3d3d3;
+  transition: 0.3s;
+}
+
+/* Overlay forandrer bakgrunnen når message er ekspandert og expanded toggles gjennom JS for å eksapandere meldinger */
+.expanded {
+  position: absolute;
+  left: -95vh;
+  top:40%;
+  transform: translateY(-50%);
+  width: 250%;
+  font-size: 32px;
+  z-index: 2;
+}
+.overlay_active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Klassen angis til time-diven gjennom JS */
+.hidden{
+  visibility: hidden;
+}
+
+.visible{
+  visibility: visible;
+}
+
+/* Navbar*/
+.navbar_container {
+  width: 7%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FC7B61;
+  border-top-right-radius: 90px;
+  border-bottom-right-radius: 90px;
+  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.25);
+}
+
+.navbar_sales_container {
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+
+.navbar_sales {
+  width: 70%;
+  color: #FFF;
+  position: absolute;
+  top: 95%;
+  left: 100%;
+  font-family: Futura;
+  font-weight: Bold;
+  font-size: 4vh;
+  transform: rotate(-90deg);
+  transition: 200ms;
+  background-color: #FC7B61;
+}
+
+.navbar_sales:hover {
+  cursor: pointer;
+  font-size: 4.2vh;
+}
+
+.navbar_employees_container {
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  top: 43%;
+  left: 0;
+}
+
+.navbar_employees {
+  width: 70%;
+  color: #FFF;
+  position: absolute;
+  top: 82%;
+  left: 100%;
+  font-family: Futura;
+  font-weight: Bold;
+  font-size: 4vh;
+  transform: rotate(-90deg);
+  transition: 200ms;
+}
+
+.navbar_employees:hover {
+  cursor: pointer;
+  font-size: 4.2vh;
+}
+
+.navbar_food_container {
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  top: 17%;
+  left: 0;
+}
+
+.navbar_food {
+  width: 70%;
+  color: #FFF;
+  position: absolute;
+  top: 60%;
+  left: 100%;
+  font-family: Futura;
+  font-weight: Bold;
+  font-size: 4vh;
+  transform: rotate(-90deg);
+  transition: 200ms;
+}
+
+.navbar_food:hover {
+  cursor: pointer;
+  font-size: 4.2vh;
+}
+
+.navbar_home_container {
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  top: 5%;
+  left: 0;
+}
+
+.navbar_home {
+  width: 70%;
+  color: #FFF;
+  position: absolute;
+  top: 35%;
+  left: 100%;
+  font-family: Futura;
+  font-weight: Bold;
+  font-size: 4vh;
+  transform: rotate(-90deg);
+  transition: 200ms;
+}
+
+.navbar_home:hover {
+  cursor: pointer;
+  font-size: 4.2vh;
+}
+
+.home_line {
+  width: 0.4vw;
+  height: 13vh;
+  background: #FFF;
+  position: absolute;
+  top: 6.3%;
+  left: 60%;
+}
+
+.food_line {
+  width: 0.4vw;
+  height: 12vh;
+  background: #FFF;
+  position: absolute;
+  top: 26.6%;
+  left: 60%;
+  display: none;
+}
+
+.employees_line {
+  width: 0.4vw;
+  height: 24vh;
+  background: #FFF;
+  position: absolute;
+  top: 47.3%;
+  left: 60%;
+  display: none;
+}
+
+.sales_line {
+  width: 0.4vw;
+  height: 12vh;
+  background: #FFF;
+  position: absolute;
+  top: 80.3%;
+  left: 60%;
+  display: none;
+}
