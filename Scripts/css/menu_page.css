@@ -8,18 +8,18 @@ body {
   margin: 0;
   padding: 0;
 }
-.menu_page_container img{
-  border-radius: 12%;
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
 .menu_page_container {
   overflow: hidden;
   width: 100%;
   height: 100%;
   background: #FFF;
   position: relative;
+}
+ .menu_page_container img{
+  border-radius: 12%;
+  position: relative;
+  height: 100px;
+  width: 100px;
 }
 .food_container {
   position: relative;
@@ -92,6 +92,7 @@ body {
   margin-right: 10%;
 }
 .drinks_title {
+  left: 10%;
   width: 10%;
   color: #000;
   position: relative;
@@ -130,7 +131,7 @@ body {
   background: #D4D4D4;
   border-radius: 20px;
   position: relative;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 }
 .recipe_bank_container {
   display: flex;
@@ -141,7 +142,15 @@ body {
   margin-left: 10%;
   margin-right: 10%;
 }
+.add_plus{
+  background-image: url("../../Images/Menu/Icons/plus.png");
+  background-size: 50%;
+    background-position: center;
+    background-repeat:no-repeat;
+}
 .recipe_bank_title {
+  position: relative;
+  left: 10%;
   width: 20%;
   color: #000;;
   font-family: Futura;

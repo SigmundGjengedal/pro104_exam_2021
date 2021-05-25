@@ -47,44 +47,44 @@ mainContent.innerHTML = `
             </div>
 
         </div>
-
-`;
+        
+        `;
+       
 }
-let pizzaContainer = document.querySelector(".pizza_container");
 
 
 
 function addPizza(){
+    let pizzaContainer = document.querySelector(".pizza_container");
     const pizza = MenuModule.getPizza();
     for(var i = 0; i<5;i++)
     if(i>0){
-    document.querySelector(".pizza_container").innerHTML +=
-    // pizzaContainer.innerHTML +=
-
-    `
-    <div class="pizza_type_1"><img data-image="${pizza[i].image}" src="../../Images/Menu/Food_and_drink/${pizza[i].image}"></div>
+    pizzaContainer.innerHTML += `
+    <div class="pizza_type_1" data-status="default"><img data-image="${pizza[i].image}" src="../../Images/Menu/Food_and_drink/${pizza[i].image}"></div>
     `
 }
-    document.querySelector(".pizza_container").innerHTML += `<div class="pizza_type_5"></div>`;
+    pizzaContainer.innerHTML += `<div class="pizza_type_5 add_plus"></div>`;
 }
 
 
 function addDrinks(){
     const drinks = MenuModule.getDrinks();
+    let drinksContainer = document.querySelector(".drinks_container")
     for(var i = 0; i<5;i++)
     if(i>0){
-    document.querySelector(".drinks_container").innerHTML +=
+        drinksContainer.innerHTML +=
     `
-    <div class="drink_type_1"><img data-image"${drinks[i].image}" src="../../Images/Menu/Food_and_drink/${drinks[i].image}"></div>
+    <div class="drink_type_1" data-type="${drinks[i].itemType}" data-status="default"><img   src="../../Images/Menu/Food_and_drink/${drinks[i].image}"></div>
     `
 }
-    document.querySelector(".drinks_container").innerHTML += `<div class="drink_type_5"></div>`;
+    drinksContainer.innerHTML += `<div class="drink_type_5 add_plus"></div>`;
 }
 
 function addReserve(){
     for(var i = 14;i>9;i--){
-        document.querySelector(".recipe_bank_container").innerHTML += `
-        <div class="recipe_1"data-type="${food[i].itemType}" data-image="${food[i].image}"><img draggable="true" src="../../Images/Menu/Food_and_drink/${food[i].image}"></div>
+        const reserveContainer = document.querySelector(".recipe_bank_container")
+        reserveContainer.innerHTML += `
+        <div class="recipe_1" data-type="${food[i].itemType}" data-image="${food[i].image}"><img draggable="true" src="../../Images/Menu/Food_and_drink/${food[i].image}"></div>
         `;
 
     }
@@ -95,10 +95,15 @@ function clearDrink(){
 }
 function addListeners(){
 document.querySelectorAll(".drink_type_1, .pizza_type_1, .recipe_1").forEach(item => item.addEventListener("click", function (e){
+    if(e.currentTarget.dataset.status === "default"){
+        console.log(this)
+        document.querySelector(".recipe_bank_container").appendChild(this);
+        this.innerHTML = "";
+    }
     if(e.currentTarget.dataset.type === "Beverage"){
         document.querySelector(".drink_type_5").innerHTML = 
         `<img src="../../Images/Menu/Food_and_drink/${e.currentTarget.dataset.image}">`;
-
+        console.log(e.currentTarget)
         document.querySelector(".drink_type_5").style.border = "none";
         document.querySelector(".drink_type_5").addEventListener("click",() => {
             document.querySelector(".drink_type_5").innerHTML ="";

@@ -1,6 +1,7 @@
 // Printer ut home content
 
 
+
 const mainContentHome = document.querySelector(".main_content");
 const navbarHome = document.querySelector(".navbar_home");
 let mainTextHome = `
@@ -118,12 +119,7 @@ let mainTextHome = `
 `
 // Loader opp homecontent når siden lastes opp og printer ut home content når brukeren klikker på Home
 window.onload = mainContentHome.innerHTML = mainTextHome;
-foodGenerator.generateLayout();
-foodGenerator.addPizza();
-foodGenerator.addDrinks();
-foodGenerator.addReserve();
-foodGenerator.addListeners();
-/*
+
 navbarHome.addEventListener("click", ()=>{
   mainContentHome.innerHTML = mainTextHome;
   loopNumber();
@@ -133,7 +129,6 @@ navbarHome.addEventListener("click", ()=>{
 
 // Importerer Salesmodule for å bruke data inn i funksjonen
 import SalesModule from './Modules/SalesModule.js';
-const positiveProfit = document.querySelector(".positive_profit");
 
 // Henter data fra SalesModule
 function totalNumber(){
@@ -162,24 +157,23 @@ function loopNumber(){
         document.querySelector(".total_profit_number").innerHTML= Math.floor(numbers[counter]) + ",-";
     }
 }
-loopNumber();
+// loopNumber();
 
 import HomePageDiagramsModule from './Generators/salesGenerator.js';
 
 // setter timeout slik at transition funker på søylene fungerer.
 window.onload =  setTimeout(HomePageDiagramsModule.generateDiagramNumbers, 100);
 
-*/
 //Generere food-delen når man klikker i nav-baren
 
 import foodGenerator from './Generators/foodGenerator.js'
 
 const navbarFood = document.querySelector(".navbar_food");
 navbarFood.addEventListener("click", function (){
+    foodGenerator.addListeners();
     foodGenerator.generateLayout();
     foodGenerator.addPizza();
     foodGenerator.addDrinks();
     foodGenerator.addReserve();
-    foodGenerator.addListeners();
 }
 )
