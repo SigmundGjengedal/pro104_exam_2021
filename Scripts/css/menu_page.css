@@ -29,6 +29,8 @@ body {
   height: 10%;
 }
 .food_title {
+  top: 20%;
+  position: relative;
   width: 20%;
   color: #000;
   font-family: Futura;
@@ -46,6 +48,7 @@ body {
   margin-right: 10%;
 }
 .pizza_title {
+  top: 7%;
   left: 10%;
   width: 20%;
   color: #000;
@@ -77,11 +80,12 @@ body {
   position: relative;
   height: 5%;
   width: 5%;
-}
-.diagram_icon {
-  width: 100%;
-  height: 100%;
-  background: blue;
+  background-image: url("../../Images/Menu/Icons/market-fluctuation.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 85%;
+  bottom: 2%;
 }
 .drinks_container {
   display: flex;
@@ -93,6 +97,7 @@ body {
   margin-right: 10%;
 }
 .drinks_title {
+  bottom: 1%;
   left: 10%;
   width: 10%;
   color: #000;
@@ -121,6 +126,7 @@ body {
   left: 30%;
 }
 .splitscreen_line_container {
+  position: relative;
   margin-top: 20px;
   width: 100%;
   height: 8px;
@@ -132,7 +138,7 @@ body {
   background: #D4D4D4;
   border-radius: 20px;
   position: relative;
-  /* transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
 }
 .recipe_bank_container {
   display: flex;
@@ -146,8 +152,8 @@ body {
 .add_plus{
   background-image: url("../../Images/Menu/Icons/plus.png");
   background-size: 50%;
-    background-position: center;
-    background-repeat:no-repeat;
+  background-position: center;
+  background-repeat:no-repeat;
 }
 .recipe_bank_title {
   position: relative;
@@ -170,37 +176,40 @@ body {
   border-radius: 20px;
 }
 .confirm_btn_container {
-  width: 5%;
-  height: 5%; /* FIKSE */
-  display: inline;
+  top: 5%;
+  left: 50%;
   position: relative;
-}
-.confitm_btn {
-  width: 100%;
-  height: 100%;
-  position: relative;
+  width: 8%;
+  height: 5%;
+  transform: translate(-50%, -50%);
 }
 .confirm_btn_filled {
-  width: 20%;
-  height: 29px;
+  width: 100%;
   background: #FC7B61;
   position: relative;
   border-radius: 50px;
 }
 .confirm_btn_circle {
-  width: 33%;
-  height: 100%;
+  height: 29px;
+  width: 50%;
   background: #000;
-  position: relative;
   border-radius: 50px;
+  border: solid 2px black;
+  position: relative;
+}
+.confirm_btn_circle:hover{
+  cursor: pointer;
+}
+.confirm_btn_circle_edit{
+  left: 50%;
 }
 .confirm_btn_txt {
-  width: 100%;
-  top: 80%;
+  margin-top: 5px;
+  width: 110%;
   color: #333;
   position: absolute;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
 }

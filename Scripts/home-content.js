@@ -164,16 +164,3 @@ import HomePageDiagramsModule from './Generators/salesGenerator.js';
 // setter timeout slik at transition funker på søylene fungerer.
 window.onload =  setTimeout(HomePageDiagramsModule.generateDiagramNumbers, 100);
 
-//Generere food-delen når man klikker i nav-baren
-
-import foodGenerator from './Generators/foodGenerator.js'
-
-const navbarFood = document.querySelector(".navbar_food");
-navbarFood.addEventListener("click", function (){
-  foodGenerator.generateLayout();
-  foodGenerator.addPizza();
-  foodGenerator.addDrinks();
-  foodGenerator.addReserve();
-  foodGenerator.addListeners();
-}
-)
