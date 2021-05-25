@@ -16,7 +16,7 @@
   width: 100%;
 }
 
-.team-box{
+.flip-card{
   background-color: #FFF;
   margin: 3%;
   width: 30%;
@@ -27,17 +27,48 @@
   justify-content: space-between;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 25px;
+  perspective: 1000px;
 }
 
-/* Card titel */
-.box-titel{
+.inner-card{
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back{
+  position: relative;
+  transform: rotateY(180deg);
+}
+
+.card-titel-front{
   text-align: center;
   font-size: 35px;
   width: 100%;
-  margin-top: 15%
 }
 
-.box-image{
+.card-image-front{
   height: 50%;
   margin-bottom: 15%;
 }
+
+/* Klassen som toggles gjennom JS og sørger for rotering av cards */
+.rotate{
+  transform:rotateY(-180deg);
+};
