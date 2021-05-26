@@ -16,6 +16,9 @@ body {
 }  
 
 #Sales_Heading{
+    
+    position: relative;
+    top: 10px;
     font-size: 50px;
     font-weight: bold;
     padding: 0;
@@ -75,6 +78,7 @@ body {
     /* flex*/
     display: flex;
     flex-direction: column;   
+    border-radius: 5px;
 }
 
 
