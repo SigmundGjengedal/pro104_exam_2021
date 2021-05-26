@@ -1,63 +1,51 @@
 import MenuModule from '../Modules/MenuModule.js'
-
+//Hente variabler som er statiske på siden.
 const navbarFood = document.querySelector(".navbar_food");
 let mainContent = document.querySelector(".main_content");
 let editable = false;
 let food = MenuModule.getAll();
 
-
+//Trigge funksjonene som genererer innhold
 navbarFood.addEventListener("click", function (){
     generateLayout();
     addPizza();
     addDrinks();
     addReserve();
     addListeners();
-}
-)
-
-
-
-
-
-
+})
+//Genererer layouten på siden med flexboxer
 function generateLayout (){
-    
     mainContent.innerHTML = `
-    
-    
-    <div class="menu_page_container">
-    
-    
-    <div class="food_container">
-    <span class="food_title">FOOD</span>
-    </div>      
-    <div class="pizza_title">PIZZA</div>
-    <div class="confirm_btn_container">
-    <div class="confirm_btn_filled">
-    <div class="confirm_btn_circle"></div>
-    </div>
-    <span class="confirm_btn_txt">EDIT MENU</span> 
-    </div>
-    <div class="diagram_icon_container">
-    <div class="diagram_icon"></div>
-    </div>
-    
-    <div class="pizza_container">           
-    </div>
-    
-    <span class="drinks_title">DRINKS</span>
-    <div class="drinks_container">
-    </div>
-    
-    <div class="splitscreen_line_container">
-    <div class="splitscreen_line"></div>
-    </div>
-    
-    <span class="recipe_bank_title">RECIPE BANK</span>
-    <div class="recipe_bank_container">
-    </div>
-    
-    </div>
+    <div class="menu_page_container"> 
+        <div class="food_container">
+            <span class="food_title">FOOD</span>
+        </div>      
+        <div class="pizza_title">PIZZA</div>
+        <div class="confirm_btn_container">
+            <div class="confirm_btn_filled">
+                <div class="confirm_btn_circle"></div>
+            </div>
+        <span class="confirm_btn_txt">EDIT MENU</span> 
+        </div>
+        <div class="diagram_icon_container">
+            <div class="diagram_icon"></div>
+        </div>
+            <div class="bottom_container">
+                <div class="pizza_container">           
+                </div>
+                
+                <span class="drinks_title">DRINKS</span>
+                <div class="drinks_container">
+                </div>
+                
+                <div class="splitscreen_line_container">
+                <div class="splitscreen_line"></div>
+                </div>
+                
+                <span class="recipe_bank_title">RECIPE BANK</span>
+                <div class="recipe_bank_container"></div>
+            </div>
+     </div>
     
     `;
     
