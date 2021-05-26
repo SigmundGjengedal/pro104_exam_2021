@@ -90,6 +90,11 @@ body {
     border-radius: 5px;
    
 }
+.button:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+   
+}
 
 .calculate-btn { 
     background-color : #28a745;
