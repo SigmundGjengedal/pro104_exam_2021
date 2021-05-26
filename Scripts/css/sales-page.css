@@ -18,13 +18,10 @@ body {
 #Sales_Heading{
     font-size: 50px;
     font-weight: bold;
-    position: relative;
     padding: 0;
     margin-top: 0;
     
 }
-
-
 
 /* Flex columns*/
 .flex-columns .row {
@@ -57,6 +54,7 @@ body {
     border: 1px solid #ccc;
 }
 
+/* kolonner med valg*/
    .select-columns {
     /*styling*/
     border-right: 1px solid #ccc;
@@ -66,21 +64,19 @@ body {
     
   }
 
+  .select-columns:last-of-type{
+    border: none;
+}
 
+/* alle div'er med innhold*/
 .data_container{
-    border-right: 1px solid #ccc;
+  
     background: #f4f4f4;
     /* flex*/
     display: flex;
     flex-direction: column;   
 }
 
-.selected_container{
-    background: #f4f4f4;
-    /* flex*/
-    display: flex;
-    flex-direction: column;   
-}
 
 .button{
     cursor: pointer;
@@ -95,25 +91,16 @@ body {
    
 }
 
-.calculate-btn {
-    cursor: pointer;
-    padding: 10px;
-    margin: 10px;
+.calculate-btn { 
     background-color : #28a745;
-    color: #fff;
-    font-family: Futura;
-    border: none;
-    border-radius: 5px;
-
 }
 
 .diagrams_container{
     width: 100%;
     height: 70%;
     display: flex;
-    flex-direction: row;
     margin-top: 20px;
-    max-height: 400px;
+    max-height: 430px;
 }
 
 .diagrams_container>.diagrams {
@@ -121,4 +108,6 @@ body {
     background: #f4f4f4;
     width: 100%;
     max-height: 100%;
+    min-width: 645px;
   }
+
