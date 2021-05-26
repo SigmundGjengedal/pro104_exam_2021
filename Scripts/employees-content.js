@@ -53,9 +53,6 @@ function add(){
     <label for="tel">PHONE</label>
     <input type="tel" name="tel" maxlength=8 pattern="[0-9]{8}" required placeholder="PHONE">
 
-    <label for="PAY-GRADE">PAY-GRADE</label>
-    <input type="range" min="0" max="5" required name="PAY-GRADE" value="1">
-
     <label for="POSITION">POSITION</label>
     <select name="POSITION">
     <option value="HOST/HOSTESS">HOST/HOSTESS</option>
@@ -63,16 +60,36 @@ function add(){
     <option value="SOUSE CHEF">SOUSE CHEF</option>
     <option value="MANAGER">MANAGER</option>
     </select>
+
+    <label for="PAY-GRADE">PAY-GRADE</label>
+    <output id="amount" class="amount">1</output>
+    <input class="range" id="value" type="range" min="0" max="5" required name="PAY-GRADE" value="1">
+
     </div>
-    <button class="remove-add-button" type="submit">ADD</button>
+
+    <button class="add-button" type="submit">ADD</button>
 
     `
+    // Slider pay-grade nummer
+    slidingPayGrade();
 
     flipCard();
     // Click event som flipper kortet tilbake og stenger remove ansatt delen
     document.querySelector(".remove-add-close").addEventListener("click", flipCard);
   })
 };
+
+function slidingPayGrade(){
+  const slider = document.getElementById("value");
+  const output = document.getElementById("amount");
+
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  }
+};
+
+
+
 
 function remove(){
   document.querySelector(".remove-user-btn").addEventListener("click", (e)=>{
@@ -80,16 +97,19 @@ function remove(){
     <img class="image-remove-add" src="../Images/employees/userImageInbox.png" alt="person-remove">
     <a class="remove-add-close" href="#"><i class="fas fa-times fa-2x"></i></a>
     <div class="remove-inputs">
-    <input type="text"  placeholder="EMPLOYEE ID" minlength="2" required>
-    <input type="text"  placeholder="NAME" minlength="2" required>
+    <label for="NAME">NAME</label>
+    <input type="text" name="NAME" placeholder="NAME" minlength="2" required>
+    <label for="tel">PHONE</label>
+    <input type="tel" name="tel" maxlength=8 pattern="[0-9]{8}" required placeholder="PHONE">
     </div>
-    <button class="remove-add-button" type="submit">REMOVE</button>
+    <button class="remove-button" type="submit">REMOVE</button>
     `
     flipCard();
     // Click event som flipper kortet tilbake og stenger remove ansatt delen
     document.querySelector(".remove-add-close").addEventListener("click", flipCard);
   })
 };
+
 
 
   // Flipper kort ved å toggle class rotate
