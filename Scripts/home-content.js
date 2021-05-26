@@ -54,6 +54,7 @@ let mainTextHome = `
 
        <div class="diagram_7">
         <div class="diagram_7_filled"></div>
+        
      </div>
 
 

@@ -100,19 +100,113 @@ body {
     background-color : #28a745;
 }
 
+/*diagrams*/
 .diagrams_container{
     width: 100%;
     height: 70%;
-    display: flex;
     margin-top: 20px;
     max-height: 430px;
-}
-
-.diagrams_container>.diagrams {
-    padding: 60px;
     background: #f4f4f4;
     width: 100%;
-    max-height: 100%;
+    padding-top: 30px;
     min-width: 645px;
+    border-radius: 10px;
+}
+
+  .diagram_1 {
+    width: 50px;
+    height: 200px;
+    position: absolute;
+    background: #DEDEDE;
+    margin-right: 10px;
+    border: #FC7B61;
+    left: 33%;
+  }
+  
+  .diagram_1_filled {
+    height: 5%;
+    width: 100%;
+    background-color: #FC7B61;
+    position: absolute;
+    bottom: 0;
+    transition: height 2s;
+    margin-right: 10px;
+  }
+  .diagram_2 {
+    width: 50px;
+    height: 200px;
+    position: absolute;
+    background: #DEDEDE;
+    left: 43%;
+  }
+  
+  .diagram_2_filled {
+    height: 10%;
+    width: 100%;
+    background-color: #FC7B61;
+    position: absolute;
+    bottom: 0;
+    
+    transition: height 2s;
+  }
+  
+  .diagram_3 {
+    width: 50px;
+    height: 200px;
+    position: absolute;
+    background: #DEDEDE;
+    left: 53%;
+  }
+  
+  .diagram_3_filled {
+    height: 50%;
+    width: 100%;
+    background-color: #FC7B61;
+    position: absolute;
+    bottom: 0;
+    transition: height 2s;
+  }
+  
+  .diagram_4 {
+    width: 50px;
+    height: 200px;
+    position: absolute;
+    background: #DEDEDE;
+    left: 63%;
+  }
+  
+  .diagram_4_filled {
+    height: 70%;
+    width: 100%;
+    background-color: #FC7B61;
+    position: absolute;
+    bottom: 0;
+    transition: height 2s;
   }
 
+  /* sales numbers ved diagram*/
+  .sales_numbers_container{
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+  }
+
+  .sales_numbers_container .sales_number{
+      margin-bottom: 25px;
+     
+  }
+
+
+  .graph_names{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .result-text{
+      display: flex;
+      justify-content: center;
+  }
+
+  .result_number{
+      color: #28a745;
+      font-size: 40px;
+  }
