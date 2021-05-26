@@ -164,4 +164,3 @@ import HomePageDiagramsModule from './Generators/salesGenerator.js';
 
 // setter timeout slik at transition funkerer på søylene
 window.onload =  setTimeout(HomePageDiagramsModule.generateDiagramNumbers, 100);
-
