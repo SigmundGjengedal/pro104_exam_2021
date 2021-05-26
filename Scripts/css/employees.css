@@ -1,21 +1,6 @@
-/* Card div posisjonert med flex */
-.teams-container{
-  background-color: #FFF;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.team-wrap{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
 
+/* kort fro å legge til og fjerne ansatte */
 .flip-card{
   background-color: #FFF;
   width: 30%;
@@ -23,6 +8,10 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 25px;
   perspective: 1000px;
+  position: absolute;
+  left:2%;
+  bottom: 2%;
+
 }
 
 .inner-card{
@@ -65,68 +54,72 @@
 }
 
 
-/* Tester mulighetene med å ha kort som er ansvalig for å legge til og fjerne ansatte */
-.add-user{
-  color:black;
-  margin-right: 100px;
+.add-user-btn{
+  color:#000;
+  margin-right:100px;
 }
 
-.remove-user{
-  color:black;
+.remove-user-btn{
+  color:#000;
+}
+
+.remove-user-btn:hover, .add-user-btn:hover{
+  color:darkgrey;
+  transition: 0.3s;
 }
 
 .add-remove-user-div{
-  margin-bottom: 5%;
-  display: flex;
+  margin-bottom: 10%;
 }
 
-.front, .back-test {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.back-test{
-  position: relative;
-  transform: rotateY(180deg);
-  background:#ECAF88;
-  border-radius: 25px;
-}
-
-/* Baksiden av remov kortet */
-.remove-close{
+/* Flles style for remov og add kortet */
+.remove-add-close{
   color: #000;
   position: absolute;
   right:5%;
-  top:5%;
+  top:3%;
 }
 
-.remove-image{
+.remove-add-close:hover{
+  color:#d3d3d3;
+  transition: 0.3s;
+}
+
+.image-remove-add{
   width: 100px;
   border-radius: 50%;
   position: absolute;
   left:50%;
-  top:8%;
+  top:2%;
   transform: translateX(-50%);
 }
 
-.remove-input{
-  display: block;
-  text-align: center;
+/* Style for add kortet */
+.add-inputs{
   position: absolute;
-  top:60%;
+  top:30%;
   left:50%;
   transform: translateX(-50%);
 }
 
-.remove-button{
+/* Style for remov kortet */
+
+.remove-inputs{
+  display: block;
+  text-align: center;
+  position: absolute;
+  top:45%;
+  left:50%;
+  transform: translateX(-50%);
+  line-height: 3.2;
+}
+
+.remove-add-button{
   position: absolute;
   top:80%;
   left: 50%;
   transform: translateX(-50%);
 }
-
 
 
 /* Klassen som toggles gjennom JS og sørger for rotering av cards */
