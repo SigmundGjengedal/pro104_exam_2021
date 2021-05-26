@@ -70,7 +70,7 @@ const MenuModule = ( function (){
             mediumPrice: 39,
             amountSoldThisYear: 60,
             grossPrItem: 25,
-            image: "pizzaLowRes.jpg"
+            image: "drinkLowRes.jpeg"
         },
         {
             menuNr: 7,
@@ -80,7 +80,7 @@ const MenuModule = ( function (){
             mediumPrice: 39,
             amountSoldThisYear: 82,
             grossPrItem: 25,
-            image: "pizzaLowRes.jpg"
+            image: "drinkLowRes.jpeg"
         },
         {
             menuNr: 8,
@@ -90,7 +90,7 @@ const MenuModule = ( function (){
             mediumPrice: 29,
             amountSoldThisYear: 62,
             grossPrItem: 25,
-            image: "pizzaLowRes.jpg"
+            image: "drinkLowRes.jpeg"
         },
         {
             menuNr: 9,
@@ -100,7 +100,7 @@ const MenuModule = ( function (){
             mediumPrice: 89,
             amountSoldThisYear: 45,
             grossPrItem: 34,
-            image: "pizzaLowRes.jpg"
+            image: "drinkLowRes.jpeg"
         },
         {
             menuNr: 10,
@@ -110,7 +110,7 @@ const MenuModule = ( function (){
             mediumPrice: 89,
             amountSoldThisYear: 39,
             grossPrItem: 39,
-            image: "pizzaLowRes.jpg"
+            image: "drinkLowRes.jpeg"
         },
         //5 Desserts
         {
@@ -141,7 +141,7 @@ const MenuModule = ( function (){
             allergies: "Cashew",
             amountSoldThisYear: 34,
             grossPrItem: 19,
-            image: "pizzaLowRes.jpg"
+            image: "drinkLowRes.jpeg"
         },
         {
             menuNr: 14,
@@ -151,7 +151,7 @@ const MenuModule = ( function (){
             allergies: "",
             amountSoldThisYear: 47,
             grossPrItem: 12,
-            image: "pizzaLowRes.jpg"
+            image: "drinkLowRes.jpeg"
         },
         {
             menuNr: 15,
@@ -161,7 +161,7 @@ const MenuModule = ( function (){
             allergies: "Milk",
             amountSoldThisYear: 112,
             grossPrItem: 40,
-            image: "pizzaLowRes.jpg"
+            image: "drinkLowRes.jpeg"
         }
         
     ]

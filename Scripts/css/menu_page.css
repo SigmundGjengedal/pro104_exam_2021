@@ -42,7 +42,7 @@ body {
   display: flex;
   justify-content: space-around;
   width: 80%;
-  height: 22%; /* FIKSE */
+  height: 30%; /* FIKSE */
   position: relative;
   margin-left: 10%;
   margin-right: 10%;
@@ -91,7 +91,7 @@ body {
   display: flex;
   justify-content: space-around;
   width: 80%;
-  height: 22%; /* FIKSE */
+  height: 30%; /* FIKSE */
   position: relative;
   margin-left: 10%;
   margin-right: 10%;
@@ -126,6 +126,7 @@ body {
   left: 30%;
 }
 .splitscreen_line_container {
+  bottom: 3%;
   position: relative;
   margin-top: 20px;
   width: 100%;
@@ -144,10 +145,11 @@ body {
   display: flex;
   justify-content: space-around;
   width: 80%;
-  height: 22%; /* FIKSE */
+  height: 30%; /* FIKSE */
   position: relative;
   margin-left: 10%;
   margin-right: 10%;
+  bottom: 1%;
 }
 .add_plus{
   background-image: url("../../Images/Menu/Icons/plus.png");
@@ -163,6 +165,7 @@ body {
   font-family: Futura;
   font-weight: Bold;
   font-size: 30px;
+  bottom: 1%;
 }
 .recipe_1 {
   width: 16%;
@@ -214,7 +217,5 @@ body {
   text-align: center;
 }
 .bottom_container{
-  border: 2px blue solid;
   height: 76%;
-  display:
 }
