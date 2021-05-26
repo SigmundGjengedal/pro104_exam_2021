@@ -16,6 +16,8 @@ body {
 }  
 
 #Sales_Heading{
+  position: relative;
+  top: 10px;
   font-size: 50px;
   font-weight: bold;
   padding: 0;
@@ -102,6 +104,10 @@ body {
 
 /*diagrams*/
 .diagrams_container{
+
+}
+
+.result-section{
   width: 100%;
   height: 70%;
   margin-top: 20px;
@@ -114,86 +120,36 @@ body {
 }
 
 .diagram_1 {
-  width: 50px;
-  height: 200px;
-  position: absolute;
+  width: 600px;
+  height: 30px;
+  position: relative;
+  left: 100px;
   background: #DEDEDE;
   margin-right: 10px;
   border: #FC7B61;
-  left: 33%;
+  
 }
 
 .diagram_1_filled {
-  height: 5%;
-  width: 100%;
+  margin-top: 100px;
+  height: 100%;
+  width: 75%;
   background-color: #FC7B61;
-  position: absolute;
-  bottom: 0;
+ 
   transition: height 2s;
-  margin-right: 10px;
-}
-.diagram_2 {
-  width: 50px;
-  height: 200px;
-  position: absolute;
-  background: #DEDEDE;
-  left: 43%;
+
 }
 
-.diagram_2_filled {
-  height: 10%;
-  width: 100%;
-  background-color: #FC7B61;
-  position: absolute;
-  bottom: 0;
-  
-  transition: height 2s;
-}
-
-.diagram_3 {
-  width: 50px;
-  height: 200px;
-  position: absolute;
-  background: #DEDEDE;
-  left: 53%;
-}
-
-.diagram_3_filled {
-  height: 50%;
-  width: 100%;
-  background-color: #FC7B61;
-  position: absolute;
-  bottom: 0;
-  transition: height 2s;
-}
-
-.diagram_4 {
-  width: 50px;
-  height: 200px;
-  position: absolute;
-  background: #DEDEDE;
-  left: 63%;
-}
-
-.diagram_4_filled {
-  height: 70%;
-  width: 100%;
-  background-color: #FC7B61;
-  position: absolute;
-  bottom: 0;
-  transition: height 2s;
-}
-
-/* sales numbers ved diagram*/
+/* sales numbers ved diagram*/  
 .sales_numbers_container{
     display: flex;
-    flex-direction: column;
-    margin-left: 30px;
+    justify-content: space-evenly;
+
+   
 }
 
 .sales_numbers_container .sales_number{
-    margin-bottom: 25px;
-   
+    margin-bottom: 25px;  
 }
 
 

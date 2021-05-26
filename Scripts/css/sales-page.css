@@ -159,7 +159,7 @@ body {
   }
   
   .diagram_3_filled {
-    height: 50%;
+    height: 20%;
     width: 100%;
     background-color: #FC7B61;
     position: absolute;
@@ -176,7 +176,7 @@ body {
   }
   
   .diagram_4_filled {
-    height: 70%;
+    height: 40%;
     width: 100%;
     background-color: #FC7B61;
     position: absolute;
