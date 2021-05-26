@@ -3,10 +3,19 @@ const navbarEmployees = document.querySelector(".navbar_employees");
 let mainTextHome =`
 
   <div class="employees-content">
+
+
+  <nav class="buttons-employee">
+      <a class="button-employee" href="#">KARL JOHAN</a>
+      <a class="button-employee" href="#">BJØRVIKA</a>
+      <a class="button-employee" href="#">NYDALEN</a>
+      <a class="button-employee" href="#">GRUNERLØKKA</a>
+    </nav>
+
     <div class="flip-card">
       <div class="inner-card">
         <div class="front">
-          <h2 class="card-titel-front">ADD & REMOVE</h2>
+          <h2 class="card-titel-front">CHANGE</h2>
           <img class="card-image-front" src="Images/employees/pizza.png" alt="">
 
           <div class="add-remove-user-div">
@@ -18,6 +27,7 @@ let mainTextHome =`
         <div class="back">
 
         </div>
+
       </div>
     </div>
 

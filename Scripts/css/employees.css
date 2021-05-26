@@ -1,6 +1,37 @@
+/* Knapper for å velge fra hvilken restorang du vil se ansatte  */
+.employees-content{
 
 
-/* kort fro å legge til og fjerne ansatte */
+}
+.buttons-employee{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  width: 20%;
+  height: 40%;
+  position: absolute;
+  top:5%;
+  left: 10%;
+}
+
+.button-employee{
+padding: 1em 1.5em;
+color: #ECAF88;
+display: inline-block;
+text-align: center;
+border: 2px solid #ECAF88;
+font-size: 1.1rem;
+text-decoration: none;
+border-radius: 20px;
+}
+
+.button-employee:hover{
+  background: #ECAF88;
+  transition: 0.6s;
+  color:#f9f3f3;
+}
+
+/* kort for å legge til og fjerne ansatte */
 .flip-card{
   background-color: #FFF;
   width: 30%;
@@ -9,9 +40,8 @@
   border-radius: 25px;
   perspective: 1000px;
   position: absolute;
-  left:2%;
-  bottom: 2%;
-
+  bottom: 5%;
+  left: 5%;
 }
 
 .inner-card{
@@ -44,7 +74,7 @@
 
 .card-titel-front{
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   width: 100%;
 }
 

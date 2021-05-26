@@ -8,6 +8,7 @@ body {
   font-family: Futura;
   font-weight: Bold;
   color: #000;
+  background-color: #f4f3f3;
 }
 
 .main_content{
@@ -15,7 +16,6 @@ body {
   left: 7%;
   width: 73%;
   height: 100vh;
-  background-color: #FFF;
 }
 
 .home_page_container {
