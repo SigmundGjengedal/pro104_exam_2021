@@ -1,4 +1,7 @@
-const mainContentHome = document.querySelector(".main_content");
+// Importerer EmpolyeesModule
+
+// Variabler for navbar employee knappen og stedet hvor info printes
+const mainContent = document.querySelector(".main_content");
 const navbarEmployees = document.querySelector(".navbar_employees");
 let mainTextHome =`
 <div class="employees-content">
@@ -12,53 +15,7 @@ let mainTextHome =`
 
 
     <div class="employee-list">
-    <div class="employee-card">
-      <div class="employee-name-div">
-      <h3 class="employee-name">Test testerson</h3>
-      <p class="employee-position">Chef</p>
-      </div>
-      <div class="employee-contact-info">
-      <p class="employee-phone">22 22 22 22</p>
-      <p class="employee-email">test@test.no</p>
-      </div>
-      <p class="employee-pay-grade">PAY GRADE 5</p>
-    </div>
 
-    <div class="employee-card">
-      <div class="employee-name-div">
-      <h3 class="employee-name">Test testerson</h3>
-      <p class="employee-position">Chef</p>
-      </div>
-      <div class="employee-contact-info">
-      <p class="employee-phone">22 22 22 22</p>
-      <p class="employee-email">test@test.no</p>
-      </div>
-      <p class="employee-pay-grade">PAY GRADE 5</p>
-    </div>
-
-    <div class="employee-card">
-      <div class="employee-name-div">
-      <h3 class="employee-name">Test testerson</h3>
-      <p class="employee-position">Chef</p>
-      </div>
-      <div class="employee-contact-info">
-      <p class="employee-phone">22 22 22 22</p>
-      <p class="employee-email">test@test.no</p>
-      </div>
-      <p class="employee-pay-grade">PAY GRADE 5</p>
-    </div>
-
-    <div class="employee-card">
-      <div class="employee-name-div">
-      <h3 class="employee-name">Test testerson</h3>
-      <p class="employee-position">Chef</p>
-      </div>
-      <div class="employee-contact-info">
-      <p class="employee-phone">22 22 22 22</p>
-      <p class="employee-email">test@test.no</p>
-      </div>
-      <p class="employee-pay-grade">PAY GRADE 5</p>
-    </div>
 
     </div>
 
@@ -83,9 +40,10 @@ let mainTextHome =`
 `
 
 navbarEmployees.addEventListener("click", ()=>{
-  mainContentHome.innerHTML = mainTextHome;
+  mainContent.innerHTML = mainTextHome;
     add();
     remove();
+    printKarlJohan();
 });
 
 // funksjonen add som tillatter brukeren å legge til ansatt
@@ -127,7 +85,6 @@ function add(){
     document.querySelector(".remove-add-close").addEventListener("click", flipCard);
   })
 };
-
 // Funksjon som gir muligheten for å fjerne ansatte
 function remove(){
   document.querySelector(".remove-user-btn").addEventListener("click", (e)=>{
@@ -147,8 +104,28 @@ function remove(){
     document.querySelector(".remove-add-close").addEventListener("click", flipCard);
   })
 };
-
   // Flipper kort ved å toggle class rotate
 function flipCard(){
   document.querySelector(".inner-card").classList.toggle("rotate");
 };
+
+// Klikk Karl Johan
+    function printKarlJohan(){
+      document.querySelector(".karl-johan").addEventListener("click", ()=>{
+        EmployeesModules.getKarlJohan().forEach(kj => {
+              document.querySelector(".employee-list").innerHTML = `
+              <div class="employee-card">
+                <div class="employee-name-div">
+                <h3 class="employee-name">${kj.name}</h3>
+                <p class="employee-position">${kj.position}</p>
+                </div>
+                <div class="employee-contact-info">
+                <p class="employee-phone">${kj.phone}</p>
+                <p class="employee-email">${kj.mail}</p>
+                </div>
+                <p class="employee-pay-grade">PAY GRAD: ${kj.payGrade}</p>
+              </div>
+              `
+        });
+      })
+    }
