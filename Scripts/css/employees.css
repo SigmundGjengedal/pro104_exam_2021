@@ -142,7 +142,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
 
 .remove-inputs{
   display: block;
-  line-height: 1.5;
+  line-height: 2;
   position: absolute;
   top:45%;
   left:50%;
