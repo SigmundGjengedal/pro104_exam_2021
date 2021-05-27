@@ -150,7 +150,7 @@ function flipCard(){
 
                 <h3 class="employee-name">${rest.name}</h3>
                 <p class="employee-position">${rest.position}</p>
-                
+
                 <div class="employee-contact-info">
                 <p class="employee-phone">${rest.phone}</p>
                 <p class="employee-email">${rest.mail}</p>
