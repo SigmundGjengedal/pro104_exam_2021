@@ -3,9 +3,7 @@ import MenuModule from '../Modules/MenuModule.js'
 const navbarFood = document.querySelector(".navbar_food");
 let mainContent = document.querySelector(".main_content");
 let editable = false;
-let isMenu = true;
 let food = MenuModule.getAll();
-
 
 
 //Trigge funksjonene som genererer innhold
@@ -53,9 +51,6 @@ function generateLayout (){
     `;
     
 }
-
-
-
 function addPizza(){
     let pizzaContainer = document.querySelector(".pizza_container");
     const pizza = MenuModule.getPizza();
@@ -67,8 +62,6 @@ function addPizza(){
     }
     pizzaContainer.innerHTML += `<div class="pizza_type_5 add_plus"></div>`;
 }
-
-
 function addDrinks(){
     const drinks = MenuModule.getDrinks();
     let drinksContainer = document.querySelector(".drinks_container")
@@ -81,7 +74,6 @@ function addDrinks(){
     }
     drinksContainer.innerHTML += `<div class="drink_type_5 add_plus"></div>`;
 }
-
 function addReserve(){
     for(var i = 14;i>9;i--){
         const reserveContainer = document.querySelector(".recipe_bank_container")
@@ -91,7 +83,6 @@ function addReserve(){
         
     }
 }
-
 function addListeners(){
 
     const drink5 = document.querySelector(".drink_type_5");
@@ -100,6 +91,8 @@ function addListeners(){
     const drinksContainer = document.querySelector(".drinks_container");
     const pizzaContainer = document.querySelector(".pizza_container");
     const analyticsBtn = document.querySelector(".diagram_icon_container");
+    var isMenu = true;
+    const pizzaTitle = document.querySelector(".pizza_title");
     
     document.querySelectorAll(".drink_type_1, .pizza_type_1, .recipe_1").forEach(item => item.addEventListener("click", function (e){
         if(editable){
@@ -153,10 +146,10 @@ function addListeners(){
 
     const menuBtnCircle = document.querySelector(".confirm_btn_circle");
     
-    const editText = document.querySelector(".confirm_btn_txt");
     
-
+    
     menuBtnCircle.addEventListener("click", function(){
+        const editText = document.querySelector(".confirm_btn_txt");
         menuBtnCircle.classList.toggle("confirm_btn_circle_edit")
         editable = editable ? false : true;
         if(!editable){
@@ -165,29 +158,243 @@ function addListeners(){
         editText.innerText = "CONFIRM MENU"
     })
 
+
+
     
-    analyticsBtn.addEventListener("click", showAnalytics
+    analyticsBtn.addEventListener("click", function () {
+        const bottomContainer =  document.querySelector(".bottom_container");
+        
+    if(!isMenu){
+        document.querySelector(".confirm_btn_container").style.visibility = "visible";
+        pizzaTitle.innerHTML = "PIZZA";
+        isMenu = true;
+        
+        generateLayout();
+        addPizza();
+        addDrinks();
+        addReserve();
+        addListeners();     
+    }
+    else if(isMenu){
+        document.querySelector(".confirm_btn_container").style.visibility = "hidden";
+        document.querySelector(".pizza_title").innerHTML = "ANALYTICS";
+        isMenu = false;
+        bottomContainer.innerHTML = `
+        <div class="analytics_top"></div>
+        <table>
+            <caption>
+    
+            </caption>
+            <thead>
+                <tr>
+                    <th scope="col">Restaurant</th>
+                    <th scope="col">Product Type</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Gross Profit</th>
+                    <th scope="col">Units Sold</th>
+                    <th scope="col">Select</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Grunerløkka</th>
+                    <td>Pizza</td>
+                    <td>Margarita</td>
+                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td>10.543</td>
+                    <td>42</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="bottom_div">
+            <div class="bottom_text_div is_flex">
+                <div>Average Price</div>
+                <div>Average Gross Profit</div>
+                <div>Average Unites Sold</div>
+            </div>
+            <div class="bottom_numbers_div is_flex">
+                <div>165.45</div>
+                <div>18.469</div>
+                <div>678.56</div>
+            </div>
+            <div class="bottom_button_container>
+                <div class="bottom_button>SUBMIT CHANGES</div>
+            </div>
+        </div>
+        `;
+    }
+    }
     )
 }
 
 
 
-function showAnalytics(){
-    if(isMenu){
-        const bottomContainer =  document.querySelector(".bottom_container");
-        document.querySelector(".confirm_btn_container").style.display = "none";
-        document.querySelector(".pizza_container").innerText = "FOOD ANALYTICS";
-        bottomContainer.innerHTML = `
-        
-        `
-        console.log("true")
-        isMenu = false;
-;
-    }
-        document.querySelector(".confirm_btn_container").style.display = "visible";
-        document.querySelector(".pizza_container").innerText = "PIZZA";
-        console.log("false")
-    
-}
+
+
+
+
+
+
+
+
+
+
+
+
+// function showAnalytics(){
+//     let isMenu = true;
+//     const pizzaTitle = document.querySelector(".pizza_title");
+//     if(isMenu){
+//         const bottomContainer =  document.querySelector(".bottom_container");
+//         document.querySelector(".confirm_btn_container").style.display = "none";
+//         document.querySelector(".pizza_title").innerHTML = "ANALYTICS";
+//         bottomContainer.innerHTML = `
+//         `;
+//         isMenu = false;
+//         console.log(isMenu)
+//     }else if(!isMenu){
+//         isMenu = true;
+//         document.querySelector(".confirm_btn_container").style.display = "visible";
+//         pizzaTitle.innerHTML = "PIZZA";
+//         console.log(isMenu)
+//     }
+// }
 
 
