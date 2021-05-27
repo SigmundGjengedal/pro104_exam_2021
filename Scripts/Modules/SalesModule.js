@@ -82,7 +82,6 @@ const SalesModule = ( function (){
 
     // funksjoner for å  hente ut totaltsalg (en value) for en og en avdeling, etter navn.
 
-    const test2 = salesArray[1].revenueAccThisYear;
 
     const getAccRevenueThisYearByRestaurant = (name)  => {        
        let result = salesArray.filter( object => object.name.toLowerCase === name.toLowerCase);
@@ -102,6 +101,18 @@ const SalesModule = ( function (){
         let resultFormatted = result[0].grossRevenuePreviousYear;
         return resultFormatted;
     }
+
+
+    // funksjon med to parameter, navn og  periode
+
+    const getRevenueByRestaurantAndPeriod = (name,period)  => {        
+        let restaurant = salesArray.filter( object => object.name.toLowerCase === name.toLowerCase);
+        let resultFormatted = restaurant[0].revenueAccThisYear; // filter laget ett array med verdiene i restaurangen, så må hente ut riktig verdi.
+        
+        return resultFormatted;
+     
+     };
+
     
     return {getAll, getTotalMonday,getTotalTuesday, getTotalWednesday,getTotalThursday,getTotalFriday,getTotalSaturday,getTotalSunday,getAccRevenueThisYearByRestaurant,getGrossRevenueThisYearByRestaurant, getGrossRevenueLastYearByRestaurant};
 
