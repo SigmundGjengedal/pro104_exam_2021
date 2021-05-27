@@ -17,54 +17,84 @@ let mainTextHome =`
 
     <div class="employee-list">
 
-
     </div>
 
-    <div class="flip-card">
-      <div class="inner-card">
-        <div class="front">
-          <h2 class="card-titel-front">CHANGE</h2>
-          <img class="card-image-front" src="Images/employees/pizza.png" alt="">
+    <div class="add-remove-buttons">
+    <a class="add-user-btn" href="#"><i class="fas fa-user-plus fa-2x"></i></a>
+    <a class="remove-user-btn" href="#"><i class="fas fa-user-minus fa-2x"></i></a>
+    </div>
 
-          <div class="add-remove-user-div">
-            <a class="add-user-btn" href="#"><i class="fas fa-user-plus fa-2x"></i></a>
-            <a class="remove-user-btn" href="#"><i class="fas fa-user-minus fa-2x"></i></a>
-          </div>
+    <div class="modal">
 
-        </div>
-        <div class="back">
+      <div class="modal-content">
 
-        </div>
+
       </div>
+
     </div>
+
+
   </div>
 `
 
 navbarEmployees.addEventListener("click", ()=>{
   mainContent.innerHTML = mainTextHome;
-    add();
-    remove();
     printKarlJohan();
     printGrunerlokka();
     printNydalen();
     printBjorvika();
+
+    addEmployee();
+    removeEmployee();
+
 });
+
+
+// Åpner add modalen
+function addEmployee(){
+  document.querySelector(".add-user-btn").addEventListener("click", function(){
+    const modal = document.querySelector(".modal");
+    modal.style.display = "block";
+    add();
+    closeModal();
+  })
+
+};
+
+// Åpner remove modalen
+function removeEmployee(){
+  document.querySelector(".remove-user-btn").addEventListener("click", function(){
+    const modal = document.querySelector(".modal");
+    modal.style.display = "block";
+    remove();
+    closeModal();
+  })
+};
+
+//Stenger modalen når bruker klikker på icon
+function closeModal(){
+  document.querySelector(".remove-add-close").addEventListener("click", function(){
+    const modal = document.querySelector(".modal");
+    modal.style.display = "none";
+  });
+};
 
 // funksjonen add som tillatter brukeren å legge til ansatt
 function add(){
-  document.querySelector(".add-user-btn").addEventListener("click", ()=>{
-    document.querySelector(".back").innerHTML = `
+    document.querySelector(".modal-content").innerHTML = `
+    <div class="image-remove-add-div">
     <img class="image-remove-add" src="../Images/employees/userImageInbox.png" alt="person-remove">
-    <a class="remove-add-close" href="#"><i class="fas fa-times fa-2x"></i></a>
+    </div>
+
+    <a class="remove-add-close" href="#"><i class=" fas fa-times fa-2x"></i></a>
   <div class="add-inputs">
-    <label for="NAME">NAME</label>
+    <label for="">CONTACT INFO:</label>
     <input type="text" name="NAME" placeholder="NAME" minlength="2" required>
-    <label for="EMAIL">EMAIL</label>
+    <input type="text" name="DEPARTMENT" placeholder="DEPARTMENT" minlength="2" required>
     <input type="email" name="EMAIL" required placeholder="EMAIL" value="">
-    <label for="tel">PHONE</label>
     <input type="tel" name="tel" maxlength=8 pattern="[0-9]{8}" required placeholder="PHONE">
 
-    <label for="POSITION">POSITION</label>
+    <label class="position" for="POSITION">POSITION:</label>
     <select name="POSITION">
     <option value="HOST/HOSTESS">HOST/HOSTESS</option>
     <option value="CHEF">CHEF</option>
@@ -72,47 +102,37 @@ function add(){
     <option value="MANAGER">MANAGER</option>
     </select>
 
-    <label for="PAY-GRADE">PAY-GRADE</label>
+    <label for="PAY-GRADE">PAY-GRADE:</label>
     <select name="pay-grade">
     <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
     <option value="4">4</option>
+    <option value="5">5</option>
     </select>
     </div>
 
     <button class="add-button" type="submit">ADD</button>
 
+
     `
-    flipCard();
-    // Click event som flipper kortet tilbake og stenger remove ansatt delen
-    document.querySelector(".remove-add-close").addEventListener("click", flipCard);
-  })
 };
 // Funksjon som gir muligheten for å fjerne ansatte
 function remove(){
-  document.querySelector(".remove-user-btn").addEventListener("click", (e)=>{
-    document.querySelector(".back").innerHTML = `
+    document.querySelector(".modal-content").innerHTML = `
+    <div class="image-remove-add-div">
     <img class="image-remove-add" src="../Images/employees/userImageInbox.png" alt="person-remove">
+    </div>
+
     <a class="remove-add-close" href="#"><i class="fas fa-times fa-2x"></i></a>
     <div class="remove-inputs">
-    <label for="NAME">NAME</label>
+    <label for="">INFO:</label>
     <input type="text" name="NAME" placeholder="NAME" minlength="2" required>
-    <label for="tel">PHONE</label>
     <input type="tel" name="tel" maxlength=8 pattern="[0-9]{8}" required placeholder="PHONE">
     </div>
     <button class="remove-button" type="submit">REMOVE</button>
     `
-    flipCard();
-    // Click event som flipper kortet tilbake og stenger remove ansatt delen
-    document.querySelector(".remove-add-close").addEventListener("click", flipCard);
-  })
 };
-  // Flipper kort ved å toggle class rotate
-function flipCard(){
-  document.querySelector(".inner-card").classList.toggle("rotate");
-};
-
 
 // Function printer fra modulen alle ansatte i KarlJohan
     function printKarlJohan(){
@@ -162,7 +182,6 @@ function flipCard(){
         });
       });
     };
-
 
     // Function printer fra modulen alle ansatte i Nydalen
     function printNydalen(){
