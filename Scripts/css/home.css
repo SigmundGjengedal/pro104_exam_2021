@@ -18,61 +18,47 @@ body {
   height: 100vh;
 }
 
-.home_page_container {
-  background: #FFF;
-}
-
 .top_page_title_container {
-  width: 20%;
-  height: 20%;
   position: absolute;
   top: 5%;
-  left: 13%;
-}
-
-.top_page_title {
-  color: #000;
-  font-family: Futura;
-  font-weight: Bold;
+  left: 5%;
   font-size: 50px;
 }
 
 .total_sales_container {
-  width: 80%;
-  height: 40%;
+  width: 100%;
+  height: 50%;
   position: absolute;
   top: 10%;
-  left: 5%;
 }
 
 .total_sales_title {
   width: 50%;
   color: #000;
-  position: relative;
+  position: absolute;
   top: 12%;
-  left: 15%;
+  left: 10%;
   font-family: Futura;
   font-weight: Bold;
   font-size: 25px;
 }
 
-/* Uke dagene under søyle diagramen */
-.week_container {
-  width: 90%;
-  height: 250px;
-  /* FÅR IKKE ENDRET TIL PROSENT */
+.total_sales_past{
   position: absolute;
-  top: 30%;
-  left: 25.5%;
+  top:13%;
+  right: 19%;
+  color: #A9A9A9;
 }
 
+/* Uke dagene under søyle diagramen */
+
 .week {
-  width: 53%;
+  width: 48%;
+  height: 250px;
   position: absolute;
   top: 75%;
+  left: 26%;
   color: #A9A9A9;
-  font-family: Futura;
-  font-weight: Bold;
   font-size: 16px;
 }
 
@@ -243,129 +229,71 @@ body {
 }
 
 .sales_numbers_container {
-  height: 48%;
+  height: 43%;
   position: absolute;
-  top: 27%;
+  top: 28%;
   left: 15%;
   letter-spacing: 1px;
-}
-
-.sales_100 {
   color: #949494;
-  position: relative;
-  font-family: Futura;
-  font-weight: Bold;
   font-size: 15px;
 }
 
+
 .sales_75 {
-  color: #949494;
   position: absolute;
   top: 22%;
   left: 2%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 15px;
 }
 
 .sales_50 {
-  color: #949494;
   position: absolute;
   top: 45%;
   left: 2%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 15px;
 }
 
 .sales_25 {
-  color: #949494;
   position: absolute;
   top: 69%;
   left: 2%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 15px;
 }
 
 .sales_0 {
-  color: #949494;
   position: absolute;
   top: 90%;
   left: 6%;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 15px;
 }
 
 /* Linjer som deler skjermen */
-.horizontal_line_container {
-  width: 70%;
-  height: 5%;
-  position: absolute;
-  top: 58%;
-  left: 23%;
-}
-
 .horizontal_line {
-  width: 68%;
-  height: 15%;
-  background: #DEDEDE;
+  width: 70%;
+  height: 5px;
   position: absolute;
+  top: 55%;
+  left:50%;
+  transform: translateX(-50%);
+  background: #DEDEDE;
   border-radius: 20px;
 }
 
-.vertical_line_container {
-  width: 20%;
-  height: 10%;
-  position: absolute;
-  top: 80%;
-  left: 36%;
-}
 
-.vertical_line {
-  width: 100%;
-  height: 2%;
-  background: #DEDEDE;
-  position: absolute;
-  border-radius: 20px;
-  transform: rotate(-90deg);
-}
 
 /* Sirkel delen - Budget  */
 .budget_page_container {
-  width: 30%;
+  width: 40%;
   height: 30%;
   position: absolute;
-  top: 63%;
-  left: 13%;
-  letter-spacing: 1px;
-}
-
-.budget_title_container {
-  width: 30%;
-  height: 30%;
-  position: absolute;
-}
-
-.budget_title {
-  color: #000;
-  position: absolute;
-  font-family: Futura;
-  font-weight: Bold;
+  top: 60%;
+  left: 10%;
   font-size: 30px;
-  letter-spacing: 0;
 }
 
 .goal_circle {
   position: absolute;
-  top: 11%;
-  left: 23%;
-  width: 50%;
-  height: 80%;
+  top: 20%;
+  left: 15%;
+  width: 60%;
+  height: 75%;
   background: #FC7B61;
-  /* top: 70%; FÅR IKKE ENDRET PLASSERING
-  left: 80%; FÅR IKKE ENDRET PLASSERING */
   border-radius: 50%;
 }
 
@@ -376,8 +304,6 @@ body {
   width: 90%;
   height: 90%;
   background-color: #f4f3f3;
-  /* top: 40%; FÅR IKKE ENDRET PLASSERING
-  left: 60%; FÅR IKKE ENDRET PLASSERING */
   border-radius: 50%;
 }
 
@@ -385,83 +311,54 @@ body {
   position: relative;
   top: -10%;
   left: 48%;
-  width: 100%;
-  height: 142%;
+  height: 120%;
   background-color: #f4f3f3;
-  /* top: 40%; FÅR IKKE ENDRET PLASSERING
-  left: 60%; FÅR IKKE ENDRET PLASSERING */
 }
 
-.accomplished {
-  width: 50%;
-  height: 30%;
+.total_circel {
   position: absolute;
-  top: 35%;
-  left: 30%;
+  top: 45%;
+  left: 28%;
 }
 
 .accomplished_number {
-  margin-left: 14px;
-  color: #000;
-  position: absolute;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 40px;
-}
-
-.total_goal {
-  width: 50%;
-  height: 30%;
-  position: absolute;
-  top: 57%;
-  left: 37%;
+  font-size: 35px;
+  display: block;
 }
 
 .total_goal_number {
-  width: 60%;
-  color: #000;
-  position: absolute;
-  font-family: Futura;
-  font-weight: Light Condensed;
-  font-size: 30px;
-}
-
-.percent_accomplished {
-  width: 50%;
-  position: absolute;
-  top: 99%;
-  left: 31%;
+  font-size: 20px;
+  margin-left: 40%;
+  color:  #A9A9A9;
 }
 
 .percent_accomplished_txt {
-  width: 100%;
-  color: #000;
   position: absolute;
-  font-family: Futura;
-  font-weight: Bold;
+  margin-top: 20px;
+  top: 100%;
+  left: 20%;
   font-size: 25px;
 }
 
 /* Profit delen */
-.profit_container {
-  width: 50%;
-  height: 30%;
-  position: absolute;
-  top: 63%;
-  left: 49%;
-}
 
-.profit_title_container {
+.profit_title {
   font-size: 30px;
+  position: absolute;
+  bottom: 36%;
+  right: 35%;
 }
 
+.total_profit_div{
+  position: absolute;
+  bottom: 15%;
+  right: 8%;
+}
 
 .total_profit_number {
-  color: #448662;
-  position: absolute;
-  font-family: Futura;
-  font-weight: Bold;
-  font-size: 4rem;
-  top: 40%;
-  left: 10%;
+  font-size: 8vw;
+}
+
+.profit_k{
+  font-size: 3vw;
 }

@@ -17,7 +17,7 @@ padding: 1em 1em;
 color: #000;
 display: inline-block;
 text-align: center;
-font-size: 1.1rem;
+font-size: 1.1vw;
 text-decoration: none;
 border-radius: 15px;
 background-color: #FFF;
@@ -175,6 +175,18 @@ margin-top: 30px;
   bottom: 7%;
   left: 50%;
   transform: translateX(-50%);
+  padding: 10px 25px;
+  border: 2px solid #ECAF88;
+  display: inline-block;
+  font-size: 1.1vw;
+  border-radius: 15px;
+  background-color: #FFF;
+}
+
+.add-button:hover{
+  background: #ECAF88;
+  transition: 0.3s;
+  color:#f9f3f3;
 }
 
 /* Fjern ansatt modal */
@@ -183,7 +195,6 @@ margin-top: 30px;
   width: 50%;
   line-height: 2.3;
   margin: 20% auto;
-
 }
 
 .remove-button{
