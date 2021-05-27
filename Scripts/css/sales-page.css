@@ -26,6 +26,38 @@ body {
     
 }
 
+/* lavnelabel over variabel-valg*/
+.labels-choices{
+    position: relative;
+    left: 60%;
+    
+}
+
+.choice{
+    background-color: #ccc;
+    border-top: 50%;
+    color: white;
+    border-radius:30%;
+    padding: 5px;
+    z-index: -1;
+}
+
+.restaurant {
+    position: relative;
+    margin-right: 40px;
+}
+
+.period {
+    position: relative;
+}
+
+.category{
+    position: relative;
+    left: 2%;
+    
+}
+
+
 /* Flex columns*/
 .flex-columns .row {
     display: flex;
