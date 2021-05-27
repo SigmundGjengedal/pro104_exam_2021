@@ -5,7 +5,7 @@ const SalesModule = ( function (){
         name: "Bjørvika",
         revenueAccThisYear: 600000,
         revenuePreviousYear: 1100000,
-        revenuePreviousMonth: 110000,
+        revenuePreviousMonth: 120000,
         revenuePreviousWeek: 35000,
 
         revenuePreviousDay: 12000,
@@ -107,9 +107,9 @@ const SalesModule = ( function (){
 
 
 
-    // funksjon med to parameter, navn og  periode
+    // funksjon som skal ta knappe-verdiene som parameter, (navn ,periode, category)
 
-    const getRevenueByRestaurantAndPeriod = (name,period)  => {        
+    const getRevenueByRestaurantAndPeriodAndCategory = (name,period, category)  => {        
         let restaurant = salesArray.filter( object => object.name.toLowerCase === name.toLowerCase);
         let revenueNumber = "";
 
@@ -120,19 +120,37 @@ const SalesModule = ( function (){
         else if(period === "last-year"){
              revenueNumber = restaurant[0].revenuePreviousYear;
         }
-         // filter laget ett array med verdiene i restaurangen, så må hente ut riktig verdi.
+
+        else if(period === "last-month"){
+            revenueNumber = restaurant[0].revenuePreviousMonth;
+       }
+
+        else if(period === "last-week"){
+            revenueNumber = restaurant[0].revenuePreviousWeek;
+        }
+
+         // tester for category og returner deretter ca profitt.
         
-        return revenueNumber;
+        switch (category){
+            case "ALL":
+                return revenueNumber;
+            case "PIZZA":
+                return revenueNumber * 0.7;
+            case "DRINKS":
+                return revenueNumber * 0.2;
+            case "SALADS":
+                return revenueNumber  * 0.1;          
+        }
      
      };
 
 
-     console.log(getRevenueByRestaurantAndPeriod("Bjørvika","last-year") ) ;
+     console.log(getRevenueByRestaurantAndPeriodAndCategory("Bjørvika","last-month","PIZZA") ) ;
 
 
 
     
-    return {getAll, getTotalMonday,getTotalTuesday, getTotalWednesday,getTotalThursday,getTotalFriday,getTotalSaturday,getTotalSunday,getAccRevenueThisYearByRestaurant,getGrossRevenueThisYearByRestaurant, getGrossRevenueLastYearByRestaurant};
+    return {getAll, getTotalMonday,getTotalTuesday, getTotalWednesday,getTotalThursday,getTotalFriday,getTotalSaturday,getTotalSunday,getAccRevenueThisYearByRestaurant,getGrossRevenueThisYearByRestaurant, getGrossRevenueLastYearByRestaurant, getRevenueByRestaurantAndPeriodAndCategory};
 
 
 }())
