@@ -56,8 +56,12 @@ const calculate_Btn = document.querySelector(".calculate-btn");
         <p>${period}'s total for ${restaurant} was <span class="result_number"> ${result}</span> NOK</p>
         `;
         /* fyller diagram*/
-        document.querySelector(".diagram_1_filled").style.width = result/10000+'%';
-    
+
+        const fillDiagram = function(){
+            document.querySelector(".diagram_1_filled").style.width = result/10000+'%';
+        }
+        
+        setTimeout(fillDiagram,100);
     })
 
 
