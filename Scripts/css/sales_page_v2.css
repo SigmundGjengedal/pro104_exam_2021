@@ -25,6 +25,20 @@ body {
   
 }
 
+#Heading-p{
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #FC7B61;
+  color: white;
+  position: relative;
+
+  
+}
+
 /* lavnelabel over variabel-valg*/
 .labels-choices{
   position: relative;
@@ -78,16 +92,17 @@ body {
   /* flex*/
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
-  flex-wrap: wrap;
+
   /* sizing */
   width: 100%;
-  padding: 30px;
   /*positioning*/
+  padding: 0 30px;
   margin-right: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  min-height: 246px;
 }
+
 
 /* kolonner med valg*/
  .select-columns {
@@ -125,6 +140,18 @@ body {
   border-radius: 5px;
  
 }
+
+.buttonChosen{
+  padding: 5px;
+  margin: 5px;
+  background-color: #FC7B61;
+  color: white;
+  font-family: Futura;
+  font-weight: Bold;
+  border: none;
+  border-radius: 5px;
+
+}
 .button:hover{
   opacity: 0.8;
   transform: scale(1.05);
@@ -133,6 +160,7 @@ body {
 
 .calculate-btn { 
   background-color : #28a745;
+  margin-bottom: 20px; 
 }
 
 /*diagrams*/
@@ -191,6 +219,7 @@ body {
 .result-text{
     display: flex;
     justify-content: center;
+    font-size: 18px;
 }
 
 .result_number{

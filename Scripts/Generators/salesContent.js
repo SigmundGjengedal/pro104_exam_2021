@@ -5,7 +5,7 @@ const chosenDiv = document.querySelector("#selected");
 
 /* henter buttons*/
 
-const res_choice = document.querySelector(".restaurant-choice");
+const restaurant_choice = document.querySelector(".restaurant-choice");
 const periode_choice = document.querySelector(".period-choice");
 const category_choice = document.querySelector(".category-choice");
 
@@ -17,14 +17,14 @@ const calculate_Btn = document.querySelector(".calculate-btn");
     let category = "";
     /* Henter verdiene fra knappene */
 
-    res_choice.addEventListener('click', (event) => {
+    restaurant_choice.addEventListener('click', (event) => {
         const isButton = event.target.nodeName === 'BUTTON';
         if (!isButton) {
           return;
         }
         restaurant = event.target.id;
         chosenDiv.innerHTML +=`
-        <button class="button">${restaurant}</button>
+        <button class="buttonChosen">${restaurant}</button>
         `;
 
         console.log(restaurant);
@@ -37,7 +37,7 @@ const calculate_Btn = document.querySelector(".calculate-btn");
         }
         period = event.target.id;
         chosenDiv.innerHTML +=`
-        <button class="button">${period}</button>
+        <button class="buttonChosen">${period}</button>
         `;
         console.log(period);
     })
@@ -50,7 +50,7 @@ const calculate_Btn = document.querySelector(".calculate-btn");
         category = event.target.id;
 
         chosenDiv.innerHTML +=`
-        <button class="button">${category}</button>
+        <button class="buttonChosen">${category}</button>
         `;
         console.log(category);
     })

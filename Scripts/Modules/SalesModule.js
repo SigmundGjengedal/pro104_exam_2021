@@ -3,9 +3,9 @@ const SalesModule = ( function (){
     const salesArray = [
     {
         name: "Bjørvika",
-        revenueAccThisYear: 600000,
-        revenuePreviousYear: 9900000,
-        revenuePreviousMonth: 120000,
+        revenueAccThisYear: 610000,
+        revenuePreviousYear: 990000,
+        revenuePreviousMonth: 190000,
         revenuePreviousWeek: 35000,
 
         revenuePreviousDay: 12000,
@@ -16,10 +16,10 @@ const SalesModule = ( function (){
     },
     {
         name: "Nydalen",
-        revenueAccThisYear: 500000,
-        revenuePreviousYear: 900000,
-        revenuePreviousMonth: 88300,
-        revenuePreviousWeek: 25000,
+        revenueAccThisYear: 530000,
+        revenuePreviousYear: 800800,
+        revenuePreviousMonth: 150000,
+        revenuePreviousWeek: 45400,
 
         revenuePreviousDay: 8000,
         grossRevenueAccThisYear: 300000,
@@ -29,10 +29,10 @@ const SalesModule = ( function (){
     },
     {
         name: "Grunerløkka",
-        revenueAccThisYear: 700000,
-        revenuePreviousYear: 1100000,
-        revenuePreviousMonth: 90000,
-        revenuePreviousWeek: 25000,
+        revenueAccThisYear: 710000,
+        revenuePreviousYear: 911000,
+        revenuePreviousMonth: 130000,
+        revenuePreviousWeek: 55500,
 
         revenuePreviousDay: 14000,
 
@@ -43,10 +43,10 @@ const SalesModule = ( function (){
     },
     {
         name: "Karl-Johan",
-        revenueAccThisYear: 400000,
-        revenuePreviousYear: 700000,
-        revenuePreviousMonth: 88000,
-        revenuePreviousWeek: 80000,
+        revenueAccThisYear: 420000,
+        revenuePreviousYear: 754000,
+        revenuePreviousMonth: 125000,
+        revenuePreviousWeek: 42300,
 
         revenuePreviousDay: 11000,
 
