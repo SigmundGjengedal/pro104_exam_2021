@@ -26,8 +26,3 @@ bjorvika_Btn.addEventListener('click', function(){
 
 
 
-/* funksjoner*/
-console.log(SalesModule.getAccRevenueThisYearByRestaurant("bjørvika"));
-console.log(SalesModule.getGrossRevenueThisYearByRestaurant("bjørvika"));
-console.log(SalesModule.getGrossRevenueLastYearByRestaurant("bjørvika"));
-
