@@ -1,7 +1,6 @@
 const mainContentHome = document.querySelector(".main_content");
 const navbarEmployees = document.querySelector(".navbar_employees");
 let mainTextHome =`
-
 <div class="employees-content">
 
   <nav class="buttons-employee">
@@ -81,7 +80,6 @@ let mainTextHome =`
       </div>
     </div>
   </div>
-
 `
 
 navbarEmployees.addEventListener("click", ()=>{
@@ -124,7 +122,6 @@ function add(){
     <button class="add-button" type="submit">ADD</button>
 
     `
-
     flipCard();
     // Click event som flipper kortet tilbake og stenger remove ansatt delen
     document.querySelector(".remove-add-close").addEventListener("click", flipCard);
@@ -150,7 +147,6 @@ function remove(){
     document.querySelector(".remove-add-close").addEventListener("click", flipCard);
   })
 };
-
 
   // Flipper kort ved å toggle class rotate
 function flipCard(){

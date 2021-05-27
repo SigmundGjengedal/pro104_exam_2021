@@ -1,50 +1,45 @@
 const EmployeesModules = (function () {
 
-    const employeeInfo = [
+        // Grunerløkka
+    const grunerlokkaArray = [
+        { name : "Marius Sunde",  mail : "mariussunde@gyldnepizza.no", phone : "90515576", position :"Manager", payGrade : "5", departement : "Grunerløkka",},
+        { name : "Sigmund Gjerdal",  mail : "sigmundhansen@gyldnepizza.no", phone : "90515213", position :"Host", payGrade : "2", departement : "Grunerløkka",},
+        { name : "Mikkel Amundsen",  mail : "mikkelamundsen@gyldnepizza.no", phone : "90515321", position :"Chef", payGrade : "3", departement : "Grunerløkka",},
+        { name : "Caroline Olsen",  mail : "carolineolsen@gyldnepizza.no", phone : "90515111", position :"Souse Chef", payGrade : "3", departement : "Grunerløkka",},
+        ];
+
+        const getGrunerlokka = () =>  grunerlokkaArray;
 
         // Karl Johan
-        { name : "Terje Hansen", homeaddress :"kongens gate 14", mail : "terjehansen@gyldnepizza.no", phone : "90515576", position :"Manager", employmentRate : "100%", salaryLevel : "4", departement : "Gyldne Pizza Karl Johan", employmentDate: "2012-01-01", employeeID : "KJ-TH", seniority : "9 years",image: "random.jpg" },
-        
-        { name : "Birger Nybø", homeaddress :"Veltres gate 11", mail : "birgernybo@gyldnepizza.no", phone : "40515573", position :"Sales", employmentRate : "100%", salaryLevel : "2", departement : "Gyldne Pizza Karl Johan", employmentDate: "2018-01-01", employeeID : "KJ-BN", seniority : "3 years" ,image: "random.jpg"  },
+    const karlJohanArray = [
+        { name : "Ole Ramberg",  mail : "oleramberg@gyldnepizza.no", phone : "90516123", position :"Manager", payGrade : "5", departement : "Karl Johan",},
+        { name : "Tina Bråthen",  mail : "tinebråthen@gyldnepizza.no", phone : "90516222", position :"Hostess", payGrade : "2", departement : "Karl Johan",},
+        { name : "Peter Mihajlovic",  mail : "petermihajlovic@gyldnepizza.no", phone : "90516333", position :"Chef", payGrade : "3", departement : "Karl Johan",},
+        { name : "Kenneth Kristiansen",  mail : "kennethkristiansen@gyldnepizza.no", phone : "90516444", position :"Souse Chef", payGrade : "3", departement : "Karl Johan",},
+        ];
 
-        { name : "Sissel Heimstad", homeaddress :"Velles vei 14b", mail : "sisselheimstad@gyldnepizza.no", phone : "99515576", position :"Sales", employmentRate : "80%", salaryLevel : "1", departement : "Gyldne Pizza Karl Johan", employmentDate: "2020-05-01", employeeID : "KJ-SH", seniority : "1 years" ,image: "random.jpg"  },
-          
-        // Bjørvika
-        { name : "Sigmund Flakne", homeaddress :"Heimsgate 12b", mail : "sigmundflakne@gyldnepizza.no", phone : "45515574", position :"Manager", employmentRate : "100%", salaryLevel : "4", departement : "Gyldne Pizza Bjørvika", employmentDate: "2015-05-01", employeeID : "N-SF", seniority : "5 years" ,image: "random.jpg"  },
-
-        { name : "Oshidi Baer", homeaddress :"Slotteveien 2c", mail : "oshidibaer@gyldnepizza.no", phone : "91515574", position :"Sales", employmentRate : "100%", salaryLevel : "2", departement : "Gyldne Pizza Bjørvika", employmentDate: "2015-05-01", employeeID : "N-OB", seniority : "5 years" ,image: "random.jpg"  },
-
-        { name : "Vebjørn Steine", homeaddress :"Klampetrampa 2d", mail : "vebjørnsteine@gyldnepizza.no", phone : "44515574", position :"Sales", employmentRate : "50%", salaryLevel : "1", departement : "Gyldne Pizza Bjørvika", employmentDate: "2018-05-01", employeeID : "N-VS", seniority : "3 years" ,image: "random.jpg"  },
+          const getKarlJohan = () =>  KarlJohanArray;
 
         // Nydalen
-        { name : "Caroline Velle", homeaddress :"Steinsgata 3d", mail : "carolinevelle@gyldnepizza.no", phone : "98535574", position :"Manager", employmentRate : "100%", salaryLevel : "4", departement : "Gyldne Pizza Nydalen", employmentDate: "2014-02-01", employeeID : "B-CV", seniority : "7 years" ,image: "random.jpg"  },
+    const nydalenArray = [
+        { name : "Rolando Gonzales",  mail : "rolandogonzales@gyldnepizza.no", phone : "90515576", position :"Manager", payGrade : "5", departement : "Nydalen",},
+        { name : "Terje Hansen",  mail : "terjehansen@gyldnepizza.no", phone : "90515213", position :"Host", payGrade : "2", departement : "Nydalen",},
+        { name : "Martin Amundsen",  mail : "martinamundsen@gyldnepizza.no", phone : "90515321", position :"Chef", payGrade : "3", departement : "Nydalen",},
+        { name : "Kevin Olsen",  mail : "kevinolsen@gyldnepizza.no", phone : "90515111", position :"Souse Chef", payGrade : "3", departement : "Nydalen",},
 
-        { name : "Shawan Safari", homeaddress :"Helleveien 3d", mail : "shawansafarie@gyldnepizza.no", phone : "98532574", position :"Sales", employmentRate : "100%", salaryLevel : "2", departement : "Gyldne Pizza Nydalen", employmentDate: "2014-02-01", employeeID : "B-SF", seniority : "7 years" ,image: "random.jpg"  },
+          const getNydalen = () =>  nydalenArray;
 
-        { name : "Sara Olsen", homeaddress :"Sellergata 3d", mail : "saraolsen@gyldnepizza.no", phone : "44532574", position :"Sales", employmentRate : "50%", salaryLevel : "1", departement : "Gyldne Pizza Nydalen", employmentDate: "2018-02-01", employeeID : "B-SO", seniority : "3 years" ,image: "random.jpg"  },
-
-        // Grunerløkka
-        { name : "Veljko Lundenes", homeaddress :"majorveien 5d", mail : "veljkolundenes@gyldnepizza.no", phone : "90532574", position :"Manager", employmentRate : "100%", salaryLevel : "4", departement : "Gyldne Pizza Grunerløkka", employmentDate: "2017-02-01", employeeID : "G-VL", seniority : "4 years" ,image: "random.jpg"  },
-
-        { name : "Gunnar Olsen", homeaddress :"strømmensgate 21d", mail : "gunnarolsen@gyldnepizza.no", phone : "90587574", position :"Sales", employmentRate : "100%", salaryLevel : "2", departement : "Gyldne Pizza Grunerløkka", employmentDate: "2017-02-01", employeeID : "G-GO", seniority : "4 years" ,image: "random.jpg"  },
-
-        { name : "Iselin Rasnes", homeaddress :"Osloveien 21d", mail : "iselinrasnes@gyldnepizza.no", phone : "90583374", position :"Sales", employmentRate : "50%", salaryLevel : "1", departement : "Gyldne Pizza Grunerløkka", employmentDate: "2018-02-01", employeeID : "G-IR", seniority : "3 years" ,image: "random.jpg"  },
-
-
+        // Bjørvika
+    const bjorvikaArray = [
+        { name : "Kari Olsen",  mail : "kariolsen@gyldnepizza.no", phone : "40415576", position :"Manager", payGrade : "5", departement : "Bjørvika",},
+        { name : "Veljko Premovic",  mail : "terjehansen@gyldnepizza.no", phone : "40415213", position :"Host", payGrade : "2", departement : "Bjørvika",},
+        { name : "Unni Løche",  mail : "unniloeche@gyldnepizza.no", phone : "40415321", position :"Chef", payGrade : "3", departement : "Bjørvika",},
+        { name : "Mario Luiggi",  mail : "marioluigi@gyldnepizza.no", phone : "40415111", position :"Souse Chef", payGrade : "3", departement : "Bjørvika",},
     ];
 
-    const getAllEmployees = () => employeeInfo;
-
-    const getByPosition = (position) => {
-        return employeeInfo.filter( employeeObject => employeeObject.position.toLowerCase === position);
-    }
-
-    const getByDepartement = (departement) => {
-        return employeeInfo.filter( employeeObject => employeeObject.departement.toLowerCase === departement);
-    }
-
-    return {getAllEmployees,getByPosition,getByDepartement}; // disse er tilgjengelig utenfra. 
-
+    const getBjorvika= () => bjorvikaArray;
+    
+    return {getBjorvika, getNydalen, getKarlJohan, getGrunerlokka};
 
 } () );
 
