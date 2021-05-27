@@ -164,7 +164,7 @@ body {
 .diagram_1_filled {
   margin-top: 100px;
   height: 100%;
-  width: 75%;
+  width: 0%;
   background-color: #FC7B61;
  
   transition: width 2s;

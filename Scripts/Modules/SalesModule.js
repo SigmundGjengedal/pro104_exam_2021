@@ -4,7 +4,7 @@ const SalesModule = ( function (){
     {
         name: "Bjørvika",
         revenueAccThisYear: 600000,
-        revenuePreviousYear: 1100000,
+        revenuePreviousYear: 9900000,
         revenuePreviousMonth: 120000,
         revenuePreviousWeek: 35000,
 
@@ -15,7 +15,7 @@ const SalesModule = ( function (){
         revenueDaysLastweek : [ 7000, 8500,9000,23500,11000,15500,26000]
     },
     {
-        name: "Karl Johan",
+        name: "Karl-Johan",
         revenueAccThisYear: 500000,
         revenuePreviousYear: 900000,
         revenuePreviousMonth: 88300,
@@ -136,17 +136,13 @@ const SalesModule = ( function (){
                 return revenueNumber;
             case "pizza":
                 return revenueNumber * 0.7;
-            case "drink":
+            case "drinks":
                 return revenueNumber * 0.2;
             case "salads":
                 return revenueNumber  * 0.1;          
         }
      
      };
-
-
-     console.log(getRevenueByRestaurantAndPeriodAndCategory("Bjørvika","last-month","salads") ) ;
-
 
 
     

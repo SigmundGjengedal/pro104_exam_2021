@@ -1,14 +1,13 @@
 import SalesModule from '../Modules/SalesModule.js';
 
 const resultText = document.querySelector(".result-text");
-
+const chosenDiv = document.querySelector("#selected");
 
 /* henter buttons*/
 
 const res_choice = document.querySelector(".restaurant-choice");
 const periode_choice = document.querySelector(".period-choice");
 const category_choice = document.querySelector(".category-choice");
-
 const calculate_Btn = document.querySelector(".calculate-btn");
 
 
@@ -23,6 +22,10 @@ const calculate_Btn = document.querySelector(".calculate-btn");
           return;
         }
         restaurant = event.target.id;
+        chosenDiv.innerHTML +=`
+        <button class="button">${restaurant}</button>
+        `;
+
         console.log(restaurant);
     })
 
@@ -32,6 +35,9 @@ const calculate_Btn = document.querySelector(".calculate-btn");
           return;
         }
         period = event.target.id;
+        chosenDiv.innerHTML +=`
+        <button class="button">${period}</button>
+        `;
         console.log(period);
     })
             
@@ -41,6 +47,10 @@ const calculate_Btn = document.querySelector(".calculate-btn");
           return;
         }
         category = event.target.id;
+
+        chosenDiv.innerHTML +=`
+        <button class="button">${category}</button>
+        `;
         console.log(category);
     })
 
@@ -62,6 +72,8 @@ const calculate_Btn = document.querySelector(".calculate-btn");
         }
         
         setTimeout(fillDiagram,100);
+
+        chosenDiv.innerHTML = "";
     })
 
 
