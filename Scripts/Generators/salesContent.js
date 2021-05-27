@@ -2,7 +2,6 @@ import SalesModule from '../Modules/SalesModule.js';
 
 const resultText = document.querySelector(".result-text");
 
-const diagram = document.querySelector(".diagram_1_filled");
 
 /* henter buttons */
 
@@ -20,6 +19,7 @@ bjorvika_Btn.addEventListener('click', function(){
     <p>2020's total for Nydalen was <span class="result_number"> ${salesNumber}</span> NOK</p>
     `;
 });
+
 
 
 
