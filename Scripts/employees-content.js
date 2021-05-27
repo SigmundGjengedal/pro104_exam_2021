@@ -2,15 +2,66 @@ const mainContentHome = document.querySelector(".main_content");
 const navbarEmployees = document.querySelector(".navbar_employees");
 let mainTextHome =`
 
-  <div class="employees-content">
-
+<div class="employees-content">
 
   <nav class="buttons-employee">
-      <a class="button-employee" href="#">KARL JOHAN</a>
-      <a class="button-employee" href="#">BJØRVIKA</a>
-      <a class="button-employee" href="#">NYDALEN</a>
-      <a class="button-employee" href="#">GRUNERLØKKA</a>
+      <a class="button-employee karl-johan" href="#">KARL JOHAN</a>
+      <a class="button-employee bjørvika" href="#">BJØRVIKA</a>
+      <a class="button-employee nydalen" href="#">NYDALEN</a>
+      <a class="button-employee grunerløkka" href="#">GRUNERLØKKA</a>
     </nav>
+
+
+    <div class="employee-list">
+    <div class="employee-card">
+      <div class="employee-name-div">
+      <h3 class="employee-name">Test testerson</h3>
+      <p class="employee-position">Chef</p>
+      </div>
+      <div class="employee-contact-info">
+      <p class="employee-phone">22 22 22 22</p>
+      <p class="employee-email">test@test.no</p>
+      </div>
+      <p class="employee-pay-grade">PAY GRADE 5</p>
+    </div>
+
+    <div class="employee-card">
+      <div class="employee-name-div">
+      <h3 class="employee-name">Test testerson</h3>
+      <p class="employee-position">Chef</p>
+      </div>
+      <div class="employee-contact-info">
+      <p class="employee-phone">22 22 22 22</p>
+      <p class="employee-email">test@test.no</p>
+      </div>
+      <p class="employee-pay-grade">PAY GRADE 5</p>
+    </div>
+
+    <div class="employee-card">
+      <div class="employee-name-div">
+      <h3 class="employee-name">Test testerson</h3>
+      <p class="employee-position">Chef</p>
+      </div>
+      <div class="employee-contact-info">
+      <p class="employee-phone">22 22 22 22</p>
+      <p class="employee-email">test@test.no</p>
+      </div>
+      <p class="employee-pay-grade">PAY GRADE 5</p>
+    </div>
+
+    <div class="employee-card">
+      <div class="employee-name-div">
+      <h3 class="employee-name">Test testerson</h3>
+      <p class="employee-position">Chef</p>
+      </div>
+      <div class="employee-contact-info">
+      <p class="employee-phone">22 22 22 22</p>
+      <p class="employee-email">test@test.no</p>
+      </div>
+      <p class="employee-pay-grade">PAY GRADE 5</p>
+    </div>
+
+    </div>
 
     <div class="flip-card">
       <div class="inner-card">
@@ -27,9 +78,9 @@ let mainTextHome =`
         <div class="back">
 
         </div>
-
       </div>
     </div>
+  </div>
 
 `
 
@@ -39,7 +90,7 @@ navbarEmployees.addEventListener("click", ()=>{
     remove();
 });
 
-// Tekst som printes ut ut ifra om brukeren velger å legge til eller fjerne ansatte
+// funksjonen add som tillatter brukeren å legge til ansatt
 function add(){
   document.querySelector(".add-user-btn").addEventListener("click", ()=>{
     document.querySelector(".back").innerHTML = `
@@ -62,16 +113,17 @@ function add(){
     </select>
 
     <label for="PAY-GRADE">PAY-GRADE</label>
-    <output id="amount" class="amount">1</output>
-    <input class="range" id="value" type="range" min="0" max="5" required name="PAY-GRADE" value="1">
-
+    <select name="pay-grade">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    </select>
     </div>
 
     <button class="add-button" type="submit">ADD</button>
 
     `
-    // Slider pay-grade nummer
-    slidingPayGrade();
 
     flipCard();
     // Click event som flipper kortet tilbake og stenger remove ansatt delen
@@ -79,18 +131,7 @@ function add(){
   })
 };
 
-function slidingPayGrade(){
-  const slider = document.getElementById("value");
-  const output = document.getElementById("amount");
-
-  slider.oninput = function() {
-    output.innerHTML = this.value;
-  }
-};
-
-
-
-
+// Funksjon som gir muligheten for å fjerne ansatte
 function remove(){
   document.querySelector(".remove-user-btn").addEventListener("click", (e)=>{
     document.querySelector(".back").innerHTML = `
@@ -109,7 +150,6 @@ function remove(){
     document.querySelector(".remove-add-close").addEventListener("click", flipCard);
   })
 };
-
 
 
   // Flipper kort ved å toggle class rotate
