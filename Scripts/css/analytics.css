@@ -1,0 +1,54 @@
+.analytics_top{
+    height: 15%;
+    border: 1px solid black;
+}
+table{
+    overflow: scroll;
+    height: 65%;
+    max-height: 65%;
+    table-layout: fixed;
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+
+}
+tbody td{
+    text-align: center;
+    letter-spacing: 2px;
+}
+th, td{
+padding: 5px;
+}
+.analytics_input{
+    width: 40%;
+}
+tbody tr:nth-child(odd) {
+    background-color: lightgray;
+}
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+.bottom_div{
+      position: relative;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      background: #FC7B61;
+      height: 20%;
+      min-height: 20%;
+      width: 80%;
+      margin: 0 10%;
+  }
+  .is_flex{
+      display: flex;
+      justify-content: space-around;
+
+  }
+  .bottom_text_div{
+    height: 40%;
+    border: 1px solid black;
+  }
+  .bottom_numbers_div{
+      height: 40%;
+      border: 1px solid black;
+
+  }
