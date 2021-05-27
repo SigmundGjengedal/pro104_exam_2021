@@ -15,7 +15,7 @@ const SalesModule = ( function (){
         revenueDaysLastweek : [ 7000, 8500,9000,23500,11000,15500,26000]
     },
     {
-        name: "Karl-Johan",
+        name: "Nydalen",
         revenueAccThisYear: 500000,
         revenuePreviousYear: 900000,
         revenuePreviousMonth: 88300,
@@ -28,7 +28,7 @@ const SalesModule = ( function (){
         revenueDaysLastweek : [ 5000, 9500,16000,10500,25000,15500,12000]
     },
     {
-        name: "Nydalen",
+        name: "Grunerløkka",
         revenueAccThisYear: 700000,
         revenuePreviousYear: 1100000,
         revenuePreviousMonth: 90000,
@@ -42,7 +42,7 @@ const SalesModule = ( function (){
         revenueDaysLastweek : [ 10000, 13500,15000,14500,16000,25500,16000]
     },
     {
-        name: "Grunerløkka",
+        name: "Karl-Johan",
         revenueAccThisYear: 400000,
         revenuePreviousYear: 700000,
         revenuePreviousMonth: 88000,
@@ -82,35 +82,11 @@ const SalesModule = ( function (){
     const getTotalSunday = getTotalperDay(6);
 
 
-    // funksjoner for å  hente ut totaltsalg (en value) for en og en avdeling, etter navn.
-
-
-    const getAccRevenueThisYearByRestaurant = (name)  => {        
-       let result = salesArray.filter( object => object.name.toLowerCase === name.toLowerCase);
-       let resultFormatted = result[0].revenueAccThisYear; // filter laget ett array, så må hente ut denne verdien.
-       return resultFormatted;
-    
-    };
-
-    const getGrossRevenueThisYearByRestaurant = (name) =>{
-        let result = salesArray.filter( object => object.name.toLowerCase === name.toLowerCase);
-        let resultFormatted = result[0].grossRevenueAccThisYear; // filter laget ett array, så må hente ut denne verdien.
-        return resultFormatted;
-    }
-
-    const getGrossRevenueLastYearByRestaurant = (name) => {
-        let result = salesArray.filter( object => object.name.toLowerCase === name.toLowerCase);
-        let resultFormatted = result[0].grossRevenuePreviousYear;
-        return resultFormatted;
-    }
-
-
-
 
     // funksjon som skal ta knappe-verdiene som parameter, (navn ,periode, category)
 
     const getRevenueByRestaurantAndPeriodAndCategory = (name,period, category)  => {        
-        let restaurant = salesArray.filter( object => object.name.toLowerCase === name.toLowerCase);
+        let restaurant = salesArray.filter( object => object.name=== name);
         let revenueNumber = "";
 
         if(period === "this-year"){
@@ -146,7 +122,7 @@ const SalesModule = ( function (){
 
 
     
-    return {getAll, getTotalMonday,getTotalTuesday, getTotalWednesday,getTotalThursday,getTotalFriday,getTotalSaturday,getTotalSunday,getAccRevenueThisYearByRestaurant,getGrossRevenueThisYearByRestaurant, getGrossRevenueLastYearByRestaurant, getRevenueByRestaurantAndPeriodAndCategory};
+    return {getAll, getTotalMonday,getTotalTuesday, getTotalWednesday,getTotalThursday,getTotalFriday,getTotalSaturday,getTotalSunday, getRevenueByRestaurantAndPeriodAndCategory};
 
 
 }())

@@ -8,6 +8,7 @@ const chosenDiv = document.querySelector("#selected");
 const res_choice = document.querySelector(".restaurant-choice");
 const periode_choice = document.querySelector(".period-choice");
 const category_choice = document.querySelector(".category-choice");
+
 const calculate_Btn = document.querySelector(".calculate-btn");
 
 
@@ -56,17 +57,18 @@ const calculate_Btn = document.querySelector(".calculate-btn");
 
 
     // bruker verdiene hentet fra knappene når man trykker calculate!
-    calculate_Btn.addEventListener('click', function() {
+    calculate_Btn.addEventListener('click', (event)=> {
 
         /* kaller funksjonen med verdier fra knapper.*/
         let result = SalesModule.getRevenueByRestaurantAndPeriodAndCategory(restaurant,period,category);
     
         /*printer*/
         resultText.innerHTML = `
-        <p>${period}'s total for ${restaurant} was <span class="result_number"> ${result}</span> NOK</p>
+        <p>${period}'s total for ${category} at ${restaurant} was <span class="result_number"> ${result}</span> NOK</p>
         `;
         /* fyller diagram*/
 
+        restaurant = "";
         const fillDiagram = function(){
             document.querySelector(".diagram_1_filled").style.width = result/10000+'%';
         }
