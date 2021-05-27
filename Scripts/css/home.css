@@ -275,17 +275,7 @@ body {
   border-radius: 20px;
 }
 
-.vertical_line {
-  width: 30%;
-  height: 5px;
-  position: absolute;
-  top: 76%;
-  left: 35%;
-  transform: translateX(-50%);
-  transform: rotate(-90deg);
-  background: #DEDEDE;
-  border-radius: 20px;
-}
+
 
 /* Sirkel delen - Budget  */
 .budget_page_container {
@@ -351,10 +341,6 @@ body {
 }
 
 /* Profit delen */
-.profit_container {
-
-
-}
 
 .profit_title {
   font-size: 30px;
@@ -370,9 +356,9 @@ body {
 }
 
 .total_profit_number {
-  font-size: 8em;
+  font-size: 8vw;
 }
 
 .profit_k{
-  font-size: 3em;
+  font-size: 3vw;
 }
