@@ -132,20 +132,20 @@ const SalesModule = ( function (){
          // tester for category og returner deretter ca profitt.
         
         switch (category){
-            case "ALL":
+            case "all":
                 return revenueNumber;
-            case "PIZZA":
+            case "pizza":
                 return revenueNumber * 0.7;
-            case "DRINKS":
+            case "drink":
                 return revenueNumber * 0.2;
-            case "SALADS":
+            case "salads":
                 return revenueNumber  * 0.1;          
         }
      
      };
 
 
-     console.log(getRevenueByRestaurantAndPeriodAndCategory("Bjørvika","last-month","PIZZA") ) ;
+     console.log(getRevenueByRestaurantAndPeriodAndCategory("Bjørvika","last-month","salads") ) ;
 
 
 
