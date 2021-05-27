@@ -1,4 +1,5 @@
 // Importerer EmpolyeesModule
+import EmployeesModules from "./Modules/EmployeesModule.js";
 
 // Variabler for navbar employee knappen og stedet hvor info printes
 const mainContent = document.querySelector(".main_content");
@@ -44,6 +45,9 @@ navbarEmployees.addEventListener("click", ()=>{
     add();
     remove();
     printKarlJohan();
+    printGrunerlokka();
+    printNydalen();
+    printBjorvika();
 });
 
 // funksjonen add som tillatter brukeren å legge til ansatt
@@ -109,23 +113,101 @@ function flipCard(){
   document.querySelector(".inner-card").classList.toggle("rotate");
 };
 
-// Klikk Karl Johan
+
+// Function printer fra modulen alle ansatte i KarlJohan
     function printKarlJohan(){
+      let employeeList = document.querySelector(".employee-list");
       document.querySelector(".karl-johan").addEventListener("click", ()=>{
-        EmployeesModules.getKarlJohan().forEach(kj => {
-              document.querySelector(".employee-list").innerHTML = `
+        employeeList.innerHTML= " "
+        EmployeesModules.getKarlJohan().forEach(rest => {
+              employeeList.innerHTML += `
               <div class="employee-card">
                 <div class="employee-name-div">
-                <h3 class="employee-name">${kj.name}</h3>
-                <p class="employee-position">${kj.position}</p>
+                <h3 class="employee-name">${rest.name}</h3>
+                <p class="employee-position">${rest.position}</p>
                 </div>
                 <div class="employee-contact-info">
-                <p class="employee-phone">${kj.phone}</p>
-                <p class="employee-email">${kj.mail}</p>
+                <p class="employee-phone">${rest.phone}</p>
+                <p class="employee-email">${rest.mail}</p>
                 </div>
-                <p class="employee-pay-grade">PAY GRAD: ${kj.payGrade}</p>
+                <p class="employee-pay-grade">PAY GRAD: ${rest.payGrade}</p>
               </div>
               `
         });
-      })
-    }
+      });
+
+    };
+
+    // Function printer fra modulen alle ansatte i Grunerløkka
+    function printGrunerlokka(){
+      let employeeList = document.querySelector(".employee-list");
+
+      document.querySelector(".grunerløkka").addEventListener("click", ()=>{
+        employeeList.innerHTML= " "
+        EmployeesModules.getGrunerlokka().forEach(rest => {
+              employeeList.innerHTML += `
+              <div class="employee-card">
+
+                <h3 class="employee-name">${rest.name}</h3>
+                <p class="employee-position">${rest.position}</p>
+                
+                <div class="employee-contact-info">
+                <p class="employee-phone">${rest.phone}</p>
+                <p class="employee-email">${rest.mail}</p>
+                </div>
+                <p class="employee-pay-grade">PAY GRAD: ${rest.payGrade}</p>
+              </div>
+              `
+
+        });
+      });
+    };
+
+
+    // Function printer fra modulen alle ansatte i Nydalen
+    function printNydalen(){
+      let employeeList = document.querySelector(".employee-list");
+      document.querySelector(".nydalen").addEventListener("click", ()=>{
+        employeeList.innerHTML= " "
+        EmployeesModules.getNydalen().forEach(rest => {
+              employeeList.innerHTML += `
+              <div class="employee-card">
+                <div class="employee-name-div">
+                <h3 class="employee-name">${rest.name}</h3>
+                <p class="employee-position">${rest.position}</p>
+                </div>
+                <div class="employee-contact-info">
+                <p class="employee-phone">${rest.phone}</p>
+                <p class="employee-email">${rest.mail}</p>
+                </div>
+                <p class="employee-pay-grade">PAY GRAD: ${rest.payGrade}</p>
+              </div>
+              `
+
+        });
+      });
+    };
+
+    // Function printer fra modulen alle ansatte i Nydalen
+    function printBjorvika(){
+      let employeeList = document.querySelector(".employee-list");
+      document.querySelector(".bjørvika").addEventListener("click", ()=>{
+        employeeList.innerHTML= " "
+        EmployeesModules.getBjorvika().forEach(rest => {
+              employeeList.innerHTML += `
+              <div class="employee-card">
+                <div class="employee-name-div">
+                <h3 class="employee-name">${rest.name}</h3>
+                <p class="employee-position">${rest.position}</p>
+                </div>
+                <div class="employee-contact-info">
+                <p class="employee-phone">${rest.phone}</p>
+                <p class="employee-email">${rest.mail}</p>
+                </div>
+                <p class="employee-pay-grade">PAY GRAD: ${rest.payGrade}</p>
+              </div>
+              `
+
+        });
+      });
+    };
