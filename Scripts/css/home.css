@@ -8,7 +8,7 @@ body {
   font-family: Futura;
   font-weight: Bold;
   color: #000;
-  background-color: #f4f3f3;
+  background-color: #f5f5fd;
 }
 
 .main_content{
@@ -111,7 +111,7 @@ body {
   width: 50px;
   height: 170px;
   position: absolute;
-  background: #DEDEDE;
+  background: #D4D4DD;
   margin-right: 10px;
   border: #FC7B61;
 }
@@ -119,7 +119,7 @@ body {
 .diagram_1_filled {
   height: 0%;
   width: 100%;
-  background-color: #FC7B61;
+  background-color: #003B49;
   position: absolute;
   bottom: 0;
   transition: height 2s;
@@ -130,7 +130,7 @@ body {
   width: 50px;
   height: 170px;
   position: absolute;
-  background: #DEDEDE;
+  background: #ECECF6;
   left: 16%;
 }
 
