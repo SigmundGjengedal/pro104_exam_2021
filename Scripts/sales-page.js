@@ -34,7 +34,7 @@ salesNavButton.addEventListener('click', function(){
                     <div id = "selected" class="data_container">
                           
                     </div>
-                    <button class="button calculate-btn">Calculate</button>
+                    <button class="calculate-btn">CALCULATE</button>
                 </div>
             </div>
 

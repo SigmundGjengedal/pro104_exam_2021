@@ -10,9 +10,7 @@ body {
 .salesPage_Container{
   width: 85%;
   height: 100vh;
-  max-height: 100vh;
   position: relative;
-  top: 4%;
   left: 8%;
   
 }  
@@ -50,6 +48,7 @@ body {
 .labels-choices{
   position: relative;
   left: 35vw;
+  top:0.5vh;
   display: flex;
   justify-content: space-between;
   width: 400px;
@@ -130,30 +129,55 @@ body {
   border-radius: 5px;
   width : 150px;
  
+ 
+}
+.button:hover{
+  opacity: 0.8;
+  transform: scale(1.05);
 }
 
 .buttonChosen{
   padding: 5px;
   margin: 5px;
+  height: 3vh;
   background-color: #FC7B61;
   color: white;
   font-family: Futura;
   font-weight: Bold;
   border: none;
   border-radius: 5px;
+  width: 100%;
 
 }
-.button:hover{
-  opacity: 0.8;
-  transform: scale(1.05);
- 
-}
+
 
 .calculate-btn { 
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
   background-color : #28a745;
-  margin-bottom: 20px; 
+  position: relative;
+  right: 1%;
   width: 100%;
+  border:none;
+  border-radius: 5px;
+  color: white;
+  font-family: Futura;
+  font-weight: Bold;
+  
 }
+
+.calculate-btn::after {
+  transform: scaleX(1);
+}
+
+.calculate-btn:hover{
+  opacity: 0.8;
+  transform: scale(1.05);
+
+}
+
+
 
 /*resultatdiv*/
 
@@ -211,8 +235,8 @@ body {
     display: flex;
     margin-top:4%;
     justify-content: center;
-    font-size: 26px;
-    color: #28a745;
+    font-size: 1.5vw;
+
 }
 
 
