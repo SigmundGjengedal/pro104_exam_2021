@@ -23,9 +23,9 @@ body {
 }
 .food_container {
   position: relative;
-  left: 10%;
-  width: 15%;
-  height: 10%;
+  top: 5%;
+  left: 5%;
+  font-size: 50px;
 }
 .food_title {
   top: 20%;
