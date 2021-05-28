@@ -201,16 +201,20 @@ category_choice.addEventListener('click', (event) => {
 })
 
 
-// event på calculate button: Bruker verdiene hentet fra knappene når man trykker calculate!
+// event på calculate button: Bruker id hentet fra knappene som argument når man trykker calculate!
+
 calculate_Btn.addEventListener('click', (event)=> {
 
-    /* kaller funksjonen i modulen med verdier fra knapper.*/
+    /* kaller funksjonen i modulen som henter riktige data derfra.*/
+
     let result = SalesModule.getRevenueByRestaurantAndPeriodAndCategory(restaurant,period,category);
 
     /*printer*/
+
     resultText.innerHTML = `
     <p> <span class = "result-text-span">${period}'s total </span> for <span class = "result-text-span">${category}</span>  at <span class = "result-text-span">${restaurant}</span>  was <span class="result_number"> ${result}</span> NOK</p>
     `;
+
     /* fyller diagram*/
 
     restaurant = "";
