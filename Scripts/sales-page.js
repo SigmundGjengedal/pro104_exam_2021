@@ -1,6 +1,6 @@
 import SalesModule from './Modules/SalesModule.js';
 
-/*Henter main content div fra home */
+/*Henter det vi trenger for å fylle main content div på home */
 const mainContent = document.querySelector(".main_content");
 
 const salesNavButton = document.querySelector('.navbar_sales');
@@ -42,10 +42,10 @@ salesNavButton.addEventListener('click', function(){
             
                 <div class="select-columns restaurant-choice">
                     <div class="data_container">
-                        <button id="Bjørvika" class="button restaurant-button">BJØRVIKA</button>
-                        <button id="Nydalen" class="button restaurant-button">NYDALEN</button>
-                        <button id="Grunerløkka" class="button restaurant-button">GRUNERLØKKA</button>
-                        <button id="Karl-Johan" class="button restaurant-button">KARL JOHAN</button>
+                        <button id="Bjørvika" class="button restaurant-buttons">BJØRVIKA</button>
+                        <button id="Nydalen" class="button restaurant-buttons">NYDALEN</button>
+                        <button id="Grunerløkka" class="button restaurant-buttons">GRUNERLØKKA</button>
+                        <button id="Karl-Johan" class="button restaurant-buttons">KARL JOHAN</button>
                     </div>
                 </div>
             
@@ -108,12 +108,15 @@ const resultText = document.querySelector(".result-text");
 const chosenDiv = document.querySelector("#selected");
 const resultDiv = document.querySelector('.result-section');
 
+const allRestaurantButtons = document.querySelectorAll('.restaurant-buttons');
+
 resultDiv.style.display = 'flex';
 
 
+  /* event på wrapper til restaurant kolonne, lagrer id på valgte knapp i en variabel */
   restaurant_choice.addEventListener('click', (event) => {
     const isButton = event.target.nodeName === 'BUTTON';
-    if (!isButton) {
+    if (!isButton) {// sjekker om det er en knapp, eventet er på hele diven.
       return;
     }
     restaurant = event.target.id;
@@ -121,28 +124,39 @@ resultDiv.style.display = 'flex';
     <button class="buttonChosen">${restaurant}</button>
     `;
 
+    /* Hindrer bruker i å gjøre flere valg */
     restaurant_choice.style.opacity = 0.5;
-    console.log(restaurant);
+    document.querySelector('#Bjørvika').disabled = true;
+    document.querySelector('#Nydalen').disabled = true;
+    document.querySelector('#Grunerløkka').disabled = true;
+    document.querySelector('#Karl-Johan').disabled = true;
+    console.log(restaurant); // debugger tool
 })
 
 
-
+/* event på wrapper til periode kolonne, lagrer id på valgte knapp i en variabel */
 periode_choice.addEventListener('click', (event) => {
     const isButton = event.target.nodeName === 'BUTTON';
-    if (!isButton) {
+    if (!isButton) {// sjekker om det er en knapp, eventet er på hele restaurant diven.
       return;
     }
     period = event.target.id;
     chosenDiv.innerHTML +=`
     <button class="buttonChosen">${period}</button>
     `;
+    /* Hindrer bruker i å gjøre flere valg */
     periode_choice.style.opacity = 0.5;
-    console.log(period);
+    document.querySelector('#this-year').disabled = true;
+    document.querySelector('#last-year').disabled = true;
+    document.querySelector('#last-month').disabled = true;
+    document.querySelector('#last-week').disabled = true;
+    console.log(period); // debugger tool
 })
         
+/* event på wrapper til category kolonne, lagrer id på valgte knapp i en variabel */
 category_choice.addEventListener('click', (event) => {
     const isButton = event.target.nodeName === 'BUTTON';
-    if (!isButton) {
+    if (!isButton) { // sjekker om det er en knapp, eventet er på hele category diven.
       return;
     }
     category = event.target.id;
@@ -150,15 +164,20 @@ category_choice.addEventListener('click', (event) => {
     chosenDiv.innerHTML +=`
     <button class="buttonChosen">${category}</button>
     `;
-    category_choice.style.opacity = 0.5;
-    console.log(category);
+      /* Hindrer bruker i å gjøre flere valg */
+      category_choice.style.opacity = 0.5;
+      document.querySelector('#all').disabled = true;
+      document.querySelector('#pizza').disabled = true;
+      document.querySelector('#drinks').disabled = true;
+      document.querySelector('#salads').disabled = true;
+      console.log(category);// debugger tool
 })
 
 
-// bruker verdiene hentet fra knappene når man trykker calculate!
+// event på calculate button: Bruker verdiene hentet fra knappene når man trykker calculate!
 calculate_Btn.addEventListener('click', (event)=> {
 
-    /* kaller funksjonen med verdier fra knapper.*/
+    /* kaller funksjonen i modulen med verdier fra knapper.*/
     let result = SalesModule.getRevenueByRestaurantAndPeriodAndCategory(restaurant,period,category);
 
     /*printer*/
@@ -172,7 +191,7 @@ calculate_Btn.addEventListener('click', (event)=> {
         document.querySelector('.sales_diagram_1_filled').style.width = result/10000+'%';
     }
     
-    setTimeout(fillDiagram,100);
+    setTimeout(fillDiagram,100); // for at transitions skal fungere.
 
     /* resetter styling på siden*/
 
@@ -180,6 +199,23 @@ calculate_Btn.addEventListener('click', (event)=> {
     category_choice.style.opacity = 1;
     restaurant_choice.style.opacity = 1;
     periode_choice.style.opacity = 1;
+
+    // NB  : fikk ikke til å bruke disabled uten å gjøre det på en og en.
+
+    document.querySelector('#Bjørvika').disabled = false;
+    document.querySelector('#Nydalen').disabled = false;
+    document.querySelector('#Grunerløkka').disabled = false;
+    document.querySelector('#Karl-Johan').disabled = false;
+
+    document.querySelector('#this-year').disabled = false;
+    document.querySelector('#last-year').disabled = false;
+    document.querySelector('#last-month').disabled = false;
+    document.querySelector('#last-week').disabled = false;
+
+    document.querySelector('#all').disabled = false;
+    document.querySelector('#pizza').disabled = false;
+    document.querySelector('#drinks').disabled = false;
+    document.querySelector('#salads').disabled = false;
 })
 
   

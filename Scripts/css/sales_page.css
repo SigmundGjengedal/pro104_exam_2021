@@ -244,8 +244,6 @@ body {
 }
 
 
-
-
 .result-text{
     display: flex;
     margin-top:4%;
@@ -253,8 +251,6 @@ body {
     font-size: 1.5vw;
 
 }
-
-
 
 .result_number{
     color: #28a745;
