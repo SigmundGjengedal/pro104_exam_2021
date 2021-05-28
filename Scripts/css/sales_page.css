@@ -68,18 +68,7 @@ body {
 }
 
 
-.restaurant {
 
-}
-
-.period {
-
-}
-
-.category{
-
-  
-}
 
 /* Flex columns*/
 .flex-columns .row {
@@ -127,8 +116,6 @@ body {
 .select-columns:last-of-type{
   border: none;
 }
-
-
 
 
 .button{
@@ -197,8 +184,7 @@ body {
   border: #FC7B61;
 }
 
-.sales_diagram_filled {
-  margin-top: 100px;
+.sales_diagram_1_filled {
   height: 100%;
   width: 0%;
   background-color: #FC7B61;
