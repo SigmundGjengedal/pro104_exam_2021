@@ -1,10 +1,18 @@
 import SalesModule from './Modules/SalesModule.js';
 
-/*Henter det vi trenger for å fylle main content div på home */
+/******** Henter det vi trenger for å fylle main content div på home ******/
 const mainContent = document.querySelector(".main_content");
 
 const salesNavButton = document.querySelector('.navbar_sales');
 
+/********* variabler på siden *****************/
+
+let restaurant = "";
+let period = "";
+let category = "";
+
+
+/********* Generer innhold på mainPage *************/
 salesNavButton.addEventListener('click', function(){
 
   let mainTextHome = `
@@ -42,10 +50,10 @@ salesNavButton.addEventListener('click', function(){
             
                 <div class="select-columns restaurant-choice">
                     <div class="data_container">
-                        <button id="Bjørvika" class="button restaurant-buttons">BJØRVIKA</button>
-                        <button id="Nydalen" class="button restaurant-buttons">NYDALEN</button>
-                        <button id="Grunerløkka" class="button restaurant-buttons">GRUNERLØKKA</button>
-                        <button id="Karl-Johan" class="button restaurant-buttons">KARL JOHAN</button>
+                        <button id="Bjørvika" class="button">BJØRVIKA</button>
+                        <button id="Nydalen" class="button">NYDALEN</button>
+                        <button id="Grunerløkka" class="button">GRUNERLØKKA</button>
+                        <button id="Karl-Johan" class="button">KARL JOHAN</button>
                     </div>
                 </div>
             
@@ -108,8 +116,6 @@ const resultText = document.querySelector(".result-text");
 const chosenDiv = document.querySelector("#selected");
 const resultDiv = document.querySelector('.result-section');
 
-const allRestaurantButtons = document.querySelectorAll('.restaurant-buttons');
-
 resultDiv.style.display = 'flex';
 
 
@@ -131,6 +137,13 @@ resultDiv.style.display = 'flex';
     document.querySelector('#Grunerløkka').disabled = true;
     document.querySelector('#Karl-Johan').disabled = true;
     console.log(restaurant); // debugger tool
+    
+    // fjerner klasse som gir hoover effekt på valgte rader
+    document.querySelector('#Bjørvika').classList.replace('button','dead-button');
+    document.querySelector('#Nydalen').classList.replace('button','dead-button');
+    document.querySelector('#Grunerløkka').classList.replace('button','dead-button');
+    document.querySelector('#Karl-Johan').classList.replace('button','dead-button');
+    
 })
 
 
@@ -150,6 +163,13 @@ periode_choice.addEventListener('click', (event) => {
     document.querySelector('#last-year').disabled = true;
     document.querySelector('#last-month').disabled = true;
     document.querySelector('#last-week').disabled = true;
+
+      // fjerner klasse som gir hoover effekt på valgte rader
+      document.querySelector('#this-year').classList.replace('button','dead-button');
+      document.querySelector('#last-year').classList.replace('button','dead-button');
+      document.querySelector('#last-month').classList.replace('button','dead-button');
+      document.querySelector('#last-week').classList.replace('button','dead-button');
+  
     console.log(period); // debugger tool
 })
         
@@ -170,6 +190,12 @@ category_choice.addEventListener('click', (event) => {
       document.querySelector('#pizza').disabled = true;
       document.querySelector('#drinks').disabled = true;
       document.querySelector('#salads').disabled = true;
+
+       // fjerner klasse som gir hoover effekt på valgte rader
+       document.querySelector('#all').classList.replace('button','dead-button');
+       document.querySelector('#pizza').classList.replace('button','dead-button');
+       document.querySelector('#drinks').classList.replace('button','dead-button');
+       document.querySelector('#salads').classList.replace('button','dead-button');   
       console.log(category);// debugger tool
 })
 
@@ -216,17 +242,29 @@ calculate_Btn.addEventListener('click', (event)=> {
     document.querySelector('#pizza').disabled = false;
     document.querySelector('#drinks').disabled = false;
     document.querySelector('#salads').disabled = false;
+
+        // NB  : fikk ikke til å bruke classList uten å gjøre det på en og en.
+
+    document.querySelector('#Bjørvika').classList.replace('dead-button','button');
+    document.querySelector('#Nydalen').classList.replace('dead-button','button');
+    document.querySelector('#Grunerløkka').classList.replace('dead-button','button');
+    document.querySelector('#Karl-Johan').classList.replace('dead-button','button');
+
+    document.querySelector('#this-year').classList.replace('dead-button','button');
+    document.querySelector('#last-year').classList.replace('dead-button','button');
+    document.querySelector('#last-month').classList.replace('dead-button','button');
+    document.querySelector('#last-week').classList.replace('dead-button','button');
+
+    document.querySelector('#all').classList.replace('dead-button','button');
+    document.querySelector('#pizza').classList.replace('dead-button','button');
+    document.querySelector('#drinks').classList.replace('dead-button','button');
+    document.querySelector('#salads').classList.replace('dead-button','button');
+})
 })
 
-  
 
-})
 
-/********************* variabler på siden *********************************/
 
-    let restaurant = "";
-    let period = "";
-    let category = "";
 
 
 

@@ -99,16 +99,11 @@ body {
   align-items: flex-end;
 }
 
-/* for valgte på venstre side*/
+/* for valgte buttons på venstre side*/
 .column-1 {
-  /*styling*/
-  /* flex*/
   display: flex;
   flex-direction: column;
-
-  /* sizing */
   width: 100%;
-  /*positioning*/
   padding: 0 30px;
   margin-right: 20px;
   border: 1px solid #ccc;
@@ -117,9 +112,8 @@ body {
 }
 
 
-/* kolonner med valg*/
+/* div med valg på høyre side*/
  .select-columns {
-  /*styling*/
   border-right: 1px solid #ccc;
   background: #f4f4f4;
   display: flex;
@@ -127,6 +121,7 @@ body {
   
 }
 
+/*fjerner border på siste kolonne, slik at man bare splitter de i midten*/
 .select-columns:last-of-type{
   border: none;
 }
@@ -143,14 +138,28 @@ body {
   border: none;
   border-radius: 5px;
   width : 150px;
- 
- 
+  
 }
+
 .button:hover{
   opacity: 0.8;
   transform: scale(1.05);
 }
 
+/* button uten hoover for døde knapper, allerede valgt*/
+.dead-button{
+  padding: 10px;
+  margin: 10px;
+  background-color: #faa492;
+  color: white;
+  font-family: Futura;
+  font-weight: Bold;
+  border: none;
+  border-radius: 5px;
+  width : 150px;
+}
+
+/* knapper som er valgte*/
 .buttonChosen{
   padding: 5px;
   margin: 5px;
