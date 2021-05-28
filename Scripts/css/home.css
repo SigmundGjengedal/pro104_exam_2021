@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Futura;
+  font-weight: Bold;
+  color: #000;
+  background-color: #f4f3f3;
+}
+
+.main_content{
+  position: absolute;
+  left: 7%;
+  width: 73%;
+  height: 100vh;
+}
+
+.top_page_title_container {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 50px;
+}
+
+.total_sales_container {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 10%;
+}
+
+.total_sales_title {
+  width: 50%;
+  color: #000;
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  font-family: Futura;
+  font-weight: Bold;
+  font-size: 25px;
+}
+
+.total_sales_past{
+  position: absolute;
+  top:13%;
+  right: 19%;
+  color: #A9A9A9;
+}
+
+/* Uke dagene under søyle diagramen */
+
+.week {
+  width: 48%;
+  height: 250px;
+  position: absolute;
+  top: 75%;
+  left: 26%;
+  color: #A9A9A9;
+  font-size: 16px;
+}
+
+.week_monday {
+  position: absolute;
+  left: 1%;
+}
+
+.week_tuesday {
+  position: absolute;
+  left: 20%;
+}
+
+.week_wednesday {
+  position: absolute;
+  left: 37%;
+}
+
+.week_thursday {
+  position: absolute;
+  left: 55%;
+}
+
+.week_friday {
+  position: absolute;
+  left: 73%;
+}
+
+.week_saturday {
+  position: absolute;
+  left: 91%;
+}
+
+.week_sunday {
+  position: absolute;
+  left: 109%;
+}
+
+/* Søyle diagram */
+.diagrams_container {
+  width: 53%;
+  height: 200px;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+
+/* Søylene : Laget med egen css og egen html*/
+.diagram_1 {
+  width: 50px;
+  height: 170px;
+  position: absolute;
+  background: #DEDEDE;
+  margin-right: 10px;
+  border: #FC7B61;
+}
+
+.diagram_1_filled {
+  height: 0%;
+  width: 100%;
+  background-color: #FC7B61;
+  position: absolute;
+  bottom: 0;
+  transition: height 2s;
+  margin-right: 10px;
+}
+
+.diagram_2 {
+  width: 50px;
+  height: 170px;
+  position: absolute;
+  background: #DEDEDE;
+  left: 16%;
+}
+
+.diagram_2_filled {
+  height: 0%;
+  width: 100%;
+  background-color: #FC7B61;
+  position: absolute;
+  bottom: 0;
+  transition: height 2s;
+}
+
+.diagram_3 {
+  width: 50px;
+  height: 170px;
+  position: absolute;
+  background: #DEDEDE;
+  left: 32%;
+}
+
+.diagram_3_filled {
+  height: 0%;
+  width: 100%;
+  background-color: #FC7B61;
+  position: absolute;
+  bottom: 0;
+  transition: height 2s;
+}
+
+.diagram_4 {
+  width: 50px;
+  height: 170px;
+  position: absolute;
+  background: #DEDEDE;
+  left: 48%;
+}
+
+.diagram_4_filled {
+  height: 0%;
+  width: 100%;
+  background-color: #FC7B61;
+  position: absolute;
+  bottom: 0;
+  transition: height 2s;
+}
+
+.diagram_5 {
+  width: 50px;
+  height: 170px;
+  position: absolute;
+  background: #DEDEDE;
+  left: 64%;
+}
+
+.diagram_5_filled {
+  height: 0%;
+  width: 100%;
+  background-color: #FC7B61;
+  position: absolute;
+  bottom: 0;
+  transition: height 2s;
+}
+
+.diagram_6 {
+  width: 50px;
+  height: 170px;
+  position: absolute;
+  background: #DEDEDE;
+  left: 80%;
+}
+
+.diagram_6_filled {
+  height: 0%;
+  width: 100%;
+  background-color: #FC7B61;
+  position: absolute;
+  bottom: 0;
+  transition: height 2s;
+}
+
+.diagram_7 {
+  width: 50px;
+  height: 170px;
+  position: absolute;
+  background: #DEDEDE;
+  left: 96%;
+}
+
+.diagram_7_filled {
+  height: 0%;
+  width: 100%;
+  background-color: #FC7B61;
+  position: absolute;
+  bottom: 0;
+  transition: height 2s;
+}
+
+.sales_numbers_container {
+  height: 43%;
+  position: absolute;
+  top: 28%;
+  left: 15%;
+  letter-spacing: 1px;
+  color: #949494;
+  font-size: 15px;
+}
+
+
+.sales_75 {
+  position: absolute;
+  top: 22%;
+  left: 2%;
+}
+
+.sales_50 {
+  position: absolute;
+  top: 45%;
+  left: 2%;
+}
+
+.sales_25 {
+  position: absolute;
+  top: 69%;
+  left: 2%;
+}
+
+.sales_0 {
+  position: absolute;
+  top: 90%;
+  left: 6%;
+}
+
+/* Linjer som deler skjermen */
+.horizontal_line {
+  width: 70%;
+  height: 5px;
+  position: absolute;
+  top: 55%;
+  left:50%;
+  transform: translateX(-50%);
+  background: #DEDEDE;
+  border-radius: 20px;
+}
+
+
+
+/* Sirkel delen - Budget  */
+.budget_page_container {
+  width: 40%;
+  height: 30%;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  font-size: 30px;
+}
+
+.goal_circle {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 60%;
+  height: 75%;
+  background: #FC7B61;
+  border-radius: 50%;
+}
+
+.goal_circle_inside {
+  position: relative;
+  left: 5%;
+  top: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: #f4f3f3;
+  border-radius: 50%;
+}
+
+.goal_circle_inside2 {
+  position: relative;
+  top: -10%;
+  left: 48%;
+  height: 120%;
+  background-color: #f4f3f3;
+}
+
+.total_circel {
+  position: absolute;
+  top: 45%;
+  left: 28%;
+}
+
+.accomplished_number {
+  font-size: 35px;
+  display: block;
+}
+
+.total_goal_number {
+  font-size: 20px;
+  margin-left: 40%;
+  color:  #A9A9A9;
+}
+
+.percent_accomplished_txt {
+  position: absolute;
+  margin-top: 20px;
+  top: 100%;
+  left: 20%;
+  font-size: 25px;
+}
+
+/* Profit delen */
+
+.profit_title {
+  font-size: 30px;
+  position: absolute;
+  bottom: 36%;
+  right: 35%;
+}
+
+.total_profit_div{
+  position: absolute;
+  bottom: 15%;
+  right: 8%;
+}
+
+.total_profit_number {
+  font-size: 8vw;
+}
+
+.profit_k{
+  font-size: 3vw;
+}

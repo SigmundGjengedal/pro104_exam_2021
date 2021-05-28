@@ -78,7 +78,7 @@ element.addEventListener("click", (e)=>{
     // console.log(e.currentTarget.dateset.msgTxt;
     overlay.classList.toggle("overlay_active");
   // Sjekker om brukeren har klikket på nyeste meldingen for å fjerne grønn border
-  if (e.currentTarget.children[1].children[2].children[0].innerHTML.length >54) {
+  if (e.currentTarget.children[1].children[2].children[0].innerHTML.length >53) {
     slicingMsgTxt()
   }else if(e.currentTarget.classList.contains("msg3_time")){
     msg3.style.border="none";
@@ -91,9 +91,6 @@ element.addEventListener("click", (e)=>{
 
 });
 });
-
-
-
 
 // Koden som henter username fra localStorage og printer det ut i inbox delen
 window.onload = inboxName.innerHTML = localStorage.getItem("username");

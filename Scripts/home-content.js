@@ -1,18 +1,21 @@
 // Printer ut home content
+
+
+
 const mainContentHome = document.querySelector(".main_content");
 const navbarHome = document.querySelector(".navbar_home");
 let mainTextHome = `
 
 <div class="home_page_container">
   <div class="top_page_title_container">
-    <span class="top_page_title">HOME</span>
+    <span>HOME</span>
   </div>
 
   <!-- Total sales container -->
   <div class="total_sales_container">
-    <span class="total_sales_title">TOTAL SALES - last week</span>
+    <span class="total_sales_title">TOTAL SALES</span>
+    <span class="total_sales_past">PAST 7 DAYS</span>
 
-    <div class="week_container">
       <div class="week">
         <span class="week_monday">M</span>
         <span class="week_tuesday">T</span>
@@ -22,12 +25,8 @@ let mainTextHome = `
         <span class="week_saturday">S</span>
         <span class="week_sunday">S</span>
       </div>
-    </div>
-
-
 
     <div class="diagrams_container">
-
         <div class="diagram_1">
            <div class="diagram_1_filled"></div>
         </div>
@@ -56,12 +55,10 @@ let mainTextHome = `
         <div class="diagram_7_filled"></div>
         
      </div>
-
-
     </div>
 
     <div class="sales_numbers_container">
-      <span class="sales_100">100K</span>
+      <span>100K</span>
       <span class="sales_75">75K</span>
       <span class="sales_50">50K</span>
       <span class="sales_25">25K</span>
@@ -70,49 +67,39 @@ let mainTextHome = `
   </div><!-- Total sales container ends -->
 
   <!-- Horisontal og vertical linje som deler grafene -->
-  <div class="horizontal_line_container">
-    <div class="horizontal_line"></div>
-  </div>
 
-  <div class="vertical_line_container">
+    <div class="horizontal_line"></div>
     <div class="vertical_line"></div>
-  </div>
+
 
 
   <!-- Budget -->
-  <div class="budget_page_container">
-    <div class="budget_title_container">
-      <span class="budget_title">BUDGET</span>
-    </div>
 
+  <div class="budget_page_container">
+  <span>BUDGET</span>
     <div class="goal_circle">
       <div class="goal_circle_inside">
         <div class="goal_circle_inside2"></div>
       </div>
-
     </div>
 
-    <div class="accomplished">
+    <div class="total_circel">
       <span class="accomplished_number">150 000</span>
-    </div>
-
-    <div class="total_goal">
       <span class="total_goal_number">300 000</span>
     </div>
 
-    <div class="percent_accomplished">
       <span class="percent_accomplished_txt">50% OF GOAL</span>
-    </div>
   </div>
+
   <!-- Profit -->
   <div class="profit_container">
-    <div class="profit_title_container">
-      <span class="profit_title">PROFIT</span>
-    </div>
 
-    <div class="profit_type">
-      <span class="total_profit_number">$</span>
-    </div>
+      <span class="profit_title">PROFIT</span>
+
+
+      <div class="total_profit_div">
+      <span class="total_profit_number">$</span><span class="profit_k"> k</span>
+      </div>
   </div>
 </div>
 `
@@ -123,12 +110,10 @@ navbarHome.addEventListener("click", ()=>{
   mainContentHome.innerHTML = mainTextHome;
   loopNumber();
   setTimeout(HomePageDiagramsModule.generateDiagramNumbers, 100);
-
 });
 
 // Importerer Salesmodule for å bruke data inn i funksjonen under
 import SalesModule from './Modules/SalesModule.js';
-const positiveProfit = document.querySelector(".positive_profit");
 
 // Henter data fra SalesModule
 function totalNumber(){
@@ -154,7 +139,7 @@ function loopNumber(){
         if(counter === 30){
             clearInterval(loopnumber)
         }
-        document.querySelector(".total_profit_number").innerHTML= Math.floor(numbers[counter]) + ",-";
+        document.querySelector(".total_profit_number").innerHTML= Math.floor(numbers[counter]);
     }
 }
 loopNumber();

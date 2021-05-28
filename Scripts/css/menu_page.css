@@ -9,34 +9,46 @@ body {
   padding: 0;
 }
 .menu_page_container {
+  overflow: hidden;
   width: 100%;
   height: 100%;
-  background: #FFF;
   position: relative;
+}
+ .menu_page_container img{
+  will-change: transform;
+  border-radius: 12%;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 .food_container {
-  width: 15%;
-  height: 10%;
-  position: absolute;
-  top: 50px; /* FIKSE */
-  left: 10%;
-}
-.food_title {
-  width: 20%;
-  color: #000;
   position: relative;
-  font-family: Futura;
-  font-weight: Bold;
+  top: 5%;
+  left: 5%;
   font-size: 50px;
 }
+.food_title {
+  top: 20%;
+  position: relative;
+  width: 20%;
+  color: #000;
+  font-family: Futura;
+  font-weight: Bold;
+  font-size: 3.1rem;
+}
 .pizza_container {
-  width: 81%;
-  height: 217px; /* FIKSE */
-  position: absolute;
-  top: 140px; /* FIKSE */
-  left: 12%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 30%; /* FIKSE */
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .pizza_title {
+  top: 7%;
+  left: 10%;
   width: 20%;
   color: #000;
   position: relative;
@@ -44,53 +56,14 @@ body {
   font-weight: Bold;
   font-size: 30px;
 }
-.pizza_types_container {
-  width: 80%;
-  height: 80%;
-  position: absolute;
-  top: 20%;
-  left: 0;
-}
 .pizza_type_1 {
   width: 16%;
   height: 80%;
-  background: blue;
-  position: relative;
-  border-radius: 20px;
-}
-.pizza_type_2 {
-  width: 16%;
-  height: 80%;
-  background: blue;
-  position: absolute;
-  top: 0;
-  left: 20.5%;
-  border-radius: 20px;
-}
-.pizza_type_3 {
-  width: 16%;
-  height: 80%;
-  background: blue;
-  position: absolute;
-  top: 0;
-  left: 41%;
-  border-radius: 20px;
-}
-.pizza_type_4 {
-  width: 16%;
-  height: 80%;
-  background: blue;
-  position: absolute;
-  top: 0;
-  left: 62%;
   border-radius: 20px;
 }
 .pizza_type_5 {
   width: 16%;
   height: 80%;
-  position: absolute;
-  top: 0;
-  left: 83%;
   border: 5px dashed #D4D4D4;
   border-radius: 20px;
 }
@@ -98,31 +71,33 @@ body {
   width: 40%;
   height: 40%;
   background: blue;
-  position: absolute;
+  position: relative;
   top: 30%;
   left: 30%;
 }
 .diagram_icon_container {
-  width: 10%;
-  height: 13%;
-  position: absolute;
-  top: 0;
-  right: 14%;
-}
-.diagram_icon {
-  width: 25%;
-  height: 100%;
-  background: blue;
   position: relative;
+  height: 5%;
+  width: 5%;
+  background-image: url("../../Images/Menu/Icons/market-fluctuation.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 85%;
+  bottom: 2%;
 }
 .drinks_container {
-  width: 81%;
-  height: 217px; /* FIKSE */
-  position: absolute;
-  top: 335px; /* FIKSE */
-  left: 12%;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 30%; /* FIKSE */
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .drinks_title {
+  bottom: 1%;
+  left: 10%;
   width: 10%;
   color: #000;
   position: relative;
@@ -130,179 +105,116 @@ body {
   font-weight: Bold;
   font-size: 30px;
 }
-.drinks_types_container {
-  width: 80%;
-  height: 80%;
-  position: absolute;
-  top: 20%;
-  left: 0;
-}
 .drink_type_1 {
   width: 16%;
   height: 80%;
-  background: blue;
-  position: relative;
-  border-radius: 20px;
-}
-.drink_type_2 {
-  width: 16%;
-  height: 80%;
-  background: blue;
-  position: absolute;
-  top: 0;
-  left: 20.5%;
-  border-radius: 20px;
-}
-.drink_type_3 {
-  width: 16%;
-  height: 80%;
-  background: blue;
-  position: absolute;
-  top: 0;
-  left: 41%;
-  border-radius: 20px;
-}
-.drink_type_4 {
-  width: 16%;
-  height: 80%;
-  background: blue;
-  position: absolute;
-  top: 0;
-  left: 62%;
   border-radius: 20px;
 }
 .drink_type_5 {
   width: 16%;
   height: 80%;
-  position: absolute;
-  top: 0;
-  left: 83%;
   border: 5px dashed #D4D4D4;
   border-radius: 20px;
 }
 .drinks_plus_icon {
+  position: relative;
   width: 40%;
   height: 40%;
   background: blue;
-  position: absolute;
   top: 30%;
   left: 30%;
 }
 .splitscreen_line_container {
-  width: 45%;
-  height: 8px; /* FIKSE */
-  position: absolute;
-  top: 545px; /* FIKSE */
-  left: 24%;
+  bottom: 3%;
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: 8px;
 }
 .splitscreen_line {
-  width: 100%;
+  left: 50%;
+  width: 50%;
   height: 100%;
   background: #D4D4D4;
-  position: absolute;
   border-radius: 20px;
+  position: relative;
+  transform: translate(-50%, -50%);
 }
 .recipe_bank_container {
-  width: 81%;
-  height: 221px; /* FIKSE */
-  position: absolute;
-  top: 570px; /* FIKSE */
-  left: 12%;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 30%; /* FIKSE */
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  bottom: 1%;
+}
+.add_plus{
+  background-image: url("../../Images/Menu/Icons/plus.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat:no-repeat;
 }
 .recipe_bank_title {
+  position: relative;
+  left: 10%;
   width: 20%;
   color: #000;;
-  position: absolute;
   font-family: Futura;
   font-weight: Bold;
   font-size: 30px;
-}
-.recipes_container {
-  width: 81%;
-  height: 80%;
-  position: absolute;
-  top: 23%;
-  left: 0;
+  bottom: 1%;
 }
 .recipe_1 {
   width: 16%;
   height: 80%;
-  background: blue;
-  position: relative;
-  border-radius: 20px;
-}
-.recipe_2 {
-  width: 16%;
-  height: 80%;
-  background: blue;
-  position: absolute;
-  top: 0;
-  left: 20.5%;
-  border-radius: 20px;
-}
-.recipe_3 {
-  width: 16%;
-  height: 80%;
-  background: blue;
-  position: absolute;
-  top: 0;
-  left: 41%;
-  border-radius: 20px;
-}
-.recipe_4 {
-  width: 16%;
-  height: 80%;
-  background: blue;
-  position: absolute;
-  top: 0;
-  left: 62%;
   border-radius: 20px;
 }
 .recipe_5 {
   width: 16%;
   height: 80%;
-  position: absolute;
-  top: 0;
-  left: 83%;
   border: 5px dashed #D4D4D4;
   border-radius: 20px;
 }
 .confirm_btn_container {
-  width: 5%;
-  height: 44px; /* FIKSE */
-  position: absolute;
-  top: 100px; /* FIKSE */
-  left: 45%;
-}
-.confitm_btn {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 10%;
+  top: 5%;
+  left: 50%;
+  position: relative;
+  width: 8%;
+  height: 5%;
+  transform: translate(-50%, -50%);
 }
 .confirm_btn_filled {
   width: 100%;
-  height: 29px;
   background: #FC7B61;
   position: relative;
   border-radius: 50px;
 }
 .confirm_btn_circle {
-  width: 33%;
-  height: 50%;
+  height: 29px;
+  width: 50%;
   background: #000;
-  position: absolute;
-  top: 6.5%;
-  left: 7.5%;
   border-radius: 50px;
+  border: solid 2px black;
+  position: relative;
+}
+.confirm_btn_circle:hover{
+  cursor: pointer;
+}
+.confirm_btn_circle_edit{
+  left: 50%;
 }
 .confirm_btn_txt {
-  width: 100%;
-  top: 80%;
+  margin-top: 5px;
+  width: 110%;
   color: #333;
   position: absolute;
   font-family: Futura;
   font-weight: Bold;
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
+}
+.bottom_container{
+  height: 76%;
 }

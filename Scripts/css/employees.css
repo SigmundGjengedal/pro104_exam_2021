@@ -1,0 +1,203 @@
+
+.employees_content{
+  position: relative;
+  background-image: url();
+}
+/* Knapper for å velge fra hvilken restorang du vil se ansatte  */
+.buttons-employee{
+  width: 90%;
+  margin: 5% auto 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-employee{
+width: 20%;
+padding: 1em 1em;
+color: #000;
+display: inline-block;
+text-align: center;
+font-size: 1.1vw;
+text-decoration: none;
+border-radius: 15px;
+background-color: #FFF;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.button-employee:hover{
+  background: #ECAF88;
+  transition: 0.3s;
+  color:#f9f3f3;
+}
+
+/* Liste over ansatte */
+.employee-list{
+  width: 90%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin: 5% auto 0;
+}
+
+.employee-card{
+width: 24%;
+height:250px;
+border-radius: 20px;
+border: solid 1px black;
+font-size: 1rem;
+position: relative;
+
+}
+.employee-name-div{
+  line-height:1;
+}
+
+.employee-name{
+  position: absolute;
+  top:5%;
+  left:50%;
+  transform: translateX(-50%);
+  width: 80%;
+  margin:auto;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+.employee-position{
+  position: absolute;
+  left: 50%;
+  top:25%;
+  transform: translateX(-50%);
+}
+
+.employee-contact-info{
+  line-height: 0.5;
+  font-size: 1vw;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.employee-pay-grade{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Add og remove buttons */
+
+.add-remove-buttons{
+position: absolute;
+left:50%;
+bottom: 5%;
+transform: translateX(-50%);
+
+}
+
+.add-user-btn{
+  margin-right: 100px;
+  color:#000;
+}
+
+.remove-user-btn{
+  color:#000;
+}
+
+/* Modal for å legge og fjerne ansatte */
+.modal {
+  position: fixed;
+  display: none;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  position: absolute;
+  left: 43%;
+  top:50%;
+  transform: translate(-43%,-50%);
+  background-color: #fefefe;
+  width: 330px;
+  height: 450px;
+  border-radius:30px;
+}
+
+.modal-content input{
+  border-radius: 5px;
+  border: 1px solid grey;
+  line-height: 1.5;
+}
+
+.remove-add-close{
+  color: #000;
+  position: absolute;
+  right:5%;
+  top:3%;
+}
+
+.remove-add-close:hover{
+  color:#d3d3d3;
+  transition: 0.3s;
+}
+
+.image-remove-add-div{
+text-align: center;
+margin-top: 30px;
+}
+
+.image-remove-add{
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Legg til ansatt modal */
+.add-inputs{
+  width: 50%;
+  line-height: 2;
+  margin: auto;
+}
+.add-inputs label{
+  display: inline-block;
+}
+
+
+.add-button{
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 25px;
+  border: 2px solid #ECAF88;
+  display: inline-block;
+  font-size: 1.1vw;
+  border-radius: 15px;
+  background-color: #FFF;
+}
+
+.add-button:hover{
+  background: #ECAF88;
+  transition: 0.3s;
+  color:#f9f3f3;
+}
+
+/* Fjern ansatt modal */
+
+.remove-inputs{
+  width: 50%;
+  line-height: 2.3;
+  margin: 20% auto;
+}
+
+.remove-button{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
