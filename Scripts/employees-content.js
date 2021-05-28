@@ -14,10 +14,14 @@ let mainTextHome =`
       <a class="button-employee bjørvika" href="#">BJØRVIKA</a>
       <a class="button-employee nydalen" href="#">NYDALEN</a>
       <a class="button-employee grunerløkka" href="#">GRUNERLØKKA</a>
-    </nav>
+  </nav>
 
 
-    <div class="employee-list">
+    <div class="employee-list1">
+
+    </div>
+
+    <div class="employee-list2">
 
     </div>
 
@@ -46,31 +50,87 @@ navbarEmployees.addEventListener("click", ()=>{
     printNydalen();
     printBjorvika();
 
-    addEmployee();
-    removeEmployee();
+    openAddModal();
+    openRemoveModal();
+
 
 });
 
 
 // Åpner add modalen
-function addEmployee(){
+
+function openAddModal(){
   document.querySelector(".add-user-btn").addEventListener("click", function(){
     const modal = document.querySelector(".modal");
     modal.style.display = "block";
-    add();
+    addModalPrint();
     closeModal();
   })
-
 };
-
 // Åpner remove modalen
-function removeEmployee(){
+function openRemoveModal(){
   document.querySelector(".remove-user-btn").addEventListener("click", function(){
     const modal = document.querySelector(".modal");
     modal.style.display = "block";
-    remove();
+    removeModalPrint();
     closeModal();
   })
+};
+// funksjonen add som printer ut addModal
+
+function addModalPrint(){
+    document.querySelector(".modal-content").innerHTML = `
+    <div class="image-remove-add-div">
+    <img class="image-remove-add" src="../Images/employees/userImageInbox.png" alt="person-remove">
+    </div>
+
+    <a class="remove-add-close" href="#"><i class=" fas fa-times fa-2x"></i></a>
+  <div class="add-inputs">
+  <form>
+    <label for="">CONTACT INFO:</label>
+    <input class="name-value" type="text" name="NAME" required placeholder="NAME" minlength="2">
+    <input class="mail-value" type="email" name="EMAIL" required placeholder="EMAIL" value="">
+    <input class="phone-value" type="tel" name="tel" required maxlength=8 pattern="[0-9]{8}"  placeholder="PHONE">
+
+    <label class="position" for="POSITION">POSITION:</label>
+    <select class="position-value" name="POSITION">
+    <option value="HOST/HOSTESS">HOST/HOSTESS</option>
+    <option value="CHEF">CHEF</option>
+    <option value="SOUSE CHEF">SOUSE CHEF</option>
+    <option value="MANAGER">MANAGER</option>
+    </select>
+
+    <label for="PAY-GRADE">PAY-GRADE:</label>
+    <select class="pay-grade-value" name="pay-grade">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    </select>
+    </div>
+
+    <button class="add-button" type="submit" value="Send">ADD</button>
+  </form>
+    `
+    addNewEmployee();
+};
+// Funksjon som printer ut removeModal
+function removeModalPrint(){
+    document.querySelector(".modal-content").innerHTML = `
+    <div class="image-remove-add-div">
+    <img class="image-remove-add" src="../Images/employees/userImageInbox.png" alt="person-remove">
+    </div>
+
+    <a class="remove-add-close" href="#"><i class="fas fa-times fa-2x"></i></a>
+    <div class="remove-inputs">
+    <label for="">INFO:</label>
+    <input class=remove-name-value type="text" name="NAME" placeholder="NAME" minlength="2" required>
+    <input class="remove-phone-value" type="tel" name="tel" maxlength=8 pattern="[0-9]{8}" required placeholder="PHONE">
+    </div>
+    <button class="remove-button" type="submit">REMOVE</button>
+    `
+    removeEmployee();
 };
 
 //Stenger modalen når bruker klikker på icon
@@ -81,68 +141,89 @@ function closeModal(){
   });
 };
 
-// funksjonen add som tillatter brukeren å legge til ansatt
-function add(){
-    document.querySelector(".modal-content").innerHTML = `
-    <div class="image-remove-add-div">
-    <img class="image-remove-add" src="../Images/employees/userImageInbox.png" alt="person-remove">
+// Funksjon som legger til ny ansatt
+let counter = 0;
+function addNewEmployee(){
+  const addBtn = document.querySelector(".add-button");
+  addBtn.addEventListener("click", function(){
+  const nameValue = document.querySelector(".name-value").value;
+  const mailValue = document.querySelector(".mail-value").value;
+  const phoneValue = document.querySelector(".phone-value").value;
+  const positionValue = document.querySelector(".position-value").value;
+  const payGradeValue = document.querySelector(".pay-grade-value").value;
+
+  if(counter <=3){
+    document.querySelector(".employee-list2").innerHTML +=`
+    <div class="employee-card">
+      <div class="employee-name-div">
+      <h3 class="employee-name">${nameValue}</h3>
+      <p class="employee-position">${positionValue}</p>
+      </div>
+      <div class="employee-contact-info">
+      <p class="employee-phone">${phoneValue}</p>
+      <p class="employee-email">${mailValue}</p>
+      </div>
+      <p class="employee-pay-grade">PAY GRAD: ${payGradeValue}</p>
     </div>
-
-    <a class="remove-add-close" href="#"><i class=" fas fa-times fa-2x"></i></a>
-  <div class="add-inputs">
-    <label for="">CONTACT INFO:</label>
-    <input type="text" name="NAME" placeholder="NAME" minlength="2" required>
-    <input type="text" name="DEPARTMENT" placeholder="DEPARTMENT" minlength="2" required>
-    <input type="email" name="EMAIL" required placeholder="EMAIL" value="">
-    <input type="tel" name="tel" maxlength=8 pattern="[0-9]{8}" required placeholder="PHONE">
-
-    <label class="position" for="POSITION">POSITION:</label>
-    <select name="POSITION">
-    <option value="HOST/HOSTESS">HOST/HOSTESS</option>
-    <option value="CHEF">CHEF</option>
-    <option value="SOUSE CHEF">SOUSE CHEF</option>
-    <option value="MANAGER">MANAGER</option>
-    </select>
-
-    <label for="PAY-GRADE">PAY-GRADE:</label>
-    <select name="pay-grade">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    </select>
-    </div>
-
-    <button class="add-button" type="submit">ADD</button>
-
-
     `
-};
-// Funksjon som gir muligheten for å fjerne ansatte
-function remove(){
-    document.querySelector(".modal-content").innerHTML = `
-    <div class="image-remove-add-div">
-    <img class="image-remove-add" src="../Images/employees/userImageInbox.png" alt="person-remove">
-    </div>
+    document.querySelector(".modal").style.display = "none";
+    counter++;
+  }else{
+        document.querySelector(".modal").style.display = "none";
+        alert("restorangen har ikke behov for flere ansatte")
+  }
+});
+      console.log(counter);
+  };
+// Funksjonen som sletter ansatte
+function removeEmployee(){
+  const employeeCard = document.querySelectorAll(".employee-card");
+  const removeBtn = document.querySelector(".remove-button");
+  removeBtn.addEventListener("click", function(){
+    const nameValue = document.querySelector(".remove-name-value").value;
+    const phoneValue = document.querySelector(".remove-phone-value").value;
+    let isFound = false;
+    employeeCard.forEach(card =>{
+      if(card.children[0].children[0].innerHTML == nameValue && card.children[1].children[0].innerHTML == phoneValue){
+        card.style.display="none";
+        document.querySelector(".modal").style.display = "none";
+        isFound = true;
+      }
+    });
+    if(isFound == false){
+      alert("Vi har ikke ansatte med denne info");
+    };
+  });
 
-    <a class="remove-add-close" href="#"><i class="fas fa-times fa-2x"></i></a>
-    <div class="remove-inputs">
-    <label for="">INFO:</label>
-    <input type="text" name="NAME" placeholder="NAME" minlength="2" required>
-    <input type="tel" name="tel" maxlength=8 pattern="[0-9]{8}" required placeholder="PHONE">
-    </div>
-    <button class="remove-button" type="submit">REMOVE</button>
-    `
 };
+
+
+// function validityInputs(){
+//   const mail = document.querySelector(".mail-value");
+//   mail.oninvalid = function(e) {
+//     e.target.setCustomValidity("");
+//     if (!e.target.validity.valid) {
+//       e.target.setCustomValidity("Du må legge inn riktig mail adresse");
+//     };
+//   };
+//   inputMail.oninput = function(e) {
+//     e.target.setCustomValidity("");
+//   };
+// };
+
+
 
 // Function printer fra modulen alle ansatte i KarlJohan
+
     function printKarlJohan(){
-      let employeeList = document.querySelector(".employee-list");
+      let employeeList1 = document.querySelector(".employee-list1");
+      let employeeList2 = document.querySelector(".employee-list2");
       document.querySelector(".karl-johan").addEventListener("click", ()=>{
-        employeeList.innerHTML= " "
+        counter=0;
+        document.querySelector(".add-remove-buttons").style.display="inline-block";
+        employeeList1.innerHTML= " "
         EmployeesModules.getKarlJohan().forEach(rest => {
-              employeeList.innerHTML += `
+              employeeList1.innerHTML += `
               <div class="employee-card">
                 <div class="employee-name-div">
                 <h3 class="employee-name">${rest.name}</h3>
@@ -156,15 +237,18 @@ function remove(){
               </div>
               `
         });
-      });
-
+      employeeList2.innerHTML= "";
+    });
     };
-
-    // Function printer fra modulen alle ansatte i Grunerløkka
+// Function printer fra modulen alle ansatte i Grunerløkka
     function printGrunerlokka(){
-      let employeeList = document.querySelector(".employee-list");
 
+
+      let employeeList = document.querySelector(".employee-list1");
+      let employeeList2 = document.querySelector(".employee-list2");
       document.querySelector(".grunerløkka").addEventListener("click", ()=>{
+        counter=0;
+        document.querySelector(".add-remove-buttons").style.display="inline-block";
         employeeList.innerHTML= " "
         EmployeesModules.getGrunerlokka().forEach(rest => {
               employeeList.innerHTML += `
@@ -182,13 +266,17 @@ function remove(){
               `
 
         });
+        employeeList2.innerHTML= "";
       });
-    };
 
-    // Function printer fra modulen alle ansatte i Nydalen
+    };
+// Function printer fra modulen alle ansatte i Nydalen
     function printNydalen(){
-      let employeeList = document.querySelector(".employee-list");
+      let employeeList = document.querySelector(".employee-list1");
+      let employeeList2 = document.querySelector(".employee-list2");
       document.querySelector(".nydalen").addEventListener("click", ()=>{
+        counter=0;
+        document.querySelector(".add-remove-buttons").style.display="inline-block";
         employeeList.innerHTML= " "
         EmployeesModules.getNydalen().forEach(rest => {
               employeeList.innerHTML += `
@@ -206,13 +294,17 @@ function remove(){
               `
 
         });
+          employeeList2.innerHTML= "";
       });
-    };
 
-    // Function printer fra modulen alle ansatte i Nydalen
+    };
+// Function printer fra modulen alle ansatte i Nydalen
     function printBjorvika(){
-      let employeeList = document.querySelector(".employee-list");
+      let employeeList = document.querySelector(".employee-list1");
+      let employeeList2 = document.querySelector(".employee-list2");
       document.querySelector(".bjørvika").addEventListener("click", ()=>{
+        counter=0;
+        document.querySelector(".add-remove-buttons").style.display="inline-block";
         employeeList.innerHTML= " "
         EmployeesModules.getBjorvika().forEach(rest => {
               employeeList.innerHTML += `
@@ -230,5 +322,6 @@ function remove(){
               `
 
         });
+        employeeList2.innerHTML="";
       });
     };
