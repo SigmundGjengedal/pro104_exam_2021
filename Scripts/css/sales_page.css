@@ -1,3 +1,5 @@
+/* css på alt: */
+
 * {
   box-sizing: border-box;
 }
@@ -22,6 +24,8 @@ body {
   flex-direction: column;   
 }
 
+
+/* header med tittel*/
 #Sales_Heading{
   position: relative;
   top: 5vh;
@@ -32,7 +36,7 @@ body {
   margin-top: 0;
   
 }
-
+/* p under tittel*/
 #Heading-p{
   margin: 0;
   padding: 0;
@@ -44,7 +48,7 @@ body {
   
 }
 
-/* lavnelabel over variabel-valg*/
+/* container for navnelabel, (resturant, periode,category) over variabel-valg i kolonnene til høyre*/
 .labels-choices{
   position: relative;
   left: 32vw;
@@ -54,6 +58,7 @@ body {
   
 }
 
+/* for alle label over */
 .choice{
   background-color: #ccc;
   border-top: 50%;
@@ -65,6 +70,7 @@ body {
 
 }
 
+/* for hver enkelt label over */
 .restaurant{
   position: relative;
 
@@ -109,7 +115,7 @@ body {
 }
 
 
-/* div med valg på høyre side*/
+/* div som holder valg med knapper på høyre side*/
  .select-columns {
   border-right: 1px solid #ccc;
   background: #f4f4f4;
@@ -143,7 +149,7 @@ body {
   transform: scale(1.05);
 }
 
-/* button uten hoover for døde knapper, allerede valgt*/
+/* button uten hoover for døde knapper, for de som allerede er valgt*/
 .dead-button{
   padding: 10px;
   margin: 10px;
@@ -196,7 +202,7 @@ body {
 
 
 
-/*resultatdiv*/
+/********** resultatdiv **********/
 
 
 .result-section{
@@ -213,6 +219,11 @@ body {
   padding-top: 30px;
   min-width: 645px;
   border-radius: 10px;
+}
+
+.sales-statistics-text{
+text-align: center;
+font-size: 2vw;
 }
 
 .sales_diagram_1 {

@@ -82,6 +82,7 @@ salesNavButton.addEventListener('click', function(){
            
             <section class="result-section">
 
+                    <p class = "sales-statistics-text"> Statistics</p>
                     <div class="sales_diagram_1">
                         <div class="sales_diagram_1_filled"></div>
                     </div>
