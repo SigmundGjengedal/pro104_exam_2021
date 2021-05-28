@@ -232,6 +232,7 @@
 .navbar-item{
   display: flex;
   position: relative;
+  transition: 200ms ease-out;
 }
 
 .tooltiptext{
@@ -251,4 +252,8 @@
 
 .navbar-item:hover .tooltiptext {
   visibility: visible;
+}
+
+.navbar-item:hover{
+transform: scale(1.2)
 }
