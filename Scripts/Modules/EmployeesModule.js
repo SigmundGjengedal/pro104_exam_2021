@@ -26,12 +26,7 @@ const EmployeesModules = (function () {
         { name : "Terje Hansen",  mail : "terjehansen@gyldnepizza.no", phone : "90515213", position :"Host", payGrade : "2", departement : "Nydalen"},
         { name : "Martin Amundsen",  mail : "martinamundsen@gyldnepizza.no", phone : "90515321", position :"Chef", payGrade : "3", departement : "Nydalen"},
         { name : "Kevin Olsen",  mail : "kevinolsen@gyldnepizza.no", phone : "90515111", position :"Souse Chef", payGrade : "3", departement : "Nydalen"},
-<<<<<<< HEAD
       ];
-=======
-    ]
-
->>>>>>> food
           const getNydalen = () =>  nydalenArray;
 
         // Bjørvika
