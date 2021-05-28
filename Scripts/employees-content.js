@@ -53,7 +53,6 @@ navbarEmployees.addEventListener("click", ()=>{
     openAddModal();
     openRemoveModal();
 
-
 });
 
 
@@ -83,8 +82,7 @@ function addModalPrint(){
     <div class="image-remove-add-div">
     <img class="image-remove-add" src="../Images/employees/userImageInbox.png" alt="person-remove">
     </div>
-
-    <a class="remove-add-close" href="#"><i class=" fas fa-times fa-2x"></i></a>
+  <a class="remove-add-close" href="#"><i class=" fas fa-times fa-2x"></i></a>
   <div class="add-inputs">
   <form>
     <label for="">CONTACT INFO:</label>
@@ -173,7 +171,6 @@ function addNewEmployee(){
         alert("restorangen har ikke behov for flere ansatte")
   }
 });
-      console.log(counter);
   };
 // Funksjonen som sletter ansatte
 function removeEmployee(){
@@ -206,7 +203,7 @@ function removeEmployee(){
 //       e.target.setCustomValidity("Du må legge inn riktig mail adresse");
 //     };
 //   };
-//   inputMail.oninput = function(e) {
+//   mail.oninput = function(e) {
 //     e.target.setCustomValidity("");
 //   };
 // };
