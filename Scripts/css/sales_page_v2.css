@@ -220,9 +220,15 @@ body {
     display: flex;
     justify-content: center;
     font-size: 18px;
+    color: #28a745;
 }
 
 .result_number{
     color: #28a745;
     font-size: 40px;
+}
+
+.result-text .result-text-span{
+    
+    text-decoration-line: underline;
 }

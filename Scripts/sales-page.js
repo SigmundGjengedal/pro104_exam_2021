@@ -1,4 +1,4 @@
-import SalesModule from '../Modules/SalesModule.js';
+import SalesModule from './Modules/SalesModule.js';
 
 const resultText = document.querySelector(".result-text");
 const chosenDiv = document.querySelector("#selected");
@@ -27,6 +27,7 @@ const calculate_Btn = document.querySelector(".calculate-btn");
         <button class="buttonChosen">${restaurant}</button>
         `;
 
+        restaurant_choice.style.opacity = 0.5;
         console.log(restaurant);
     })
 
@@ -39,6 +40,7 @@ const calculate_Btn = document.querySelector(".calculate-btn");
         chosenDiv.innerHTML +=`
         <button class="buttonChosen">${period}</button>
         `;
+        periode_choice.style.opacity = 0.5;
         console.log(period);
     })
             
@@ -52,6 +54,7 @@ const calculate_Btn = document.querySelector(".calculate-btn");
         chosenDiv.innerHTML +=`
         <button class="buttonChosen">${category}</button>
         `;
+        category_choice.style.opacity = 0.5;
         console.log(category);
     })
 
@@ -64,7 +67,7 @@ const calculate_Btn = document.querySelector(".calculate-btn");
     
         /*printer*/
         resultText.innerHTML = `
-        <p>${period}'s total for ${category} at ${restaurant} was <span class="result_number"> ${result}</span> NOK</p>
+        <p> <span class = "result-text-span">${period}'s total </span> for <span class = "result-text-span">${category}</span>  at <span class = "result-text-span">${restaurant}</span>  was <span class="result_number"> ${result}</span> NOK</p>
         `;
         /* fyller diagram*/
 
@@ -75,7 +78,12 @@ const calculate_Btn = document.querySelector(".calculate-btn");
         
         setTimeout(fillDiagram,100);
 
+        /* resetter styling på siden*/
+
         chosenDiv.innerHTML = "";
+        category_choice.style.opacity = 1;
+        restaurant_choice.style.opacity = 1;
+        periode_choice.style.opacity = 1;
     })
 
 
