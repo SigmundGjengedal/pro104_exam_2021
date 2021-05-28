@@ -1,17 +1,44 @@
 .analytics_top{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     height: 15%;
     border: 1px solid black;
 }
+.analytics_flex_item{
+    flex:50%;
+    padding: 5px;
+}
+.select_restaurants_input{
+    width: 100%;
+}
+.select_wrapper_restaurants{
+    
+}
+.search_icon{
+    position: absolute;
+    left: 74.5%;
+    top: 26.3%;
+    height: 50px;
+    width: 15px;
+    background-image: url("../../Images/Menu/Icons/loupe.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 table{
-    height: 65%;
+    height: 69%;
     table-layout: fixed;
     width: 100%;
-    background-color: white;
     border-collapse: collapse;
-
 }
 .table_wrapper{
-    max-height: 65%;
+    padding: 0;
+    width: 100%;
+    max-height: 69%;
+    min-height: 69%;
     overflow: scroll;
 }
 tbody td{
@@ -19,7 +46,7 @@ tbody td{
     letter-spacing: 2px;
 }
 th, td{
-padding: 25px;
+padding: 15px;
 }
 .analytics_input{
     width: 40%;

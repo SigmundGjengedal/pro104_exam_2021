@@ -166,13 +166,161 @@ const MenuModule = ( function (){
         
     ]
 
+
+    const itemsArray = [
+        {
+            restaurant: "Grunerløkka",
+            type: "Pizza",
+            name: "Cheeze and Tomato",
+            price: 149,
+            grossProfit: 30,
+            unitsSold: 498,
+        
+        },
+        {
+            restaurant: "Karl Johan",
+            type: "Pizza",
+            name: "Cheeze and Tomato",
+            price: 149,
+            grossProfit: 30,
+            unitsSold: 349,
+        
+        },
+        {
+            restaurant: "Nydalen",
+            type: "Pizza",
+            name: "Cheeze and Tomato",
+            price: 149,
+            grossProfit: 30,
+            unitsSold: 569,
+        
+        },
+        {
+            restaurant: "Bjørvika",
+            type: "Pizza",
+            name: "Cheeze and Tomato",
+            price: 149,
+            grossProfit: 30,
+            unitsSold: 452,
+        
+        },
+        {
+            restaurant: "Grunerløkka",
+            type: "Pizza",
+            name: "Ham and Pepperoni",
+            price: 159,
+            grossProfit: 56,
+            unitsSold: 498,
+        },
+        {
+            restaurant: "Karl Johan",
+            type: "Pizza",
+            name: "Ham and Pepperoni",
+            price: 159,
+            grossProfit: 56,
+            unitsSold: 498,
+        },
+        {
+            restaurant: "Nydalen",
+            type: "Pizza",
+            name: "Ham and Pepperoni",
+            price: 159,
+            grossProfit: 56,
+            unitsSold: 123,
+        },
+        {
+            restaurant: "Bjørvika",
+            type: "Pizza",
+            name: "Ham and Pepperoni",
+            price: 159,
+            grossProfit: 56,
+            unitsSold: 456,
+        },
+        {
+            restaurant: "Grunerløkka",
+            type: "Drinks",
+            name: "Pepsi",
+            price: 69,
+            grossProfit: 23,
+            unitsSold: 345,
+        },
+        {
+            restaurant: "Karl Johan",
+            type: "Drinks",
+            name: "Pepsi",
+            price: 69,
+            grossProfit: 23,
+            unitsSold: 356,
+        },
+        {
+            restaurant: "Nydalen",
+            type: "Drinks",
+            name: "Pepsi",
+            price: 69,
+            grossProfit: 23,
+            unitsSold: 432,
+        },
+        {
+            restaurant: "Bjørvika",
+            type: "Drinks",
+            name: "Pepsi",
+            price: 69,
+            grossProfit: 23,
+            unitsSold: 234,
+        },
+        {
+            restaurant: "Grunerløkka",
+            type: "Drinks",
+            name: "Beer",
+            price: 99,
+            grossProfit: 54,
+            unitsSold: 654,
+        },
+        {
+            restaurant: "Karl Johan",
+            type: "Drinks",
+            name: "Beer",
+            price: 99,
+            grossProfit: 23,
+            unitsSold: 456,
+        },
+        {
+            restaurant: "Nydalen",
+            type: "Drinks",
+            name: "Beer",
+            price: 99,
+            grossProfit: 23,
+            unitsSold: 555,
+        },
+        {
+            restaurant: "Bjørvika",
+            type: "Drinks",
+            name: "Beer",
+            price: 69,
+            grossProfit: 23,
+            unitsSold: 445,
+        },
+        
+    ]
+
+    const getItems = () => itemsArray;
     const getAll = () => menuArray;
 
+    const getPizzaItems =() => itemsArray.filter(e => e.type === "Pizza");
+    const getDrinksItems =() => itemsArray.filter(e => e.type === "Beverage");
     const getPizza =() => menuArray.filter(e => e.itemType === "Pizza");
     const getDrinks =() => menuArray.filter(e => e.itemType === "Beverage");
     
+    const getByRestaurant = function(name){
+        return itemsArray.filter(e => e.restaurant === name)
+    }
+    const getByType = (type) => itemsArray.filter(e => e.type === type);
+    const getByBoth = function(name, type){
+        const rest = itemsArray.filter(e => e.restaurant === restaurant)
+        return rest.filter(e => e.type === type);
+    }
 
-    return {getAll, getPizza, getDrinks}
+    return {getAll, getPizza, getDrinks, getItems, getByBoth, getByRestaurant,getByType, getPizzaItems, getDrinksItems}
 
 }())
 
