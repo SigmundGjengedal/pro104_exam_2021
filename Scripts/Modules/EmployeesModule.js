@@ -1,4 +1,4 @@
-const EmployeesModule = (function () {
+const EmployeesModules = (function () {
 
         // Grunerløkka
     const grunerlokkaArray = [
@@ -18,7 +18,7 @@ const EmployeesModule = (function () {
         { name : "Kenneth Kristiansen",  mail : "kennethkristiansen@gyldnepizza.no", phone : "90516444", position :"Souse Chef", payGrade : "3", departement : "Karl Johan"},
         ];
 
-          const getKarlJohan = () =>  KarlJohanArray;
+          const getKarlJohan = () =>  karlJohanArray;
 
         // Nydalen
     const nydalenArray = [
@@ -26,6 +26,7 @@ const EmployeesModule = (function () {
         { name : "Terje Hansen",  mail : "terjehansen@gyldnepizza.no", phone : "90515213", position :"Host", payGrade : "2", departement : "Nydalen"},
         { name : "Martin Amundsen",  mail : "martinamundsen@gyldnepizza.no", phone : "90515321", position :"Chef", payGrade : "3", departement : "Nydalen"},
         { name : "Kevin Olsen",  mail : "kevinolsen@gyldnepizza.no", phone : "90515111", position :"Souse Chef", payGrade : "3", departement : "Nydalen"},
+    ]
 
           const getNydalen = () =>  nydalenArray;
 
@@ -43,4 +44,4 @@ const EmployeesModule = (function () {
 
 } () );
 
-export default EmployeesModule;
+export default EmployeesModules;

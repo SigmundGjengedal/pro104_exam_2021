@@ -1,5 +1,5 @@
 // Importerer EmpolyeesModule
-
+import EmployeesModules from './Modules/EmployeesModule.js'
 // Variabler for navbar employee knappen og stedet hvor info printes
 const mainContent = document.querySelector(".main_content");
 const navbarEmployees = document.querySelector(".navbar_employees");

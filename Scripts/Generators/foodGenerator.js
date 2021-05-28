@@ -181,6 +181,7 @@ function addListeners(){
         isMenu = false;
         bottomContainer.innerHTML = `
         <div class="analytics_top"></div>
+        <div class="table_wrapper">
         <table>
             <caption>
     
@@ -201,7 +202,7 @@ function addListeners(){
                     <th scope="row">Grunerløkka</th>
                     <td>Pizza</td>
                     <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
+                    <td><span>-</span><input class="analytics_input" type="number" value="149.00" ><span>+</span></td>
                     <td>10.543</td>
                     <td>42</td>
                     <td><input type="checkbox"></td>
@@ -343,6 +344,7 @@ function addListeners(){
                 </tr>
             </tbody>
         </table>
+        </div>
         <div class="bottom_div">
             <div class="bottom_text_div is_flex">
                 <div>Average Price</div>
