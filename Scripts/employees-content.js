@@ -1,6 +1,10 @@
 // Importerer EmpolyeesModule
+<<<<<<< HEAD
 import EmployeesModules from "./Modules/EmployeesModule.js";
 
+=======
+import EmployeesModules from './Modules/EmployeesModule.js'
+>>>>>>> food
 // Variabler for navbar employee knappen og stedet hvor info printes
 const mainContent = document.querySelector(".main_content");
 const navbarEmployees = document.querySelector(".navbar_employees");

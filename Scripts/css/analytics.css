@@ -3,21 +3,23 @@
     border: 1px solid black;
 }
 table{
-    overflow: scroll;
     height: 65%;
-    max-height: 65%;
     table-layout: fixed;
     width: 100%;
     background-color: white;
     border-collapse: collapse;
 
 }
+.table_wrapper{
+    max-height: 65%;
+    overflow: scroll;
+}
 tbody td{
     text-align: center;
     letter-spacing: 2px;
 }
 th, td{
-padding: 5px;
+padding: 25px;
 }
 .analytics_input{
     width: 40%;
