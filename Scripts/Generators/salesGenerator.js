@@ -16,7 +16,7 @@ const HomePageDiagramsModule = ( function () {
         document.querySelector(".diagram_7_filled").style.height = SalesModule.getTotalSunday;
     };
 
-
+    
 
     return{generateDiagramNumbers};
 

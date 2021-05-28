@@ -2,47 +2,57 @@ const SalesModule = ( function (){
 
     const salesArray = [
     {
-        name: "Restaurant 1",
-        revenuePreviousYear: 412345,
-        revenueAccThisYear: 80123,
-        revenuePreviousMonth: 15123,
-        revenuePreviousWeek: 4512,
-        revenuePreviousDay: 1212,
-        grossRevenuePreviousYear: 61234,
-        grossRevenueAccThisYear: 8345,
+        name: "Bjørvika",
+        revenueAccThisYear: 610000,
+        revenuePreviousYear: 990000,
+        revenuePreviousMonth: 190000,
+        revenuePreviousWeek: 35000,
+
+        revenuePreviousDay: 12000,
+        grossRevenueAccThisYear: 500000,
+        grossRevenuePreviousYear: 700000,
+
         revenueDaysLastweek : [ 7000, 8500,9000,23500,11000,15500,26000]
     },
     {
-        name: "Restaurant 2",
-        revenuePreviousYear: 605042,
-        revenueAccThisYear: 96234,
-        revenuePreviousMonth: 18300,
-        revenuePreviousWeek: 7543,
-        revenuePreviousDay: 1905,
-        grossRevenuePreviousYear: 66400,
-        grossRevenueAccThisYear: 9954,
+        name: "Nydalen",
+        revenueAccThisYear: 530000,
+        revenuePreviousYear: 800800,
+        revenuePreviousMonth: 150000,
+        revenuePreviousWeek: 45400,
+
+        revenuePreviousDay: 8000,
+        grossRevenueAccThisYear: 300000,
+        grossRevenuePreviousYear: 600000,
+        
         revenueDaysLastweek : [ 5000, 9500,16000,10500,25000,15500,12000]
     },
     {
-        name: "Restaurant 3",
-        revenuePreviousYear: 450643,
-        revenueAccThisYear: 86321,
-        revenuePreviousMonth: 16924,
-        revenuePreviousWeek: 4989,
-        revenuePreviousDay: 1590,
-        grossRevenuePreviousYear: 72450,
-        grossRevenueAccThisYear: 8874,
+        name: "Grunerløkka",
+        revenueAccThisYear: 710000,
+        revenuePreviousYear: 911000,
+        revenuePreviousMonth: 130000,
+        revenuePreviousWeek: 55500,
+
+        revenuePreviousDay: 14000,
+
+        grossRevenueAccThisYear: 500000,
+        grossRevenuePreviousYear: 900000,
+        
         revenueDaysLastweek : [ 10000, 13500,15000,14500,16000,25500,16000]
     },
     {
-        name: "Restaurant 4",
-        revenuePreviousYear: 290543,
-        revenueAccThisYear: 60455,
-        revenuePreviousMonth: 11981,
-        revenuePreviousWeek: 3799,
-        revenuePreviousDay: 890,
-        grossRevenuePreviousYear: 39567,
-        grossRevenueAccThisYear: 5298,
+        name: "Karl-Johan",
+        revenueAccThisYear: 420000,
+        revenuePreviousYear: 754000,
+        revenuePreviousMonth: 125000,
+        revenuePreviousWeek: 42300,
+
+        revenuePreviousDay: 11000,
+
+        grossRevenueAccThisYear: 300000,
+        grossRevenuePreviousYear: 500000,
+        
         revenueDaysLastweek : [ 20000, 23500,30000,4500,15000,35500,15000]
     }
     ]
@@ -72,10 +82,50 @@ const SalesModule = ( function (){
     const getTotalSunday = getTotalperDay(6);
 
 
+
+    // funksjon som skal ta knappe-verdiene som parameter, (navn ,periode, category)
+
+    const getRevenueByRestaurantAndPeriodAndCategory = (name,period, category)  => {        
+        let restaurant = salesArray.filter( object => object.name=== name);
+        let revenueNumber = "";
+
+        if(period === "this-year"){
+             revenueNumber = restaurant[0].revenueAccThisYear;
+        }
+
+        else if(period === "last-year"){
+             revenueNumber = restaurant[0].revenuePreviousYear;
+        }
+
+        else if(period === "last-month"){
+            revenueNumber = restaurant[0].revenuePreviousMonth;
+       }
+
+        else if(period === "last-week"){
+            revenueNumber = restaurant[0].revenuePreviousWeek;
+        }
+
+         // tester for category og returner deretter ca profitt.
+        
+        switch (category){
+            case "all":
+                return revenueNumber;
+            case "pizza":
+                return revenueNumber * 0.7;
+            case "drinks":
+                return revenueNumber * 0.2;
+            case "salads":
+                return revenueNumber  * 0.1;          
+        }
+     
+     };
+
+
     
-    return {getAll, getTotalMonday,getTotalTuesday, getTotalWednesday,getTotalThursday,getTotalFriday,getTotalSaturday,getTotalSunday};
+    return {getAll, getTotalMonday,getTotalTuesday, getTotalWednesday,getTotalThursday,getTotalFriday,getTotalSaturday,getTotalSunday, getRevenueByRestaurantAndPeriodAndCategory};
 
 
 }())
 
 export default SalesModule
+
