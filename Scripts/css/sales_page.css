@@ -47,24 +47,39 @@ body {
 /* lavnelabel over variabel-valg*/
 .labels-choices{
   position: relative;
-  left: 35vw;
-  top:0.5vh;
-  display: flex;
-  justify-content: space-between;
+  left: 32vw;
+  top: 0.1vh;
   width: 400px;
 
-  
   
 }
 
 .choice{
   background-color: #ccc;
   border-top: 50%;
-  color: white;
+  color: black;
+  width: auto;
   border-radius:40%;
   padding: 5px;
   z-index: -1;
+
 }
+
+.restaurant{
+  position: relative;
+
+}
+
+.period{
+  position: relative;
+  left: 5vw;
+}
+
+.category{
+  position: relative;
+  left: 11vw;
+}
+
 
 
 
