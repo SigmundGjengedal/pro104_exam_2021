@@ -36,6 +36,10 @@
   visibility: hidden;
 }
 
+.close:hover{
+  color:#d3d3d3;
+}
+
 /* Meldinger i inboxen */
 
 .msg {

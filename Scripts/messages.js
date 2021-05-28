@@ -92,9 +92,6 @@ element.addEventListener("click", (e)=>{
 });
 });
 
-
-
-
 // Koden som henter username fra localStorage og printer det ut i inbox delen
 window.onload = inboxName.innerHTML = localStorage.getItem("username");
 
