@@ -81,9 +81,6 @@ body {
 }
 
 
-
-
-
 /* Flex columns*/
 .flex-columns .row {
   display: flex;
@@ -99,7 +96,7 @@ body {
   align-items: flex-end;
 }
 
-/* for valgte buttons på venstre side*/
+/* holder de valgte buttons på venstre side*/
 .column-1 {
   display: flex;
   flex-direction: column;
@@ -189,10 +186,6 @@ body {
   font-family: Futura;
   font-weight: Bold;
   
-}
-
-.calculate-btn::after {
-  transform: scaleX(1);
 }
 
 .calculate-btn:hover{
