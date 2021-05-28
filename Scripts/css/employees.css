@@ -1,12 +1,18 @@
 
 .employees_content{
   position: relative;
-  background-image: url();
+}
+
+/* Ansatt titel */
+.employees-title{
+  margin-top: 4.05%;
+  margin-left:5%;
+  font-size: 50px;
 }
 /* Knapper for å velge fra hvilken restorang du vil se ansatte  */
 .buttons-employee{
   width: 90%;
-  margin: 5% auto 0;
+  margin:auto;
   display: flex;
   justify-content: space-around;
 }
@@ -31,23 +37,31 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
 }
 
 /* Liste over ansatte */
-.employee-list{
+.employee-list1{
   width: 90%;
   text-align: center;
   display: flex;
   justify-content: space-around;
   margin: auto;
-  margin: 5% auto 0;
+  margin: 1% auto;
+}
+
+.employee-list2{
+  width: 90%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin: 1% auto;
 }
 
 .employee-card{
 width: 24%;
-height:250px;
+height:220px;
 border-radius: 20px;
 border: solid 1px black;
 font-size: 1rem;
 position: relative;
-
 }
 .employee-name-div{
   line-height:1;
@@ -93,6 +107,7 @@ position: absolute;
 left:50%;
 bottom: 5%;
 transform: translateX(-50%);
+display: none;
 
 }
 

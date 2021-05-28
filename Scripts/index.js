@@ -41,7 +41,7 @@ loginBtn.disabled = true;
 form.addEventListener("keyup", function(){
     let username = usernameInput.value;
     let password = passwordInput.value;
-    if(username.length > 3 && password.length > 3){
+    if(username == "Rolando" && password == "Widard" || username == "Eivind" && password == "live logn and prosper"){
         loginBtn.disabled = false;
         loginBtn.style.opacity = "1";
         userNameUnderlineActive.classList.add('login_green');
