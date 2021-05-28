@@ -1,7 +1,12 @@
 
 .employees_content{
   position: relative;
-  background-image: url();
+}
+
+/* Ansatt titel */
+.employees-title{
+  
+  font-size: 50px;
 }
 /* Knapper for å velge fra hvilken restorang du vil se ansatte  */
 .buttons-employee{

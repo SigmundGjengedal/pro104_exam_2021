@@ -7,6 +7,8 @@ const navbarEmployees = document.querySelector(".navbar_employees");
 let mainTextHome =`
 <div class="employees-content">
 
+  <h1 class="employees-title">EMPLOYEES</h1>
+
   <nav class="buttons-employee">
       <a class="button-employee karl-johan" href="#">KARL JOHAN</a>
       <a class="button-employee bjørvika" href="#">BJØRVIKA</a>
