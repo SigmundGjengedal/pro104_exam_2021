@@ -53,7 +53,7 @@ let mainTextHome = `
 
        <div class="diagram_7">
         <div class="diagram_7_filled"></div>
-        
+
      </div>
     </div>
 
@@ -98,7 +98,7 @@ let mainTextHome = `
 
 
       <div class="total_profit_div">
-      <span class="total_profit_number">$</span><span class="profit_k"> k</span>
+      <span class="total_profit_number">$</span><span class="profit_k"> .-</span>
       </div>
   </div>
 </div>

@@ -127,7 +127,7 @@
 }
 
 .msg3{
-  border:solid 4px green;
+  border:solid 4px #003B49;
 }
 
 @keyframes pop-up {
@@ -154,7 +154,7 @@
 
 
 .logout_icone{
-  color:black;
+  color:#003B49 ;
 }
 
 .logout_icone:hover{
