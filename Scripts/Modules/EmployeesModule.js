@@ -14,7 +14,7 @@ const EmployeesModules = (function () {
     const karlJohanArray = [
         { name : "Ole Ramberg",  mail : "oleramberg@gyldnepizza.no", phone : "90516123", position :"Manager", payGrade : "5", departement : "Karl Johan"},
         { name : "Tina Bråthen",  mail : "tinebråthen@gyldnepizza.no", phone : "90516222", position :"Hostess", payGrade : "2", departement : "Karl Johan"},
-        { name : "Peter Mihajlovic",  mail : "petermihajlovic@gyldnepizza.no", phone : "90516333", position :"Chef", payGrade : "3", departement : "Karl Johan"},
+        { name : "Petar Mihajlovic",  mail : "petermihajlovic@gyldnepizza.no", phone : "90516333", position :"Chef", payGrade : "3", departement : "Karl Johan"},
         { name : "Kenneth Kristiansen",  mail : "kennethkristiansen@gyldnepizza.no", phone : "90516444", position :"Souse Chef", payGrade : "3", departement : "Karl Johan"},
         ];
 

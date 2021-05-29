@@ -10,6 +10,11 @@ body {
   color: #000;
 }
 
+.pizza-logo{
+  width: 120px;
+  margin: 15px 0 0 5px;
+}
+
 ::placeholder{
   color: #c4c4c4;
 }
@@ -94,7 +99,7 @@ body {
   height: 12px;
   background: #ECAF88;
   border-radius: 20px;
-  transition: 300ms ease-out;
+
 }
 
 .create_underline {
@@ -102,7 +107,6 @@ body {
   height: 12px;
   background: #ECAF88;
   border-radius: 20px;
-  transition: 300ms ease-out;
   display:none;
 }
 

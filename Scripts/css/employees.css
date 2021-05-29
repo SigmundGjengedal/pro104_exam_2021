@@ -20,20 +20,21 @@
 .button-employee{
 width: 20%;
 padding: 1em 1em;
-color: #000;
+border:2px solid #003B49;
+color: #f5f5fd;
 display: inline-block;
 text-align: center;
 font-size: 1.1vw;
 text-decoration: none;
 border-radius: 15px;
-background-color: #FFF;
-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+background-color: #003B49;
+letter-spacing: 2px;
 }
 
 .button-employee:hover{
-  background: #ECAF88;
+  background: #f5f5fd;
   transition: 0.3s;
-  color:#f9f3f3;
+  color:#000;
 }
 
 /* Liste over ansatte */
@@ -59,9 +60,9 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
 width: 24%;
 height:220px;
 border-radius: 20px;
-border: solid 1px black;
 font-size: 1rem;
 position: relative;
+background: #ECECF6;
 }
 .employee-name-div{
   line-height:1;
@@ -108,16 +109,15 @@ left:50%;
 bottom: 5%;
 transform: translateX(-50%);
 display: none;
-
 }
 
 .add-user-btn{
   margin-right: 100px;
-  color:#000;
+  color:#003B49;;
 }
 
 .remove-user-btn{
-  color:#000;
+  color:#003B49;
 }
 
 /* Modal for å legge og fjerne ansatte */
@@ -135,10 +135,10 @@ display: none;
 
 .modal-content {
   position: absolute;
-  left: 43%;
+  left: 41.5%;
   top:50%;
   transform: translate(-43%,-50%);
-  background-color: #fefefe;
+  background-color: #003B49;
   width: 330px;
   height: 450px;
   border-radius:30px;
@@ -146,20 +146,14 @@ display: none;
 
 .modal-content input{
   border-radius: 5px;
-  border: 1px solid grey;
   line-height: 1.5;
 }
 
 .remove-add-close{
-  color: #000;
+  color: #fff;
   position: absolute;
   right:5%;
   top:3%;
-}
-
-.remove-add-close:hover{
-  color:#d3d3d3;
-  transition: 0.3s;
 }
 
 .image-remove-add-div{
@@ -177,7 +171,9 @@ margin-top: 30px;
   width: 50%;
   line-height: 2;
   margin: auto;
+  color:#f5f5fd;
 }
+
 .add-inputs label{
   display: inline-block;
 }
@@ -189,17 +185,15 @@ margin-top: 30px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 25px;
-  border: 2px solid #ECAF88;
+  border:none;
   display: inline-block;
   font-size: 1.1vw;
   border-radius: 15px;
-  background-color: #FFF;
+  background-color: #f5f5fd;
 }
 
 .add-button:hover{
-  background: #ECAF88;
-  transition: 0.3s;
-  color:#f9f3f3;
+  cursor:pointer;
 }
 
 /* Fjern ansatt modal */
@@ -208,6 +202,8 @@ margin-top: 30px;
   width: 50%;
   line-height: 2.3;
   margin: 20% auto;
+  border:none;
+  color:#f5f5fd;
 }
 
 .remove-button{

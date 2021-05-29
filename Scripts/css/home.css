@@ -8,7 +8,7 @@ body {
   font-family: Futura;
   font-weight: Bold;
   color: #000;
-  background-color: #f4f3f3;
+  background-color: #f5f5fd;
 }
 
 .main_content{
@@ -34,7 +34,6 @@ body {
 
 .total_sales_title {
   width: 50%;
-  color: #000;
   position: absolute;
   top: 12%;
   left: 10%;
@@ -119,7 +118,7 @@ body {
 .diagram_1_filled {
   height: 0%;
   width: 100%;
-  background-color: #FC7B61;
+  background-color: #003B49;
   position: absolute;
   bottom: 0;
   transition: height 2s;
@@ -137,7 +136,7 @@ body {
 .diagram_2_filled {
   height: 0%;
   width: 100%;
-  background-color: #FC7B61;
+  background-color: #003B49;
   position: absolute;
   bottom: 0;
   transition: height 2s;
@@ -154,7 +153,7 @@ body {
 .diagram_3_filled {
   height: 0%;
   width: 100%;
-  background-color: #FC7B61;
+  background-color: #003B49;
   position: absolute;
   bottom: 0;
   transition: height 2s;
@@ -171,7 +170,7 @@ body {
 .diagram_4_filled {
   height: 0%;
   width: 100%;
-  background-color: #FC7B61;
+  background-color: #003B49;
   position: absolute;
   bottom: 0;
   transition: height 2s;
@@ -188,7 +187,7 @@ body {
 .diagram_5_filled {
   height: 0%;
   width: 100%;
-  background-color: #FC7B61;
+  background-color: #003B49;
   position: absolute;
   bottom: 0;
   transition: height 2s;
@@ -205,7 +204,7 @@ body {
 .diagram_6_filled {
   height: 0%;
   width: 100%;
-  background-color: #FC7B61;
+  background-color: #003B49;
   position: absolute;
   bottom: 0;
   transition: height 2s;
@@ -222,7 +221,7 @@ body {
 .diagram_7_filled {
   height: 0%;
   width: 100%;
-  background-color: #FC7B61;
+  background-color: #003B49;
   position: absolute;
   bottom: 0;
   transition: height 2s;
@@ -234,7 +233,7 @@ body {
   top: 28%;
   left: 15%;
   letter-spacing: 1px;
-  color: #949494;
+  color: #A9A9A9;
   font-size: 15px;
 }
 
@@ -293,7 +292,7 @@ body {
   left: 15%;
   width: 60%;
   height: 75%;
-  background: #FC7B61;
+  background: #003B49;
   border-radius: 50%;
 }
 
@@ -303,7 +302,7 @@ body {
   top: 5%;
   width: 90%;
   height: 90%;
-  background-color: #f4f3f3;
+  background-color: #f5f5fd;
   border-radius: 50%;
 }
 
@@ -312,7 +311,7 @@ body {
   top: -10%;
   left: 48%;
   height: 120%;
-  background-color: #f4f3f3;
+  background-color: #f5f5fd;
 }
 
 .total_circel {
@@ -356,7 +355,7 @@ body {
 }
 
 .total_profit_number {
-  font-size: 8vw;
+  font-size: 6vw;
 }
 
 .profit_k{
