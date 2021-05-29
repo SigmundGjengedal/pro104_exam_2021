@@ -1,27 +1,16 @@
-/* css på alt: */
-
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: Futura;
-  font-weight: Bold;
-  color: #000;
-}
 
 .salesPage_Container{
   width: 85%;
   height: 100vh;
   position: relative;
   left: 8%;
-  
-}  
+}
 
 /* alle div'er med innhold*/
 .data_container{
   /* flex*/
   display: flex;
-  flex-direction: column;   
+  flex-direction: column;
 }
 
 
@@ -29,62 +18,41 @@ body {
 #Sales_Heading{
   position: relative;
   top: 5vh;
-  right: 4%;
+  right: 3%;
   font-size: 50px;
   font-weight: bold;
   padding: 0;
   margin-top: 0;
-  
+
 }
 /* p under tittel*/
 #Heading-p{
-  margin: 0;
-  padding: 0;
-  padding: 10px;
+  margin:15px 0 0;
   display: inline-block;
   position: relative;
-  font-size: 1vw;
-
-  
+  font-size: 20px;
 }
 
 /* container for navnelabel, (resturant, periode,category) over variabel-valg i kolonnene til høyre*/
 .labels-choices{
   position: relative;
-  left: 32vw;
-  top: 0.1vh;
-  width: 400px;
-
-  
+  left: 30vw;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* for alle label over */
 .choice{
-  background-color: #ccc;
   border-top: 50%;
   color: black;
   width: auto;
   border-radius:40%;
   padding: 5px;
-  z-index: -1;
-
 }
 
 /* for hver enkelt label over */
-.restaurant{
-  position: relative;
 
-}
-
-.period{
-  position: relative;
-  left: 5vw;
-}
-
-.category{
-  position: relative;
-  left: 11vw;
-}
 
 
 /* Flex columns*/
@@ -92,8 +60,8 @@ body {
   display: flex;
   flex-direction: row;
   height: 30%;
-  
 }
+
 
 .flex-columns .column{
   display: flex;
@@ -121,7 +89,6 @@ body {
   background: #f4f4f4;
   display: flex;
   flex-direction: column;
-  
 }
 
 /*fjerner border på siste kolonne, slik at man bare splitter de i midten*/
@@ -134,14 +101,14 @@ body {
   cursor: pointer;
   padding: 10px;
   margin: 10px;
-  background-color: #FC7B61;
+  background-color: #003B49;
   color: white;
   font-family: Futura;
   font-weight: Bold;
   border: none;
   border-radius: 5px;
   width : 150px;
-  
+
 }
 
 .button:hover{
@@ -153,7 +120,7 @@ body {
 .dead-button{
   padding: 10px;
   margin: 10px;
-  background-color: #faa492;
+  background-color: #003B49;
   color: white;
   font-family: Futura;
   font-weight: Bold;
@@ -167,7 +134,7 @@ body {
   padding: 5px;
   margin: 5px;
   height: 3vh;
-  background-color: #FC7B61;
+  background-color: #003B49;
   color: white;
   font-family: Futura;
   font-weight: Bold;
@@ -178,7 +145,7 @@ body {
 }
 
 
-.calculate-btn { 
+.calculate-btn {
   cursor: pointer;
   padding: 10px;
   margin: 10px;
@@ -191,13 +158,12 @@ body {
   color: white;
   font-family: Futura;
   font-weight: Bold;
-  
+
 }
 
 .calculate-btn:hover{
   opacity: 0.8;
   transform: scale(1.05);
-
 }
 
 
@@ -206,19 +172,14 @@ body {
 
 
 .result-section{
-
   display: flex;
-
   flex-direction: column;
   width: 100%;
-  height: 70%;
+  height: 38%;
   margin-top: 20px;
-  max-height: 430px;
-  background: #DEDEDE;
-  width: 100%;
+  background: #ECECF6;
   padding-top: 30px;
-  min-width: 645px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .sales-statistics-text{
@@ -232,34 +193,28 @@ font-size: 2vw;
   height: 30px;
   position: relative;
   left: 14%;
-  background: #ffffff;
-  border: #FC7B61;
+  background: #f5f5fd;
+  border: #003B49;
 }
 
 .sales_diagram_1_filled {
   height: 100%;
   width: 0%;
-  background-color: #FC7B61;
+  background-color: #003B49;
   transition: width 2s;
 
 }
 
-/* sales numbers ved diagram*/  
+/* sales numbers ved diagram*/
 .diagram_numbers_container{
   display: flex;
   justify-content: space-evenly;
- 
-    
-}
-
-.sales_numbers_container .sales_number{
-    margin-bottom: 25px;  
 }
 
 
 .result-text{
     display: flex;
-    margin-top:4%;
+    margin-top:2%;
     justify-content: center;
     font-size: 1.3vw;
 
@@ -268,9 +223,4 @@ font-size: 2vw;
 .result_number{
     color: #28a745;
     font-size: 40px;
-}
-
-.result-text .result-text-span{
-    
-    text-decoration-line: underline;
 }

@@ -2,7 +2,6 @@ import SalesModule from './Modules/SalesModule.js';
 
 /******** Henter det vi trenger for å fylle main content div på home ******/
 const mainContent = document.querySelector(".main_content");
-
 const salesNavButton = document.querySelector('.navbar_sales');
 
 /********* variabler på siden *****************/
@@ -20,8 +19,8 @@ salesNavButton.addEventListener('click', function(){
   <div class="salesPage_Container">
 
     <header>
-        <h3 id="Sales_Heading">SALES</h3>  
-        <p id="Heading-p">Please select Restaurant, Period and Category</p>
+        <h3 id="Sales_Heading">SALES</h3>
+        <p id="Heading-p">Select Restaurant, Period & Category</p>
     </header>
 
     <!-- navn på kolonner-->
@@ -40,14 +39,14 @@ salesNavButton.addEventListener('click', function(){
                 <div class="column-1">
                     <h4>Chosen</h4>
                     <div id = "selected" class="data_container">
-                          
+
                     </div>
                     <button class="calculate-btn">CALCULATE</button>
                 </div>
             </div>
 
             <!-- brukervalg, til høyre på siden-->
-            
+
                 <div class="select-columns restaurant-choice">
                     <div class="data_container">
                         <button id="Bjørvika" class="button">BJØRVIKA</button>
@@ -56,7 +55,7 @@ salesNavButton.addEventListener('click', function(){
                         <button id="Karl-Johan" class="button">KARL JOHAN</button>
                     </div>
                 </div>
-            
+
                 <div class="select-columns period-choice">
                     <div class="data_container">
                         <button id="this-year" class="button">THIS YEAR</button>
@@ -74,12 +73,12 @@ salesNavButton.addEventListener('click', function(){
                         <button id="salads" class="button">SALADS</button>
                     </div>
                 </div>
-            
+
         </div>
     </section>
-        
 
-           
+
+
             <section class="result-section">
 
                     <p class = "sales-statistics-text"> Statistics</p>
@@ -98,8 +97,8 @@ salesNavButton.addEventListener('click', function(){
 
                       <!-- tall/ text må må tilpasses hva som vises, mnd, år, osv -->
                       <div class="result-text">
-                        
-                      </div>         
+
+                      </div>
             </section>
   </div>
 
@@ -138,13 +137,13 @@ resultDiv.style.display = 'flex';
     document.querySelector('#Grunerløkka').disabled = true;
     document.querySelector('#Karl-Johan').disabled = true;
     console.log(restaurant); // debugger tool
-    
+
     // fjerner klasse som gir hoover effekt på valgte rader
     document.querySelector('#Bjørvika').classList.replace('button','dead-button');
     document.querySelector('#Nydalen').classList.replace('button','dead-button');
     document.querySelector('#Grunerløkka').classList.replace('button','dead-button');
     document.querySelector('#Karl-Johan').classList.replace('button','dead-button');
-    
+
 })
 
 
@@ -170,10 +169,10 @@ periode_choice.addEventListener('click', (event) => {
       document.querySelector('#last-year').classList.replace('button','dead-button');
       document.querySelector('#last-month').classList.replace('button','dead-button');
       document.querySelector('#last-week').classList.replace('button','dead-button');
-  
+
     console.log(period); // debugger tool
 })
-        
+
 /* event på wrapper til category kolonne, lagrer id på valgte knapp i en variabel */
 category_choice.addEventListener('click', (event) => {
     const isButton = event.target.nodeName === 'BUTTON';
@@ -196,7 +195,7 @@ category_choice.addEventListener('click', (event) => {
        document.querySelector('#all').classList.replace('button','dead-button');
        document.querySelector('#pizza').classList.replace('button','dead-button');
        document.querySelector('#drinks').classList.replace('button','dead-button');
-       document.querySelector('#salads').classList.replace('button','dead-button');   
+       document.querySelector('#salads').classList.replace('button','dead-button');
       console.log(category);// debugger tool
 })
 
@@ -212,7 +211,7 @@ calculate_Btn.addEventListener('click', (event)=> {
     /*printer*/
 
     resultText.innerHTML = `
-    <p> <span class = "result-text-span">${period}'s total </span> for <span class = "result-text-span">${category}</span>  at <span class = "result-text-span">${restaurant}</span>  was <span class="result_number"> ${result}</span> NOK</p>
+    <p> <span class = "result-text-span">${period}'s total </span> for <span class = "result-text-span">${category}</span>  at <span class = "result-text-span">${restaurant}</span>  was<span class="result_number"> ${result}</span> .-</p>
     `;
 
     /* fyller diagram*/
@@ -221,7 +220,7 @@ calculate_Btn.addEventListener('click', (event)=> {
     const fillDiagram = function(){
         document.querySelector('.sales_diagram_1_filled').style.width = result/10000+'%';
     }
-    
+
     setTimeout(fillDiagram,100); // for at transitions skal fungere.
 
     /* resetter styling på siden*/
@@ -266,13 +265,3 @@ calculate_Btn.addEventListener('click', (event)=> {
     document.querySelector('#salads').classList.replace('dead-button','button');
 })
 })
-
-
-
-
-
-
-
-
-
-
