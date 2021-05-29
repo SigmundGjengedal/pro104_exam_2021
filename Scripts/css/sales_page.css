@@ -14,14 +14,14 @@ body {
   height: 100vh;
   position: relative;
   left: 8%;
-  
-}  
+
+}
 
 /* alle div'er med innhold*/
 .data_container{
   /* flex*/
   display: flex;
-  flex-direction: column;   
+  flex-direction: column;
 }
 
 
@@ -34,7 +34,7 @@ body {
   font-weight: bold;
   padding: 0;
   margin-top: 0;
-  
+
 }
 /* p under tittel*/
 #Heading-p{
@@ -45,7 +45,7 @@ body {
   position: relative;
   font-size: 1vw;
 
-  
+
 }
 
 /* container for navnelabel, (resturant, periode,category) over variabel-valg i kolonnene til høyre*/
@@ -55,7 +55,7 @@ body {
   top: 0.1vh;
   width: 400px;
 
-  
+
 }
 
 /* for alle label over */
@@ -92,7 +92,7 @@ body {
   display: flex;
   flex-direction: row;
   height: 30%;
-  
+
 }
 
 .flex-columns .column{
@@ -121,14 +121,13 @@ body {
   background: #f4f4f4;
   display: flex;
   flex-direction: column;
-  
+
 }
 
 /*fjerner border på siste kolonne, slik at man bare splitter de i midten*/
 .select-columns:last-of-type{
   border: none;
 }
-
 
 .button{
   cursor: pointer;
@@ -141,7 +140,7 @@ body {
   border: none;
   border-radius: 5px;
   width : 150px;
-  
+
 }
 
 .button:hover{
@@ -178,7 +177,7 @@ body {
 }
 
 
-.calculate-btn { 
+.calculate-btn {
   cursor: pointer;
   padding: 10px;
   margin: 10px;
@@ -191,7 +190,7 @@ body {
   color: white;
   font-family: Futura;
   font-weight: Bold;
-  
+
 }
 
 .calculate-btn:hover{
@@ -244,16 +243,16 @@ font-size: 2vw;
 
 }
 
-/* sales numbers ved diagram*/  
+/* sales numbers ved diagram*/
 .diagram_numbers_container{
   display: flex;
   justify-content: space-evenly;
- 
-    
+
+
 }
 
 .sales_numbers_container .sales_number{
-    margin-bottom: 25px;  
+    margin-bottom: 25px;
 }
 
 
@@ -271,6 +270,6 @@ font-size: 2vw;
 }
 
 .result-text .result-text-span{
-    
+
     text-decoration-line: underline;
 }
