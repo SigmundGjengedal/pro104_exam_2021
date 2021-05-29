@@ -27,7 +27,7 @@ body {
 
 /* Venstre side*/
 .left_half {
-  background:#000;
+  background:#003B49;
   position:relative;
   height: 100vh;
   width: 50%;
@@ -45,6 +45,7 @@ body {
 }
 
 .name_txt {
+  color: #003B49;
   position: absolute;
   top: 60%;
   left: 50%;
@@ -97,7 +98,7 @@ body {
 .signin_underline {
   width: 8vw;
   height: 12px;
-  background: #ECAF88;
+  background: #003B49;
   border-radius: 20px;
 
 }
@@ -105,7 +106,7 @@ body {
 .create_underline {
   width: 20vw;
   height: 12px;
-  background: #ECAF88;
+  background: #003B49;
   border-radius: 20px;
   display:none;
 }
@@ -242,9 +243,6 @@ body {
   overflow: hidden;
 }
 
-#toggle_password_eye {
-
-}
 
 .logout_checkbox {
   width: 24px;
@@ -266,7 +264,7 @@ body {
 .login_btn {
   width: 300px;
   height: 64px;
-  background: #ECAF88;
+  background: #003B49;
   border-radius: 50px;
   opacity: 0.2;
   border:none;
@@ -289,10 +287,11 @@ body {
 .login_btn_txt {
   width: 200px;
   color: rgba(0,0,0,0.6000000238418579);
-  font-family: Futura-Bold;
-  font-weight: Regular;
+  font-family: Futura;
+  font-weight: bold;
   font-size: 30px;
   text-align: left;
+  color:#f5f5fd;
 }
 
 .forgot_div{

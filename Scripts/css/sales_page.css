@@ -4,10 +4,6 @@
   height: 100vh;
   position: relative;
   left: 8%;
-<<<<<<< HEAD
-
-=======
->>>>>>> old-state
 }
 
 /* alle div'er med innhold*/
@@ -34,30 +30,16 @@
   margin:15px 0 0;
   display: inline-block;
   position: relative;
-<<<<<<< HEAD
-  font-size: 1vw;
-
-
-=======
   font-size: 20px;
->>>>>>> old-state
 }
 
 /* container for navnelabel, (resturant, periode,category) over variabel-valg i kolonnene til høyre*/
 .labels-choices{
   position: relative;
-<<<<<<< HEAD
-  left: 32vw;
-  top: 0.1vh;
-  width: 400px;
-
-
-=======
   left: 30vw;
   width: 45%;
   display: flex;
   justify-content: space-between;
->>>>>>> old-state
 }
 
 /* for alle label over */
@@ -78,10 +60,6 @@
   display: flex;
   flex-direction: row;
   height: 30%;
-<<<<<<< HEAD
-
-=======
->>>>>>> old-state
 }
 
 
@@ -111,10 +89,6 @@
   background: #f4f4f4;
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-
-=======
->>>>>>> old-state
 }
 
 /*fjerner border på siste kolonne, slik at man bare splitter de i midten*/
@@ -234,15 +208,6 @@ font-size: 2vw;
 .diagram_numbers_container{
   display: flex;
   justify-content: space-evenly;
-<<<<<<< HEAD
-
-
-}
-
-.sales_numbers_container .sales_number{
-    margin-bottom: 25px;
-=======
->>>>>>> old-state
 }
 
 
@@ -258,11 +223,3 @@ font-size: 2vw;
     color: #28a745;
     font-size: 40px;
 }
-<<<<<<< HEAD
-
-.result-text .result-text-span{
-
-    text-decoration-line: underline;
-}
-=======
->>>>>>> old-state
