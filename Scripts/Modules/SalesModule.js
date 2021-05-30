@@ -105,17 +105,17 @@ const SalesModule = ( function (){
             revenueNumber = restaurant[0].revenuePreviousWeek;
         }
 
-         // tester for category og returner deretter ca profitt.
+         // tester for category og returner deretter ca profitt: pizza settes til 70%. Drikke til 20%. Salat til 10%.
         
         switch (category){
             case "all":
                 return revenueNumber;
             case "pizza":
-                return revenueNumber * 0.7;
+                return  Math.round(revenueNumber * 0.7);
             case "drinks":
-                return revenueNumber * 0.2;
+                return Math.round(revenueNumber * 0.2);
             case "salads":
-                return revenueNumber  * 0.1;          
+                return Math.round(revenueNumber  * 0.1);          
         }
      
      };
