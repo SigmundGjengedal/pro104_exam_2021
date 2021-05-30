@@ -11,6 +11,8 @@ let period = "";
 let category = "";
 
 
+
+
 /********* Generer innhold på mainPage *************/
 salesNavButton.addEventListener('click', function(){
 
@@ -204,24 +206,38 @@ category_choice.addEventListener('click', (event) => {
 
 calculate_Btn.addEventListener('click', (event)=> {
 
-    /* kaller funksjonen i modulen som henter riktige data derfra.*/
+    /* Visst gyldig valg, så kaller vi funksjonen i modulen som henter riktige data derfra.*/
+    let validChoice = true;
 
-    let result = SalesModule.getRevenueByRestaurantAndPeriodAndCategory(restaurant,period,category);
+     if(restaurant == "" || period == "" || category == ""){
+       alert('Chose a restaurant, period, and a category!')
+       validChoice = false;
+       resultText.innerHTML = "";
 
-    /*printer*/
+     } 
 
-    resultText.innerHTML = `
-    <p> <span class = "result-text-span">${period}'s total </span> for <span class = "result-text-span">${category}</span>  at <span class = "result-text-span">${restaurant}</span>  was<span class="result_number"> ${result}</span> .-</p>
-    `;
+     if(validChoice){
+      let result = SalesModule.getRevenueByRestaurantAndPeriodAndCategory(restaurant,period,category);
 
-    /* fyller diagram*/
+      /*printer*/
+      resultText.innerHTML = `
+      <p> <span class = "result-text-span">${period}'s total </span> for <span class = "result-text-span">${category}</span>  at <span class = "result-text-span">${restaurant}</span>  was<span class="result_number"> ${result}</span> .-</p>
+      `;
+  
+      /* fyller diagram*/
+      restaurant = "";
+      const fillDiagram = function(){
+          document.querySelector('.sales_diagram_1_filled').style.width = result/10000+'%';
+      }
+  
+      setTimeout(fillDiagram,100); // for at transitions skal fungere.
+     }
+
+    /* resetter variablene */
 
     restaurant = "";
-    const fillDiagram = function(){
-        document.querySelector('.sales_diagram_1_filled').style.width = result/10000+'%';
-    }
-
-    setTimeout(fillDiagram,100); // for at transitions skal fungere.
+    period = "";
+    category = "";
 
     /* resetter styling på siden*/
 
