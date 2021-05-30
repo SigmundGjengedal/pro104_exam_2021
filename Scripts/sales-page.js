@@ -216,6 +216,7 @@ calculate_Btn.addEventListener('click', (event)=> {
        alert('Please chose a restaurant, period, and a category!')
        validChoice = false;
        resultText.innerHTML = "";
+       document.querySelector('.sales_diagram_1_filled').style.width = 0+'%';
 
      } 
 
