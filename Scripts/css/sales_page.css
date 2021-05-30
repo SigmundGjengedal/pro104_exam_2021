@@ -36,7 +36,7 @@
 /* container for navnelabel, (resturant, periode,category) over variabel-valg i kolonnene til høyre*/
 .labels-choices{
   position: relative;
-  left: 32vw;
+  left: 31vw;
   width: 45%;
   display: flex;
   justify-content: space-between;
@@ -53,6 +53,15 @@
 
 /* for hver enkelt label over */
 
+.restaurant{
+  position: relative;
+  left: 2vw;
+}
+
+.category{
+  position:relative;
+  right: 1vw;;
+}
 
 
 /* Flex columns*/

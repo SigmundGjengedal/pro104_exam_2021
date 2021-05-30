@@ -210,7 +210,7 @@ calculate_Btn.addEventListener('click', (event)=> {
     let validChoice = true;
 
      if(restaurant == "" || period == "" || category == ""){
-       alert('Chose a restaurant, period, and a category!')
+       alert('Please chose a restaurant, period, and a category!')
        validChoice = false;
        resultText.innerHTML = "";
 
