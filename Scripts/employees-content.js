@@ -143,6 +143,10 @@ function closeModal(){
 let counter = 0;
 function addNewEmployee(){
   const addBtn = document.querySelector(".add-button");
+  const employeeList2 = document.querySelector(".employee-list2")
+
+
+
   addBtn.addEventListener("click", function(){
   const nameValue = document.querySelector(".name-value").value;
   const mailValue = document.querySelector(".mail-value").value;
@@ -150,8 +154,13 @@ function addNewEmployee(){
   const positionValue = document.querySelector(".position-value").value;
   const payGradeValue = document.querySelector(".pay-grade-value").value;
 
-  if(counter <=3){
-    document.querySelector(".employee-list2").innerHTML +=`
+
+  if(nameValue.length<2 && mailValue.length < 5 && phoneValue < 8){
+    alert("Du må legge inn riktig infor for å opprette ansatt");
+    let removeLastOne = employeeList2.children.length;
+    removeLastOne.style.display="none";
+  }if(counter <=3){
+    employeeList2.innerHTML +=`
     <div class="employee-card">
       <div class="employee-name-div">
       <h3 class="employee-name">${nameValue}</h3>
@@ -171,7 +180,7 @@ function addNewEmployee(){
         alert("restorangen har ikke behov for flere ansatte")
   }
 });
-  };
+};
 // Funksjonen som sletter ansatte
 function removeEmployee(){
   const employeeCard = document.querySelectorAll(".employee-card");
@@ -185,6 +194,7 @@ function removeEmployee(){
         card.style.display="none";
         document.querySelector(".modal").style.display = "none";
         isFound = true;
+        counter --;
       }
     });
     if(isFound == false){
@@ -194,24 +204,7 @@ function removeEmployee(){
 
 };
 
-
-// function validityInputs(){
-//   const mail = document.querySelector(".mail-value");
-//   mail.oninvalid = function(e) {
-//     e.target.setCustomValidity("");
-//     if (!e.target.validity.valid) {
-//       e.target.setCustomValidity("Du må legge inn riktig mail adresse");
-//     };
-//   };
-//   mail.oninput = function(e) {
-//     e.target.setCustomValidity("");
-//   };
-// };
-
-
-
 // Function printer fra modulen alle ansatte i KarlJohan
-
     function printKarlJohan(){
       let employeeList1 = document.querySelector(".employee-list1");
       let employeeList2 = document.querySelector(".employee-list2");

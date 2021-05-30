@@ -36,6 +36,10 @@
   visibility: hidden;
 }
 
+.close:hover{
+  transform: scale(1.2);
+}
+
 /* Meldinger i inboxen */
 
 .msg {
@@ -153,6 +157,11 @@
   color:#003B49 ;
 }
 
+.logout_icone:hover{
+  transform: scale(1.2);
+  transition: 200ms ease-out;
+}
+
 
 /* Overlay forandrer bakgrunnen når message er ekspandert og expanded toggles gjennom JS for å eksapandere meldinger */
 .expanded {
@@ -200,8 +209,8 @@
   width: 80px;
   position: absolute;
   top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 10%;
+  transform: rotate(-25deg);
 
 }
 
