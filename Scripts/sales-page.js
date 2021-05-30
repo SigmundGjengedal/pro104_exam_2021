@@ -128,8 +128,9 @@ resultDiv.style.display = 'flex';
       return;
     }
     restaurant = event.target.id;
+    let restaurantUPPER = restaurant.toUpperCase();
     chosenDiv.innerHTML +=`
-    <button class="buttonChosen">${restaurant}</button>
+    <button class="buttonChosen">${restaurantUPPER}</button>
     `;
 
     /* Hindrer bruker i å gjøre flere valg */
@@ -156,8 +157,9 @@ periode_choice.addEventListener('click', (event) => {
       return;
     }
     period = event.target.id;
+    let periodUPPER = period.toUpperCase();
     chosenDiv.innerHTML +=`
-    <button class="buttonChosen">${period}</button>
+    <button class="buttonChosen">${periodUPPER}</button>
     `;
     /* Hindrer bruker i å gjøre flere valg */
     periode_choice.style.opacity = 0.5;
@@ -182,9 +184,10 @@ category_choice.addEventListener('click', (event) => {
       return;
     }
     category = event.target.id;
+    let categoryUPPER = category.toUpperCase();
 
     chosenDiv.innerHTML +=`
-    <button class="buttonChosen">${category}</button>
+    <button class="buttonChosen">${categoryUPPER}</button>
     `;
       /* Hindrer bruker i å gjøre flere valg */
       category_choice.style.opacity = 0.5;
