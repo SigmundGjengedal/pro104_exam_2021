@@ -137,7 +137,7 @@ display: none;
   position: absolute;
   left: 41.5%;
   top:50%;
-  transform: translate(-43%,-50%);
+  transform: translate(-41.5%,-50%);
   background-color: #003B49;
   width: 330px;
   height: 450px;
@@ -192,9 +192,7 @@ margin-top: 30px;
   background-color: #f5f5fd;
 }
 
-.add-button:hover{
-  cursor:pointer;
-}
+
 
 /* Fjern ansatt modal */
 
