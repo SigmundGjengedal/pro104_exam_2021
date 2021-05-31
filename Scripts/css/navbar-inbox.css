@@ -226,7 +226,6 @@
   display: flex;
   position: relative;
   transition: 200ms ease-out;
-  border-bottom: 4px solid #fff;
 }
 
 .tooltiptext{
