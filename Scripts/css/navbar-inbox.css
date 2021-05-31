@@ -70,7 +70,7 @@
   display: flex;
   align-items: center;
   font-family: Futura;
-  font-weight: Bold;
+
   font-size: 0.8em;
   line-height: 0.2;
 }
@@ -81,10 +81,12 @@
   float: left;
   border-radius: 50%;
   margin-right: 20px;
+  object-fit: cover;
 }
 
 .message_txt_div {
   font-family: Futura;
+  font-weight: normal;
   font-size: 0.8em;
   text-align: left;
   width: 80%;
