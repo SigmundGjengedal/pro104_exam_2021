@@ -9,8 +9,6 @@ const todayTimeTxt = document.querySelector(".timeToday");
 const todayDateTxt = document.querySelector(".dateToday");
 const time = document.querySelectorAll(".time");
 
-
-
 // Lager og formaterer date objekt for meldinger i inboksen
 const months = [
   'Jan',
@@ -99,3 +97,38 @@ var audio = new Audio("../Images/mail-notification.mp3");
 audio.play();
 };
 window.onload = setTimeout(printMessage3, 6000);
+
+
+// Navbar funksjonalitet som setter border under iconer som indikerer hva brukeren har klikket på
+const home = document.querySelector(".navbar_home");
+const food = document.querySelector(".navbar_food");
+const employees = document.querySelector(".navbar_employees");
+const sales = document.querySelector(".navbar_sales");
+
+home.addEventListener("click", ()=>{
+home.style.borderBottom="4px solid #fff";
+food.style.borderBottom="none";
+employees.style.borderBottom="none";
+sales.style.borderBottom="none";
+});
+
+food.addEventListener("click", ()=>{
+home.style.borderBottom="none";
+food.style.borderBottom="4px solid #fff";
+employees.style.borderBottom="none";
+sales.style.borderBottom="none";
+});
+
+employees.addEventListener("click", ()=>{
+home.style.borderBottom="none";
+food.style.borderBottom="none";
+employees.style.borderBottom="4px solid #fff";
+sales.style.borderBottom="none";
+});
+
+sales.addEventListener("click", ()=>{
+home.style.borderBottom="none";
+food.style.borderBottom="none";
+employees.style.borderBottom="none";
+sales.style.borderBottom="4px solid #fff";
+});

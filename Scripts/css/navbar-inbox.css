@@ -226,16 +226,15 @@
   display: flex;
   position: relative;
   transition: 200ms ease-out;
-  border-bottom: 4px solid #fff;
 }
 
 .tooltiptext{
-  font-size: 15px;
+  font-size: 12px;
   position: absolute;
   left:130%;
   top:14%;
   z-index: 1;
-  width: 80px;
+  width: 90px;
   background-color:#000;
   color: #fff;
   text-align: center;

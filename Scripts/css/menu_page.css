@@ -188,16 +188,16 @@ body {
 }
 .confirm_btn_filled {
   width: 100%;
-  background: #FC7B61;
+  background: #003B49;
   position: relative;
   border-radius: 50px;
 }
 .confirm_btn_circle {
   height: 29px;
   width: 50%;
-  background: #000;
+  background: #fff;
   border-radius: 50px;
-  border: solid 2px black;
+  border: solid 1px black;
   position: relative;
 }
 .confirm_btn_circle:hover{
