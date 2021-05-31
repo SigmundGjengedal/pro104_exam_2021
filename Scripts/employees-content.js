@@ -156,7 +156,7 @@ function addNewEmployee(){
 
 
   if(nameValue.length<2 && mailValue.length < 5 && phoneValue < 8){
-    alert("Du må legge inn riktig infor for å opprette ansatt");
+    alert("You need to fill in information");
     let removeLastOne = employeeList2.children.length;
     removeLastOne.style.display="none";
   }if(counter <=3){
@@ -177,7 +177,7 @@ function addNewEmployee(){
     counter++;
   }else{
         document.querySelector(".modal").style.display = "none";
-        alert("restorangen har ikke behov for flere ansatte")
+        alert("The restaurant does not need more employees")
   }
 });
 };
