@@ -141,8 +141,10 @@ function addListeners(){
         }
         
         
-    }   
-    }))
+    } 
+    }
+    )
+    )
 
     const menuBtnCircle = document.querySelector(".confirm_btn_circle");
     menuBtnCircle.addEventListener("click", function(){
@@ -165,7 +167,6 @@ function addListeners(){
         document.querySelector(".confirm_btn_container").style.visibility = "visible";
         pizzaTitle.innerHTML = "PIZZA";
         isMenu = true;
-        
         generateLayout();
         addPizza();
         addDrinks();
@@ -180,7 +181,7 @@ function addListeners(){
         <div class="analytics_top">
             <div class="restaurant_text analytics_flex_item">SELECT RESTAURANT</div>
             <div class="select_wrapper_restaurants analytics_flex_item">
-                <select class="restaurant_input">
+                <select class="restaurant_input analytics_dropdown">
                     <option value="All">All</option>
                     <option value="Grunerløkka">Grunerløkka</option>
                     <option value="Karl Johan">Karl Johan</option>
@@ -190,7 +191,7 @@ function addListeners(){
             </div>
             <div class="categories_text analytics_flex_item">CATEGORIES</div>
             <div class="select_wrapper_categories analytics_flex_item">
-                <select class="categories_input">
+                <select class="categories_input analytics_dropdown">
                     <option value="All">All</option>
                     <option value="Pizza">Pizza</option>
                     <option value="Drinks">Drinks</option>
@@ -237,40 +238,39 @@ function addListeners(){
                 <div class="average_gross">18.469</div>
                 <div class="units_sold">678.56</div>
             </div>
-            <div class="bottom_button_container>
-                <div class="bottom_button>SUBMIT CHANGES</div>
+            <div class="bottom_button_container">
+                <div class="bottom_button">SUBMIT CHANGES</div>
             </div>
         </div>
         `;
         addRows();
-        document.querySelector(".restaurant_input").addEventListener("change", showByRestaurant)
+        document.querySelectorAll(".analytics_dropdown").forEach(e => e.addEventListener("change", addRowsByInput))
     }
     }
 
 
     )}
 
-    function showByRestaurant(){
+    function addRowsByInput(){
         const tableBody = document.querySelector(".table_body");
         tableBody.innerHTML = "";
-        let choice = document.querySelector(".restaurant_input").value;
-        if(choice === "All"){
-            addRows();
-        }else{
-        const restArray = MenuModule.getByRestaurant(choice);
-        restArray.forEach(element => 
+        let restChoice = document.querySelector(".restaurant_input").value;
+        let typeChoice = document.querySelector(".categories_input").value;
+        console.log(restChoice)
+        console.log(typeChoice)
+        const arr = MenuModule.getByBoth(restChoice, typeChoice);
+        arr.forEach(element => 
             tableBody.innerHTML += `
             <tr>
             <th scope="row">${element.restaurant}</th>
-            <td>${element.type}</td>
-            <td>${element.name}</td>
-            <td><span>-</span><input class="analytics_input" type="text" value="${element.price}" ><span>+</span></td>
-            <td>${element.grossProfit}</td>
-            <td>${element.unitsSold}</td>
-            <td><input type="checkbox" checked="true"></td>
-        </tr>`)
-        calculateBottom(restArray)
-        }
+                <td>${element.type}</td>
+                <td>${element.name}</td>
+                <td><span class="minus_span">-</span><input class="analytics_input" type="text" value="${element.price}" ><span class="plus_span">+</span></td>
+                <td>${element.grossProfit}</td>
+                <td>${element.unitsSold}</td>
+                <td><input type="checkbox" checked="true"></td>
+            </tr>`)
+        calculateBottom(arr)
     }
 
     function addRows(){
@@ -282,7 +282,7 @@ function addListeners(){
             <th scope="row">${element.restaurant}</th>
             <td>${element.type}</td>
             <td>${element.name}</td>
-            <td><span>-</span><input class="analytics_input" type="text" value="${element.price}" ><span>+</span></td>
+            <td><span class="minus_span">-</span><input class="analytics_input" type="text" value="${element.price}" ><span class="plus_span">+</span></td>
             <td>${element.grossProfit}</td>
             <td>${element.unitsSold}</td>
             <td><input type="checkbox" checked="true"></td>
@@ -311,7 +311,6 @@ function addListeners(){
             for(var i = 0;i<array.length;i++){
                 sold += array[i].unitsSold;
             }
-            sold = sold / array.length;
             document.querySelector(".units_sold").innerText = sold;
     } //slutt på calculateBottom
 

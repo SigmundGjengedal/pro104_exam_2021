@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     height: 15%;
-    border: 1px solid black;
+
 }
 .analytics_flex_item{
     flex:50%;
@@ -15,7 +15,7 @@
     width: 100%;
 }
 .select_wrapper_restaurants{
-    
+
 }
 .search_icon{
     position: absolute;
@@ -74,10 +74,39 @@ tbody tr:nth-child(even) {
   }
   .bottom_text_div{
     height: 40%;
-    border: 1px solid black;
+
   }
   .bottom_numbers_div{
-      height: 40%;
-      border: 1px solid black;
+      height: 40%;  
+  }
+  .plus_span, .minus_span{
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      padding: 7px;
 
+  }
+  .bottom_button_container{
+    text-align: center;
+    width: 280px;
+    font-size: 20px;
+    height: 55px;
+    display: block;
+    position: relative;
+    left: 70%;
+    bottom: 15px;
+    background-color: white;
+    border-radius: 10px;
+    height: 30px;
+  }
+  .bottom_text_div div{
+    padding-top: 15px;
+    text-align: center;
+  }
+  .bottom_numbers_div div{
+    padding-top: 15px;
+    text-align: center;
+  }
+  .bottom_button_container:hover{
+      cursor: pointer;
   }

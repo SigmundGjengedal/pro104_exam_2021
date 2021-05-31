@@ -315,9 +315,17 @@ const MenuModule = ( function (){
         return itemsArray.filter(e => e.restaurant === name)
     }
     const getByType = (type) => itemsArray.filter(e => e.type === type);
+
     const getByBoth = function(name, type){
-        const rest = itemsArray.filter(e => e.restaurant === restaurant)
-        return rest.filter(e => e.type === type);
+        if (name === "All" && type === "All"){
+            return itemsArray
+        }else if(type === "All"){
+            return itemsArray.filter(e => e.restaurant === name)
+        }else if(name === "All"){
+            return itemsArray.filter(e => e.type === type);
+                }else {
+        return itemsArray.filter(e => e.restaurant === name && e.type === type)
+        }
     }
 
     return {getAll, getPizza, getDrinks, getItems, getByBoth, getByRestaurant,getByType, getPizzaItems, getDrinksItems}
