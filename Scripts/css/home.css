@@ -283,7 +283,7 @@ body {
   position: absolute;
   top: 60%;
   left: 10%;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .goal_circle {
@@ -342,7 +342,7 @@ body {
 /* Profit delen */
 
 .profit_title {
-  font-size: 30px;
+  font-size: 25px;
   position: absolute;
   bottom: 36%;
   right: 35%;
