@@ -156,7 +156,7 @@
   cursor: pointer;
   padding: 10px;
   margin: 10px;
-  background-color : #28a745;
+  background-color : #006a73;
   position: relative;
   right: 1%;
   width: 100%;
@@ -228,6 +228,6 @@ font-size: 2vw;
 }
 
 .result_number{
-    color: #28a745;
+    color: #006a73;
     font-size: 40px;
 }

@@ -96,7 +96,7 @@ body {
 }
 
 .signin_underline {
-  width: 8vw;
+  width: 9vw;
   height: 12px;
   background: #003B49;
   border-radius: 20px;
@@ -199,14 +199,14 @@ body {
   bottom: 6px;
   width: 0px;
   height: 6px;
-  background: #ECAF88;
+  background: #006a73;
   transition-duration: 600ms;
 }
 
 .login_input_underline_active_to {
   width: 100%;
   height: 6px;
-  background: #ECAF88;
+  background: #006a73;
   opacity: 1;
   overflow: hidden;
   transition-duration: 600ms;
@@ -222,14 +222,14 @@ body {
   bottom: 6px;
   width: 0px;
   height: 6px;
-  background:#ECAF88;
+  background:#006a73;;
   transition-duration: 600ms;
 }
 
 .login_password_underline_active_to {
   width: 100%;
   height: 6px;
-  background: #ECAF88;
+  background: #006a73;;
   transition-duration: 600ms;
 }
 
@@ -238,7 +238,7 @@ body {
 .login_green {
   width: 100%;
   height: 6px;
-  background: #88eca9;
+  background: #28a745;
   opacity: 1;
   overflow: hidden;
 }
