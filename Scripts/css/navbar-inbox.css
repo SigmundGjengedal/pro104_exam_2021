@@ -127,7 +127,7 @@
 }
 
 .msg3{
-  border:solid 4px #003B49;
+  border:solid 4px #28a745;
 }
 
 @keyframes pop-up {
@@ -205,14 +205,6 @@
   font-size: 4vh;
 }
 
-.logo-pizza{
-  width: 80px;
-  position: absolute;
-  top: 25px;
-  left: 10%;
-  transform: rotate(-25deg);
-
-}
 
 .navbar-wrap{
   display:flex;
@@ -234,6 +226,7 @@
   display: flex;
   position: relative;
   transition: 200ms ease-out;
+  border-bottom: 4px solid #fff;
 }
 
 .tooltiptext{

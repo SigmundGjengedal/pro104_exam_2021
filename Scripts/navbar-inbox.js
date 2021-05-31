@@ -50,9 +50,6 @@ yesterdayTxt.forEach(day =>{
   day.innerHTML = yesterday;
 });
 
-
-
-
 // Function som slicer og printer message text til x antall bokstaver - Må jobbes mere med
 const msgArray = [
    "Kenneth er syk idag. Kunne du sett om vi har noen som kan erstate kveldsvakta hans?",
