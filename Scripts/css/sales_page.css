@@ -8,7 +8,6 @@
 
 /* alle div'er med innhold*/
 .data_container{
-  /* flex*/
   display: flex;
   flex-direction: column;
 }

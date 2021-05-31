@@ -32,9 +32,8 @@ letter-spacing: 2px;
 }
 
 .button-employee:hover{
-  background: #f5f5fd;
-  transition: 0.3s;
-  color:#000;
+  opacity: 0.8;
+  transform: scale(1.05);
 }
 
 /* Liste over ansatte */
