@@ -206,4 +206,10 @@ margin-top: 30px;
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
+  padding: 10px 25px;
+  border:none;
+  display: inline-block;
+  font-size: 1.1vw;
+  border-radius: 15px;
+  background-color: #f5f5fd;
 }
