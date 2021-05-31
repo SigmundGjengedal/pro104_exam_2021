@@ -22,14 +22,14 @@ salesNavButton.addEventListener('click', function(){
 
     <header>
         <h3 id="Sales_Heading">SALES</h3>
-        <p id="Heading-p">Select Restaurant, Period & Category</p>
+        <p id="Heading-p">SELECT RESTAURANT, PERIOD & CATEGORY</p>
     </header>
 
     <!-- navn på kolonner-->
     <div class="labels-choices">
-        <span class ="choice restaurant">Restaurant</span>
-        <span class ="choice period">Period </span>
-        <span class ="choice category">Category</span>
+        <span class ="choice restaurant">RESTAURANT</span>
+        <span class ="choice period">PERIOD</span>
+        <span class ="choice category">CATEGORY</span>
     </div>
 
     <!-- div som skal fylles med valg-->
@@ -83,7 +83,7 @@ salesNavButton.addEventListener('click', function(){
 
             <section class="result-section">
 
-                    <p class = "sales-statistics-text"> Statistics</p>
+                    <p class = "sales-statistics-text"> STATISTICS</p>
                     <div class="sales_diagram_1">
                         <div class="sales_diagram_1_filled"></div>
                     </div>
