@@ -141,13 +141,12 @@ function addListeners(){
         }
         
         
-    }   
-    }))
+    } 
+    }
+    )
+    )
 
     const menuBtnCircle = document.querySelector(".confirm_btn_circle");
-    
-    
-    
     menuBtnCircle.addEventListener("click", function(){
         const editText = document.querySelector(".confirm_btn_txt");
         menuBtnCircle.classList.toggle("confirm_btn_circle_edit")
@@ -168,7 +167,6 @@ function addListeners(){
         document.querySelector(".confirm_btn_container").style.visibility = "visible";
         pizzaTitle.innerHTML = "PIZZA";
         isMenu = true;
-        
         generateLayout();
         addPizza();
         addDrinks();
@@ -180,7 +178,32 @@ function addListeners(){
         document.querySelector(".pizza_title").innerHTML = "ANALYTICS";
         isMenu = false;
         bottomContainer.innerHTML = `
-        <div class="analytics_top"></div>
+        <div class="analytics_top">
+            <div class="restaurant_text analytics_flex_item">SELECT RESTAURANT</div>
+            <div class="select_wrapper_restaurants analytics_flex_item">
+                <select class="restaurant_input analytics_dropdown">
+                    <option value="All">All</option>
+                    <option value="Grunerløkka">Grunerløkka</option>
+                    <option value="Karl Johan">Karl Johan</option>
+                    <option value="Nydalen">Nydalen</option>
+                    <option value="Bjørvika">Bjørvika</option>
+                </select>
+            </div>
+            <div class="categories_text analytics_flex_item">CATEGORIES</div>
+            <div class="select_wrapper_categories analytics_flex_item">
+                <select class="categories_input analytics_dropdown">
+                    <option value="All">All</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="Drinks">Drinks</option>
+                </select>
+            </div>
+            <div class="search_text analytics_flex_item">SEARCH BY NAME</div>
+            <div class="search_input_wrapper analytics_flex_item">
+                <div class="search_icon">
+                </div>
+                <input class="search_input" type="text" placeholder="SEARCH PRODUCTS">
+            </div>
+        </div>
         <div class="table_wrapper">
         <table>
             <caption>
@@ -197,151 +220,10 @@ function addListeners(){
                     <th scope="col">Select</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="number" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <th scope="row">Grunerløkka</th>
-                    <td>Pizza</td>
-                    <td>Margarita</td>
-                    <td><span>-</span><input class="analytics_input" type="text" value="149.00" ><span>+</span></td>
-                    <td>10.543</td>
-                    <td>42</td>
-                    <td><input type="checkbox"></td>
-                </tr>
+            <tbody class="table_body">
+            <!-- Inserte rows med javascript -->
+                
+                
             </tbody>
         </table>
         </div>
@@ -352,51 +234,87 @@ function addListeners(){
                 <div>Average Unites Sold</div>
             </div>
             <div class="bottom_numbers_div is_flex">
-                <div>165.45</div>
-                <div>18.469</div>
-                <div>678.56</div>
+                <div class="average_price">165.45</div>
+                <div class="average_gross">18.469</div>
+                <div class="units_sold">678.56</div>
             </div>
-            <div class="bottom_button_container>
-                <div class="bottom_button>SUBMIT CHANGES</div>
+            <div class="bottom_button_container">
+                <div class="bottom_button">SUBMIT CHANGES</div>
             </div>
         </div>
         `;
+        addRows();
+        document.querySelectorAll(".analytics_dropdown").forEach(e => e.addEventListener("change", addRowsByInput))
     }
     }
-    )
-}
+
+
+    )}
+
+    function addRowsByInput(){
+        const tableBody = document.querySelector(".table_body");
+        tableBody.innerHTML = "";
+        let restChoice = document.querySelector(".restaurant_input").value;
+        let typeChoice = document.querySelector(".categories_input").value;
+        console.log(restChoice)
+        console.log(typeChoice)
+        const arr = MenuModule.getByBoth(restChoice, typeChoice);
+        arr.forEach(element => 
+            tableBody.innerHTML += `
+            <tr>
+            <th scope="row">${element.restaurant}</th>
+                <td>${element.type}</td>
+                <td>${element.name}</td>
+                <td><span class="minus_span">-</span><input class="analytics_input" type="text" value="${element.price}" ><span class="plus_span">+</span></td>
+                <td>${element.grossProfit}</td>
+                <td>${element.unitsSold}</td>
+                <td><input type="checkbox" checked="true"></td>
+            </tr>`)
+        calculateBottom(arr)
+    }
+
+    function addRows(){
+        const tableBody = document.querySelector(".table_body");
+        const itemsArray = MenuModule.getItems();
+        itemsArray.forEach(element => 
+            tableBody.innerHTML += `
+            <tr>
+            <th scope="row">${element.restaurant}</th>
+            <td>${element.type}</td>
+            <td>${element.name}</td>
+            <td><span class="minus_span">-</span><input class="analytics_input" type="text" value="${element.price}" ><span class="plus_span">+</span></td>
+            <td>${element.grossProfit}</td>
+            <td>${element.unitsSold}</td>
+            <td><input type="checkbox" checked="true"></td>
+        </tr>
+            `);
+            calculateBottom(itemsArray)
+            
+            
+            
+    }//Slutt på addRows
+
+    function calculateBottom(array){
+        let averagePrice = 0;
+            for(var i = 0;i<array.length;i++){
+                averagePrice += array[i].price;
+            }
+            averagePrice = averagePrice / array.length
+            document.querySelector(".average_price").innerHTML = averagePrice;
+            let averageGross = 0;
+            for(var i = 0;i<array.length;i++){
+                averageGross += array[i].grossProfit;
+            }
+            averageGross = averageGross / array.length;
+            document.querySelector(".average_gross").innerText = averageGross;
+            let sold = 0;
+            for(var i = 0;i<array.length;i++){
+                sold += array[i].unitsSold;
+            }
+            document.querySelector(".units_sold").innerText = sold;
+    } //slutt på calculateBottom
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-// function showAnalytics(){
-//     let isMenu = true;
-//     const pizzaTitle = document.querySelector(".pizza_title");
-//     if(isMenu){
-//         const bottomContainer =  document.querySelector(".bottom_container");
-//         document.querySelector(".confirm_btn_container").style.display = "none";
-//         document.querySelector(".pizza_title").innerHTML = "ANALYTICS";
-//         bottomContainer.innerHTML = `
-//         `;
-//         isMenu = false;
-//         console.log(isMenu)
-//     }else if(!isMenu){
-//         isMenu = true;
-//         document.querySelector(".confirm_btn_container").style.display = "visible";
-//         pizzaTitle.innerHTML = "PIZZA";
-//         console.log(isMenu)
-//     }
-// }
 
 
