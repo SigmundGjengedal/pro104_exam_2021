@@ -1,4 +1,4 @@
-// Importerer EmpolyeesModule
+github// Importerer EmpolyeesModule
 import EmployeesModules from "./Modules/EmployeesModule.js";
 
 // Variabler for navbar employee knappen og stedet hvor info printes
@@ -232,14 +232,13 @@ function removeEmployee(){
     };
 // Function printer fra modulen alle ansatte i Grunerløkka
     function printGrunerlokka(){
-
-
-      let employeeList = document.querySelector(".employee-list1");
+      let employeeList1 = document.querySelector(".employee-list1");
       let employeeList2 = document.querySelector(".employee-list2");
+
       document.querySelector(".grunerløkka").addEventListener("click", ()=>{
         counter=0;
         document.querySelector(".add-remove-buttons").style.display="inline-block";
-        employeeList.innerHTML= " "
+        employeeList1.innerHTML= " "
         EmployeesModules.getGrunerlokka().forEach(rest => {
               employeeList.innerHTML += `
               <div class="employee-card">
